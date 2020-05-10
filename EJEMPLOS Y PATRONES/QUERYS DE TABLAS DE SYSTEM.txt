@@ -1,0 +1,65 @@
+-- DOS QUERYS PARA RASTREAR LA ULTIMA TABLA EN ACTUALIZACE EN UN PROCESO
+
+SELECT     ius.last_user_seek, ius.last_user_scan, ius.last_user_lookup, ius.last_user_update, tab.name, tab.create_date, tab.modify_date
+FROM         sys.dm_db_index_usage_stats AS ius INNER JOIN
+                      sys.tables AS tab ON tab.object_id = ius.object_id
+WHERE     (ius.database_id = DB_ID(N'LIBERTYCarsAnualDB'))
+ORDER BY ius.last_user_update
+GO
+
+
+
+SELECT * FROM logTransacciones
+ORDER BY FechaTrn
+GO
+
+
+SELECT     ius.database_id, ius.object_id, ius.index_id, ius.user_seeks, ius.user_scans, ius.user_lookups, ius.user_updates, ius.last_user_seek, ius.last_user_scan, ius.last_user_lookup, 
+                      ius.last_user_update, ius.system_seeks, ius.system_scans, ius.system_lookups, ius.system_updates, ius.last_system_seek, ius.last_system_scan, ius.last_system_lookup, 
+                      ius.last_system_update, tab.name, tab.object_id AS Expr1, tab.principal_id, tab.schema_id, tab.parent_object_id, tab.type, tab.type_desc, tab.create_date, tab.modify_date, tab.is_ms_shipped, 
+                      tab.is_published, tab.is_schema_published, tab.lob_data_space_id, tab.filestream_data_space_id, tab.max_column_id_used, tab.lock_on_bulk_load, tab.uses_ansi_nulls, tab.is_replicated, 
+                      tab.has_replication_filter, tab.is_merge_published, tab.is_sync_tran_subscribed, tab.has_unchecked_assembly_data, tab.text_in_row_limit, tab.large_value_types_out_of_row, 
+                      tab.is_tracked_by_cdc, tab.lock_escalation, tab.lock_escalation_desc
+FROM         sys.dm_db_index_usage_stats AS ius INNER JOIN
+                      sys.tables AS tab ON tab.object_id = ius.object_id
+ORDER BY ius.last_user_seek
+GO
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+-- QUERY PARA LISTAR LOS OBJETOS EXISTENTE EN UNA BD
+SELECT     name, object_id, principal_id, schema_id, parent_object_id, type, type_desc, create_date, modify_date, is_ms_shipped, is_published, is_schema_published
+FROM         sys.objects
+ORDER BY type
+GO
+
+SELECT     name, object_id, principal_id, schema_id, parent_object_id, type, type_desc, create_date, modify_date, is_ms_shipped, is_published, is_schema_published, lob_data_space_id, 
+                      filestream_data_space_id, max_column_id_used, lock_on_bulk_load, uses_ansi_nulls, is_replicated, has_replication_filter, is_merge_published, is_sync_tran_subscribed, 
+                      has_unchecked_assembly_data, text_in_row_limit, large_value_types_out_of_row, is_tracked_by_cdc, lock_escalation, lock_escalation_desc
+FROM         sys.tables
+GO
+
+
+SELECT     TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, ORDINAL_POSITION, COLUMN_DEFAULT, IS_NULLABLE, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, 
+                      CHARACTER_OCTET_LENGTH, NUMERIC_PRECISION, NUMERIC_PRECISION_RADIX, NUMERIC_SCALE, DATETIME_PRECISION, CHARACTER_SET_CATALOG, CHARACTER_SET_SCHEMA, 
+                      CHARACTER_SET_NAME, COLLATION_CATALOG, COLLATION_SCHEMA, COLLATION_NAME, DOMAIN_CATALOG, DOMAIN_SCHEMA, DOMAIN_NAME
+FROM         INFORMATION_SCHEMA.COLUMNS
+GO
+
+
+SELECT     CONSTRAINT_CATALOG, CONSTRAINT_SCHEMA, CONSTRAINT_NAME, TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, ORDINAL_POSITION
+FROM         INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+GO
+
+SELECT     CONSTRAINT_CATALOG, CONSTRAINT_SCHEMA, CONSTRAINT_NAME, TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, CONSTRAINT_TYPE, IS_DEFERRABLE, INITIALLY_DEFERRED
+FROM         INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+GO
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+  
+if exists (select * from dbo.sysobjects where id = object_id(N'[SP_00_VENTANA_ERROR]'))
+drop PROCEDURE  SP_00_VENTANA_ERROR
+GO 
+ 
+
+CREATE PROCEDURE  SP_00_VENTANA_ERROR @DESCRIPERROR varchar(300) 
+--WITH ENCRYPTION
+AS
+
+    BEGIN
+      RAISERROR (@DESCRIPERROR,16,1)
+      ROLLBACK TRANSACTION
+      RETURN
+    END

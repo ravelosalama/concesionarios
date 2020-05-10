@@ -1,0 +1,13 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Predeterminado|Default = Predeterminado|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00000000-0000-0000-0000-000000000000}.Predeterminado|Default.ActiveCfg = Predeterminado
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

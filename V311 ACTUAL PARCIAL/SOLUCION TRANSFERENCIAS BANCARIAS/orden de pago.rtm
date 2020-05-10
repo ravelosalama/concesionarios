@@ -1,0 +1,5775 @@
+object ppRpt: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Carta'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 2000
+  PrinterSetup.mmMarginLeft = 2000
+  PrinterSetup.mmMarginRight = 2000
+  PrinterSetup.mmMarginTop = 2000
+  PrinterSetup.mmPaperHeight = 279400
+  PrinterSetup.mmPaperWidth = 215900
+  PrinterSetup.PaperSize = 1
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = plTempI
+  Template.DatabaseSettings.Name = '002 - ORDEN DE PAGO'
+  Template.DatabaseSettings.NameField = 'itemname'
+  Template.DatabaseSettings.TemplateField = 'template'
+  Template.FileName = 'C:\Users\Administrador\Desktop\orden de pago.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = []
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<EncontrarTexto>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 492
+  Top = 124
+  Version = '16.03'
+  mmColumnWidth = 215900
+  DataPipelineName = 'Bancos_Transacciones'
+  object ppDetailBand1: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 123825
+    mmPrintPosition = 0
+    object ppShape2: TppShape
+      DesignLayer = ppDesignLayer2
+      UserName = 'Shape2'
+      Brush.Color = clSilver
+      Shape = stRoundRect
+      mmHeight = 76994
+      mmLeft = 6085
+      mmTop = 36248
+      mmWidth = 199761
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppSubReport1: TppSubReport
+      DesignLayer = ppDesignLayer2
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      TraverseAllData = False
+      DataPipelineName = 'Bancos_Detalle_Transacciones'
+      mmHeight = 5292
+      mmLeft = 0
+      mmTop = 118012
+      mmWidth = 211900
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView5.Bancos_Detalle_Transacciones
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'Carta'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 2000
+        PrinterSetup.mmMarginLeft = 2000
+        PrinterSetup.mmMarginRight = 2000
+        PrinterSetup.mmMarginTop = 2000
+        PrinterSetup.mmPaperHeight = 279400
+        PrinterSetup.mmPaperWidth = 215900
+        PrinterSetup.PaperSize = 1
+        Template.DatabaseSettings.DataPipeline = plTempI
+        Template.DatabaseSettings.NameField = 'itemname'
+        Template.DatabaseSettings.TemplateField = 'template'
+        Template.SaveTo = stDatabase
+        Units = utMillimeters
+        Version = '16.03'
+        mmColumnWidth = 0
+        DataPipelineName = 'Bancos_Detalle_Transacciones'
+        object ppTitleBand1: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5821
+          mmPrintPosition = 0
+          object ppLabel17: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label17'
+            Caption = 'Asiento contable realizado'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormField = False
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 7408
+            mmTop = 265
+            mmWidth = 44980
+            BandType = 1
+            LayerName = Foreground
+          end
+        end
+        object ppDetailBand2: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5292
+          mmPrintPosition = 0
+          object ppDBText6: TppDBText
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBText6'
+            AutoSize = True
+            Border.Weight = 1.000000000000000000
+            DataField = 'CodCta'
+            DataPipeline = daADOQueryDataView5.Bancos_Detalle_Transacciones
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'Bancos_Detalle_Transacciones'
+            mmHeight = 4233
+            mmLeft = 7408
+            mmTop = 0
+            mmWidth = 14817
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText7: TppDBText
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBText7'
+            AutoSize = True
+            Border.Weight = 1.000000000000000000
+            DataField = 'descripcion'
+            DataPipeline = daADOQueryDataView5.Bancos_Detalle_Transacciones
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'Bancos_Detalle_Transacciones'
+            mmHeight = 4233
+            mmLeft = 36777
+            mmTop = 0
+            mmWidth = 79640
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText9: TppDBText
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBText9'
+            AutoSize = True
+            BlankWhenZero = True
+            Border.Weight = 1.000000000000000000
+            DataField = 'MtoDb'
+            DataPipeline = daADOQueryDataView5.Bancos_Detalle_Transacciones
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Bancos_Detalle_Transacciones'
+            mmHeight = 4233
+            mmLeft = 155575
+            mmTop = 265
+            mmWidth = 16934
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText10: TppDBText
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBText10'
+            AutoSize = True
+            BlankWhenZero = True
+            Border.Weight = 1.000000000000000000
+            DataField = 'MtoCr'
+            DataPipeline = daADOQueryDataView5.Bancos_Detalle_Transacciones
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Bancos_Detalle_Transacciones'
+            mmHeight = 4233
+            mmLeft = 202407
+            mmTop = 0
+            mmWidth = 793
+            BandType = 4
+            LayerName = Foreground
+          end
+        end
+        object ppSummaryBand1: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 132557
+          mmPrintPosition = 0
+          object ppShape1: TppShape
+            DesignLayer = ppDesignLayer1
+            UserName = 'Shape1'
+            Shape = stRoundRect
+            mmHeight = 33073
+            mmLeft = 4233
+            mmTop = 71173
+            mmWidth = 203994
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel3: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label3'
+            Border.Weight = 1.000000000000000000
+            Caption = 'Totales ...'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormField = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 51065
+            mmTop = 6617
+            mmWidth = 16669
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppDBCalc1: TppDBCalc
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBCalc1'
+            AutoSize = True
+            Border.Weight = 1.000000000000000000
+            DataField = 'MtoDb'
+            DataPipeline = daADOQueryDataView5.Bancos_Detalle_Transacciones
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Bancos_Detalle_Transacciones'
+            mmHeight = 4234
+            mmLeft = 149754
+            mmTop = 6085
+            mmWidth = 22755
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppDBCalc2: TppDBCalc
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBCalc2'
+            AutoSize = True
+            Border.Weight = 1.000000000000000000
+            DataField = 'MtoCr'
+            DataPipeline = daADOQueryDataView5.Bancos_Detalle_Transacciones
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Bancos_Detalle_Transacciones'
+            mmHeight = 4234
+            mmLeft = 179123
+            mmTop = 6085
+            mmWidth = 24077
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLine3: TppLine
+            DesignLayer = ppDesignLayer1
+            UserName = 'Line3'
+            Border.Weight = 1.000000000000000000
+            Pen.Width = 2
+            Position = lpBottom
+            Weight = 1.500000000000000000
+            mmHeight = 3969
+            mmLeft = 139741
+            mmTop = 1325
+            mmWidth = 64029
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel19: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label19'
+            Caption = 'Ordenado por:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormField = False
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 80698
+            mmTop = 75671
+            mmWidth = 24342
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel18: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label18'
+            Caption = 'Elaborado por:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormField = False
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 6085
+            mmTop = 75671
+            mmWidth = 24871
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel20: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label20'
+            Caption = 'Autorizado por:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormField = False
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 156634
+            mmTop = 75671
+            mmWidth = 25929
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppDBText24: TppDBText
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBText24'
+            DataField = 'CodUsua'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 33867
+            mmTop = 75671
+            mmWidth = 17198
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel2: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label2'
+            Caption = 'Firma y fecha:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            FormField = False
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 81225
+            mmTop = 95779
+            mmWidth = 18256
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel25: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label25'
+            Caption = 'Firma y fecha:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            FormField = False
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 156638
+            mmTop = 95781
+            mmWidth = 18257
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel4: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label4'
+            Caption = 'RESPONSABLES DEL PAGO:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormField = False
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 8197
+            mmTop = 64823
+            mmWidth = 47889
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppDBBarCode1: TppDBBarCode
+            DesignLayer = ppDesignLayer1
+            UserName = 'DBBarCode1'
+            AlignBarCode = ahLeft
+            BarCodeType = bcCode39
+            BarColor = clBlack
+            DataField = 'Documento'
+            DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+            ParentDataPipeline = False
+            Alignment = taRightJustify
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Bancos_Transacciones'
+            mmHeight = 16933
+            mmLeft = 160602
+            mmTop = 114036
+            mmWidth = 47625
+            BandType = 7
+            LayerName = Foreground
+            mmBarWidth = 254
+            mmWideBarRatio = 76200
+          end
+          object ppLabel5: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label5'
+            Caption = 'Firma y fecha:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            FormField = False
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 7938
+            mmTop = 95779
+            mmWidth = 18256
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel6: TppLabel
+            DesignLayer = ppDesignLayer1
+            UserName = 'Label6'
+            Caption = 
+              'Este documento esta firmado digitalmente como comprobante de leg' +
+              'itimidad'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 9868950
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            FormField = False
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 13758
+            mmTop = 114036
+            mmWidth = 129911
+            BandType = 7
+            LayerName = Foreground
+          end
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {
+            01060D54726156617250726F6772616D094368696C645479706502110B50726F
+            6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+            0B747450726F63656475726506536F75726365066870726F6365647572652056
+            61726961626C65733B0D0A7661720D0A202020546F74616C44656269746F203A
+            20457874656E6465643B0D0A202020546F74616C4372656469746F3A20457874
+            656E6465643B0D0A202020200D0A626567696E0D0A0D0A656E643B0D0A084361
+            726574506F730102030202000000}
+        end
+        object ppDesignLayers1: TppDesignLayers
+          object ppDesignLayer1: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppLabel1: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label1'
+      Caption = 'ORDEN DE PAGO Nr: '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 5821
+      mmLeft = 128588
+      mmTop = 13506
+      mmWidth = 52652
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText2'
+      AutoSize = True
+      DataField = 'Documento'
+      DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 16
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Bancos_Transacciones'
+      mmHeight = 6350
+      mmLeft = 183621
+      mmTop = 13494
+      mmWidth = 22225
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel12: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label12'
+      Caption = 'A favor de:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = []
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 14552
+      mmTop = 52123
+      mmWidth = 18256
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel13: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label13'
+      Caption = 'Por concepto de:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = []
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 14552
+      mmTop = 81756
+      mmWidth = 29369
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel14: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label14'
+      Caption = 'Por la cantidad de Bs.:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = []
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 14552
+      mmTop = 89718
+      mmWidth = 38893
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel15: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label15'
+      Caption = 'Fecha:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 138176
+      mmTop = 30455
+      mmWidth = 12435
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel16: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label16'
+      Caption = 'Codigo del beneficiario:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = []
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 14552
+      mmTop = 44738
+      mmWidth = 39952
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText12: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText12'
+      AutoSize = True
+      DataField = 'CodBene'
+      DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Bancos_Transacciones'
+      mmHeight = 4763
+      mmLeft = 57944
+      mmTop = 44450
+      mmWidth = 38365
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText13: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText13'
+      AutoSize = True
+      DataField = 'Descripcion'
+      DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Bancos_Transacciones'
+      mmHeight = 4763
+      mmLeft = 57944
+      mmTop = 51858
+      mmWidth = 80433
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel21: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label21'
+      Caption = 'Cuenta a Abonar:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = []
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 14552
+      mmTop = 66963
+      mmWidth = 29897
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText19: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText19'
+      AutoSize = True
+      DataField = 'Numero_de_cuenta'
+      DataPipeline = daADOQueryDataView3.Proveedores_Datos_de_Transferencias
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Proveedores_Datos_de_Transferencias'
+      mmHeight = 4763
+      mmLeft = 57944
+      mmTop = 66675
+      mmWidth = 42333
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel22: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label22'
+      Caption = 'Tipo de cuenta:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = []
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 14552
+      mmTop = 59531
+      mmWidth = 26458
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText20: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText20'
+      AutoSize = True
+      DataField = 'Tipo_de_cuenta_a_transfer'
+      DataPipeline = daADOQueryDataView3.Proveedores_Datos_de_Transferencias
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Proveedores_Datos_de_Transferencias'
+      mmHeight = 4762
+      mmLeft = 57944
+      mmTop = 59267
+      mmWidth = 53975
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel23: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label23'
+      Caption = 'Correo electronico aviso:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = []
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 14552
+      mmTop = 74372
+      mmWidth = 42862
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText21: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText21'
+      AutoSize = True
+      DataField = 'Direccion_de_emial'
+      DataPipeline = daADOQueryDataView3.Proveedores_Datos_de_Transferencias
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Proveedores_Datos_de_Transferencias'
+      mmHeight = 4763
+      mmLeft = 57944
+      mmTop = 74083
+      mmWidth = 53975
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText22: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText22'
+      AutoSize = True
+      DataField = 'Document'
+      DataPipeline = daADOQueryDataView1.Cuentas_pagar
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Cuentas_pagar'
+      mmHeight = 4762
+      mmLeft = 57944
+      mmTop = 81492
+      mmWidth = 13229
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText25: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText25'
+      DataField = 'MtoDb'
+      DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Bancos_Transacciones'
+      mmHeight = 4498
+      mmLeft = 57944
+      mmTop = 89718
+      mmWidth = 45773
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      DesignLayer = ppDesignLayer2
+      UserName = 'DBText1'
+      AutoSize = True
+      DataField = 'Fecha'
+      DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+      DisplayFormat = 'dd/mm/yyyy hh:nn:ss AM/PM'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Bancos_Transacciones'
+      mmHeight = 4763
+      mmLeft = 159015
+      mmTop = 30427
+      mmWidth = 42069
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDB2DBarCode1: TppDB2DBarCode
+      DesignLayer = ppDesignLayer2
+      UserName = 'DB2DBarCode1'
+      AlignBarcode = ahLeft
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      Transparent = True
+      MaxiCodeSettings.BarHeight = 8
+      MaxiCodeSettings.CarrierPostalCode = '000000000'
+      MaxiCodeSettings.HorPixelsPerMM = 4.000000000000000000
+      MaxiCodeSettings.VerPixelsPerMM = 4.000000000000000000
+      PDF417Settings.BarHeight = 8
+      QRCodeSettings.QuietZone = 4
+      DataMatrixSettings.QuietZone = 4
+      BarCodeType = bcPDF417
+      DataPipeline = daADOQueryDataView2.Bancos_Transacciones
+      DataField = 'NOpe'
+      DataPipelineName = 'Bancos_Transacciones'
+      mmHeight = 21431
+      mmLeft = 14549
+      mmTop = 1323
+      mmWidth = 72231
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      DesignLayer = ppDesignLayer2
+      UserName = 'Label7'
+      Caption = 'Label7'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 100542
+      mmTop = 98690
+      mmWidth = 11377
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060A54726150726F6772616D094368696C645479706502150E497346756E63
+      74696F6E54797065090B50726F6772616D4E616D65060743656E74656E610B50
+      726F6772616D54797065070A747446756E6374696F6E06536F757263650CAC02
+      000046756E6374696F6E2043656E74656E612876617220756E692C206465632C
+      2063656E203A20496E7465676572293A537472696E673B0D0A7661720D0A2020
+      202043546578746F203A20537472696E673B0D0A426567696E0D0A2020202063
+      546578746F203A3D2027273B0D0A20202020436173652063656E206F660D0A20
+      2020202020202031203A20426567696E0D0A2020202020202020202020202020
+      2020496620646563202B20756E69203D2030205468656E0D0A20202020202020
+      202020202020202020202063546578746F203A3D20276369656E20270D0A2020
+      2020202020202020202020202020456C73650D0A202020202020202020202020
+      20202020202063546578746F203A3D20276369656E746F20273B0D0A20202020
+      2020202020202020456E643B0D0A2020202020202020323A2063546578746F20
+      3A3D2027646F736369656E746F7320273B0D0A2020202020202020333A206354
+      6578746F203A3D2027747265736369656E746F7320273B0D0A20202020202020
+      20343A2063546578746F203A3D202763756174726F6369656E746F7320273B0D
+      0A2020202020202020353A2063546578746F203A3D20277175696E69656E746F
+      7320273B0D0A2020202020202020363A2063546578746F203A3D202773656973
+      6369656E746F7320273B0D0A2020202020202020373A2063546578746F203A3D
+      2027736574656369656E746F7320273B0D0A2020202020202020383A20635465
+      78746F203A3D20276F63686F6369656E746F7320273B0D0A2020202020202020
+      393A2063546578746F203A3D20276E6F76656369656E746F7320273B0D0A2020
+      202020202020456C73650D0A20202020202020202020202063546578746F203A
+      3D2027273B0D0A20202020456E643B0D0A20202020526573756C74203A3D2063
+      546578746F3B0D0A456E643B0D0A084361726574506F73010203020600000106
+      0A54726150726F6772616D094368696C645479706502150E497346756E637469
+      6F6E54797065090B50726F6772616D4E616D650606446563656E610B50726F67
+      72616D54797065070A747446756E6374696F6E06536F757263650C8004000046
+      756E6374696F6E20446563656E612856617220756E692C6465633A496E746567
+      6572293A537472696E673B0D0A7661720D0A2020202063546578746F203A2053
+      7472696E673B0D0A426567696E0D0A2020202063546578746F203A3D2027273B
+      0D0A202020204361736520646563206F660D0A2020202020202020313A0D0A20
+      20202020202020202020204361736520756E69206F660D0A2020202020202020
+      2020202020202020303A2063546578746F203A3D20276469657A20273B0D0A20
+      202020202020202020202020202020313A2063546578746F203A3D20276F6E63
+      6520273B0D0A20202020202020202020202020202020323A2063546578746F20
+      3A3D2027646F636520273B0D0A20202020202020202020202020202020333A20
+      63546578746F203A3D2027747265636520273B0D0A2020202020202020202020
+      2020202020343A2063546578746F203A3D20276361746F72636520273B0D0A20
+      202020202020202020202020202020353A2063546578746F203A3D2027717569
+      6E636520273B0D0A20202020202020202020202020202020363A206354657874
+      6F203A3D20276469656369273B0D0A2020202020202020202020202020202037
+      3A2063546578746F203A3D20276469656369273B0D0A20202020202020202020
+      202020202020383A2063546578746F203A3D20276469656369273B0D0A202020
+      20202020202020202020202020393A2063546578746F203A3D20276469656369
+      273B0D0A202020202020202020202020456E643B0D0A2020202020202020323A
+      0D0A202020202020202020202020426567696E0D0A2020202020202020202020
+      2020202020496620756E69203D2030205468656E0D0A20202020202020202020
+      2020202020202020202063546578746F203A3D20277665696E746520270D0A20
+      202020202020202020202020202020456C736520496620756E69203E20302054
+      68656E0D0A202020202020202020202020202020202020202063546578746F20
+      3A3D20277665696E7469273B0D0A202020202020202020202020456E643B0D0A
+      2020202020202020333A2063546578746F203A3D2027747265696E746120273B
+      0D0A2020202020202020343A2063546578746F203A3D202763756172656E7461
+      20273B0D0A2020202020202020353A2063546578746F203A3D202763696E6375
+      656E746120273B0D0A2020202020202020363A2063546578746F203A3D202773
+      6573656E746120273B0D0A2020202020202020373A2063546578746F203A3D20
+      27736574656E746120273B0D0A2020202020202020383A2063546578746F203A
+      3D20276F6368656E746120273B0D0A2020202020202020393A2063546578746F
+      203A3D20276E6F76656E746120273B0D0A2020202020202020656C73650D0A20
+      202020202020202020202063546578746F203A3D2027273B0D0A20202020456E
+      643B0D0A2020202049662028756E69203E20302920416E642028646563203E20
+      3229205468656E2063546578746F203A3D2063546578746F202B20277920273B
+      0D0A20202020526573756C74203A3D2063546578746F3B0D0A456E643B0D0A08
+      4361726574506F730102400224000001060A54726150726F6772616D09436869
+      6C645479706502150E497346756E6374696F6E54797065090B50726F6772616D
+      4E616D65060650726F7465630B50726F6772616D54797065070A747446756E63
+      74696F6E06536F7572636514A803000046756E6374696F6E2050726F74656328
+      7374724361642C204368203A20537472696E673B20696E7443616E74203A2049
+      6E7465676572293A537472696E673B0D0A7B2A2A2A2A2A2A2A2A2A2A2A2A2A2A
+      2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A7D0D0A
+      7B2A2A2A2A2A2A2A2A2A2A2A46756E6369C3B36E202050726F7465632A2A2A2A
+      2A2A2A2A2A2A2A2A2A2A2A2A2A7D0D0A7B2046756E6369C3B36E207175652061
+      6772656761206361726163746572657320616C207072696E63692D20207D0D0A
+      7B2070696F207920616C2066696E616C20646520756E6120636164656E612064
+      6520636172616374657265737D0D0A7B20706172612070726F74656765726C61
+      2E202D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A7B2D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D2D2D2D7D0D0A7B20526563696265207472657320506172616D
+      6574726F732C20656C207072696D65726F206573206C6120207D0D0A7B206361
+      64656E612C207920656C20736567756E646F20657320656C2063617261637465
+      72206120202020207D0D0A7B20636F6C6F63617220616C207072696E63697069
+      6F207920616C2066696E616C206465206C6120202020207D0D0A7B2063616465
+      6E6120612070726F74656765722C207920656C207465726365726F206573206C
+      6120202020207D0D0A7B2063616E746964616420646520636172616374657265
+      73206120636F6C6F63617220656C207072696E2D207D0D0A7B20636970696F20
+      792066696E616C206465206C6120636164656E61202D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D7D0D0A7B204C6120636F6E7374616E7465204D617820496E64696361
+      20656C2074616D61C3B16F206DC3A178696D6F20207D0D0A7B206465206C6120
+      636164656E6120612070726F7465676572202D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D7D0D0A7B2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A
+      2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A7D0D0A636F6E73740D0A202020
+      204D6178203D203232303B0D0A426567696E0D0A202020206966204C656E6774
+      6828436829203E2031207468656E0D0A20202020202020204368203A3D202727
+      3B0D0A20202020526573756C74203A3D20537472696E674F6643686172502843
+      682C696E7443616E74292B2720272B7374724361642B537472696E674F664368
+      6172502843682C696E7443616E74293B0D0A456E643B0D0A084361726574506F
+      730102050217000001060A54726150726F6772616D094368696C645479706502
+      150E497346756E6374696F6E54797065090B50726F6772616D4E616D65060D53
+      7472696E674F6643686172500B50726F6772616D54797065070A747446756E63
+      74696F6E06536F75726365149402000046756E6374696F6E20537472696E674F
+      664368617250284368203A20537472696E673B496E7443616E74203A20496E74
+      65676572293A537472696E673B0D0A7B2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A
+      2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A7D0D0A7B2A
+      2A2A2A2A2A2A2A2A2A2A46756E6369C3B36E2020537472696E674F6643686172
+      502A2A2A2A2A2A2A2A2A2A7D0D0A7B2046756E6369C3B36E207175652067656E
+      65726120756E6120636164656E6120646520636172616374652D207D0D0A7B20
+      726573206461646120756E6120636164656E61206E2020202020202076656365
+      732E202D2D2D2D2D2D2D7D0D0A7B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A7B205265
+      6369626520646F7320506172616D6574726F732C20656C207072696D65726F20
+      6573206C612020207D0D0A7B20636164656E612C207920656C20736567756E64
+      6F20657320656C206C612063616E7469646164206465207D0D0A7B2076656365
+      7320612067656E65726172206C6120636164656E61202D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D7D0D0A7B2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A
+      2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A7D0D0A7661720D0A202020
+      20737472436164203A20537472696E673B0D0A20202020696E7449203A20496E
+      74656765723B0D0A426567696E0D0A20202020737472436164203A3D2027273B
+      0D0A20202020666F7220696E7449203A3D203020746F20496E7443616E74202D
+      203120646F0D0A2020202020202020737472436164203A3D2073747243616420
+      2B2043683B0D0A20202020526573756C74203A3D207374724361643B0D0A456E
+      643B0D0A084361726574506F730102050213000001060A54726150726F677261
+      6D094368696C645479706502150E497346756E6374696F6E54797065090B5072
+      6F6772616D4E616D6506094E756D4C65747261730B50726F6772616D54797065
+      070A747446756E6374696F6E06536F7572636514AC15000046756E6374696F6E
+      204E756D4C657472617328766172204E756D65726F3A20457874656E6465643B
+      204D6179757363756C61732C2043656E74696D6F733A20496E7465676572293A
+      537472696E673B0D0A7B2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A
+      2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A7D0D0A7B2A2043
+      6F6E7665727369C3B36E204EC3BA6D65726F202D3E204C657472612020202020
+      202020202020202020202020202A290D0A7B2A20202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2A7D0D0A7B2A2046756E63696F6E65732041646963696F6E616C657320526571
+      756572696461733A20202020202020202020202A7D0D0A7B2A202D20556E6964
+      61642856617220756E692C206465633A20496E74656765722920202020202020
+      2020202020202A7D0D0A7B2A202D20446563656E612856617220756E692C2064
+      65633A20496E746567657229202020202020202020202020202A7D0D0A7B2A20
+      2D2043656E74656E612856617220756E692C206465632C2063656E3A20496E74
+      6567657229202020202020202A7D0D0A7B2A202D20537472696E674F66436861
+      72502843683A20537472696E673B496E7443616E743A20496E7465676572292A
+      7D0D0A7B2A202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202A7D0D0A7B2A20506172C3A16D65
+      74726F733A202020202020202020202020202020202020202020202020202020
+      2020202020202A7D0D0A7B2A2020202020202020202020202020202020202020
+      202020202020202020202020202020202020202020202020202A7D0D0A7B2A20
+      204E756D65726F20202020203A204EC3BA6D65726F206120636F6E7665727469
+      722020202020202020202020202A7D0D0A7B2A20204D6179757363756C617320
+      3A20202020202020202020202020202020202020202020202020202020202020
+      2A7D0D0A7B2A202020202020202020202020202030202D3E204D696EC3BA7363
+      756C6120202020202020202020202020202020202A7D0D0A7B2A202020202020
+      202020202020202031202D3E204D6179C3BA7363756C61202020202020202020
+      20202020202020202A7D0D0A7B2A202043656E74696D6F732020203A2043656E
+      74696D6F7320656E206C65747261206F20656E20202020202020202A7D0D0A7B
+      2A2020090920202020206EC3BA6D65726F2E2020202020202020202020202020
+      2020202020202020202A7D0D0A7B2A202020202020202020202020202030202D
+      3E204C657472617320202020202020202020202020202020202020202A7D0D0A
+      7B2A202020202020202020202020202031202D3E204EC3BA6D65726F20202020
+      202020202020202020202020202020202A7D0D0A7B2A20202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202A7D0D0A7B2A205265737472696363696F6E65733A2020202020202020
+      202020202020202020202020202020202020202020202A7D0D0A7B2A20202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202A7D0D0A7B2A202D205265646F6E64656F206120646F73
+      20646563696D616C65732020202020202020202020202020202020202A7D0D0A
+      7B2A202D2052616E676F3A20302C30302061203939392E3939392E3939392E39
+      39392E3939392C39392020202020202A7D0D0A7B2A2020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20202A7D0D0A7B2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A
+      2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A2A7D0D0A7661720D0A2020
+      4E756D546D702C204E756D546D70312C206C65747261312C206C65747261322C
+      0D0A20206C65747261332C204C6579656E64612C204C6579656E6461312C0D0A
+      202054464E756D65726F203A20537472696E673B0D0A20206330312C20633032
+      2C2069706F732C206469672C2063656E2C206465632C0D0A2020756E692C2074
+      6D70203A20496E74656765723B0D0A20204943656E74696D6F73203A20496E74
+      656765723B0D0A0D0A426567696E0D0A202069662028284E756D65726F203C20
+      302E303029206F7220284E756D65726F203E2039393939393939393939393939
+      39392E39392929206F7220284D6179757363756C6173203C203029206F722028
+      4D6179757363756C6173203E203129207468656E0D0A20202020526573756C74
+      203A3D20274552524F5220454E20415247554D454E544F53270D0A2020656C73
+      650D0A2020426567696E0D0A20202020202020204966204E756D65726F203C20
+      30205468656E204E756D65726F203A3D204E756D65726F2A2D313B0D0A0D0A20
+      202020202020204E756D546D70203A3D205472696D28466F726D6174466C6F61
+      742827302E3030272C204E756D65726F29293B0D0A20202020202020204E756D
+      546D7031203A3D205472696D28466F726D6174466C6F61742827302E3030272C
+      204E756D65726F29293B0D0A20202020202020206943656E74696D6F73203A3D
+      2028526F756E642846726163284E756D65726F29202A2031303029293B0D0A20
+      202020202020204E756D546D70203A3D20537472696E674F6643686172502827
+      30272C203138202D204C656E677468284E756D546D702929202B204E756D546D
+      703B0D0A20202020202020204E756D546D7031203A3D20537472696E674F6643
+      68617250282730272C203138202D204C656E677468284E756D546D7031292920
+      2B204E756D546D70313B0D0A2020200D0A0D0A2020202020202020633031203A
+      3D20313B0D0A202020202020202069706F73203A3D20313B0D0A202020202020
+      202054464E756D65726F203A3D2027273B0D0A20202020202020207B50617261
+      206578747261657220747265732064696769746F7320636164612076657A7D0D
+      0A20202020202020205768696C6520633031203C3D203520646F20426567696E
+      0D0A20202020202020202020633032203A3D20313B0D0A202020202020202020
+      205768696C6520633032203C3D203320646F20426567696E0D0A202020202020
+      202020202020207B45787472616520756E2064696769746F2063616461207665
+      7A20646520697A71756965726461206120646572656368617D0D0A2020202020
+      202020202020202020646967203A3D20537472546F496E7428436F7079284E75
+      6D546D702C2069706F732C203129293B0D0A2020202020202020202020202020
+      4361736520633032206F660D0A20202020202020202020202020202020202031
+      3A2063656E203A3D206469673B0D0A2020202020202020202020202020202020
+      20323A20646563203A3D206469673B0D0A202020202020202020202020202020
+      202020333A20756E69203A3D206469673B0D0A20202020202020202020202020
+      20456E643B0D0A2020202020202020202020202020633032203A3D2063303220
+      2B20313B0D0A202020202020202020202020202069706F73203A3D2069706F73
+      202B20313B0D0A20202020202020202020456E647B456E64205768696C652063
+      3031203C3D20337D3B0D0A202020202020202020206C6574726133203A3D2043
+      656E74656E6128756E692C206465632C2063656E293B0D0A2020202020202020
+      20206C6574726132203A3D20446563656E6128756E692C20646563293B0D0A20
+      2020202020202020206C6574726131203A3D20556E6964616428756E692C2064
+      6563293B0D0A0D0A202020202020202020204361736520633031206F660D0A20
+      202020202020202020202020202020313A426567696E0D0A2020202020202020
+      20202020202020202020202020204966202863656E202B20646563203D203029
+      20416E642028756E69203D203129205468656E0D0A2020202020202020202020
+      2020202020202020202020202020204C6579656E6461203A3D202742696C6C6F
+      6E20270D0A2020202020202020202020202020202020202020202020456C7365
+      204966202863656E203E203029204F722028646563203E203029204F72202875
+      6E69203E203129205468656E0D0A202020202020202020202020202020202020
+      20202020202020204C6579656E6461203A3D202742696C6C6F6E657320273B0D
+      0A202020202020202020202020202020202020456E643B0D0A20202020202020
+      202020202020202020323A426567696E0D0A2020202020202020202020202020
+      2020202020202020746D70203A3D20537472546F496E7428436F7079284E756D
+      546D702C20372C203329293B0D0A202020202020202020202020202020202020
+      202020204966202863656E202B20646563202B20756E69203E3D20312920416E
+      642028746D70203D203029205468656E0D0A2020202020202020202020202020
+      2020202020202020202020204C6579656E6461203A3D20274D696C204D696C6C
+      6F6E657320270D0A20202020202020202020202020202020202020202020456C
+      73652049662063656E202B20646563202B20756E69203E3D2031205468656E0D
+      0A20202020202020202020202020202020202020202020202020204C6579656E
+      6461203A3D20274D696C20273B0D0A2020202020202020202020202020202020
+      20456E643B0D0A20202020202020202020202020202020333A426567696E0D0A
+      202020202020202020202020202020202020202020204966202863656E202B20
+      646563203D20302920416E642028756E69203D203129205468656E0D0A202020
+      20202020202020202020202020202020202020202020204C6579656E6461203A
+      3D20274D696C6C6F6E20270D0A20202020202020202020202020202020202020
+      202020456C7365204966202863656E203E203029204F722028646563203E2030
+      29204F722028756E69203E203129205468656E0D0A2020202020202020202020
+      2020202020202020202020202020204C6579656E6461203A3D20274D696C6C6F
+      6E657320273B0D0A202020202020202020202020202020202020456E643B0D0A
+      20202020202020202020202020202020343A426567696E0D0A20202020202020
+      20202020202020202020202020202049662063656E202B20646563202B20756E
+      69203E3D2031205468656E0D0A20202020202020202020202020202020202020
+      202020202020204C6579656E6461203A3D20274D696C20273B0D0A2020202020
+      20202020202020202020202020456E643B0D0A20202020202020202020202020
+      202020353A426567696E0D0A2020202020202020202020202020202020204966
+      2063656E202B20646563202B20756E69203E3D2031205468656E0D0A20202020
+      202020202020202020202020202020204C6579656E6461203A3D2027273B0D0A
+      202020202020202020202020202020202020456E643B0D0A2020202020202020
+      2020456E643B0D0A20202020202020202020633031203A3D20633031202B2031
+      3B0D0A2020202020202020202054464E756D65726F203A3D2054464E756D6572
+      6F202B206C6574726133202B206C6574726132202B206C6574726131202B204C
+      6579656E64613B0D0A202020202020202020204C6579656E6461203A3D202727
+      3B0D0A202020202020202020206C6574726131203A3D2027273B0D0A20202020
+      2020202020206C6574726132203A3D2027273B0D0A202020202020202020206C
+      6574726133203A3D2027273B0D0A2020202020202020456E64207B456E642057
+      68696C6520633031203C3D20357D3B0D0A0D0A202020202020202054464E756D
+      65726F203A3D2054464E756D65726F2B4C6579656E6461313B0D0A0D0A202020
+      2020202020696620286943656E74696D6F73203C3E203029207468656E204265
+      67696E0D0A2020202020202020094E756D546D70203A3D20496E74546F537472
+      286943656E74696D6F73293B0D0A2020202020202020096966202843656E7469
+      6D6F73203D203029205468656E200D0A202020202020202009426567696E0D0A
+      2020202020202020202009094E756D546D70203A3D20537472696E674F664368
+      617250282730272C2033202D204C656E677468284E756D546D7029292B4E756D
+      546D703B0D0A202020202020202020200909633032203A3D20313B0D0A202020
+      20202020202020090969706F73203A3D20313B0D0A2020202020202020202009
+      095768696C6520633032203C3D203320646F20426567696E0D0A202020202020
+      202020202020202009097B45787472616520756E2064696769746F2063616461
+      2076657A20646520697A71756965726461206120646572656368617D0D0A2020
+      2020202020202020202020202020202009646967203A3D20537472546F496E74
+      28436F7079284E756D546D702C2069706F732C203129293B0D0A202020202020
+      202020202020202020202020094361736520633032206F660D0A202020202020
+      202020202020202020202020202020200909313A2063656E203A3D206469673B
+      0D0A202020202020202020202020202020202020202020200909323A20646563
+      203A3D206469673B0D0A20202020202020202020202020202020202020202020
+      0909333A20756E69203A3D206469673B0D0A2020202020202020202020202020
+      2020202009456E643B0D0A202020202020202020202020202020202020096330
+      32203A3D20633032202B20313B0D0A2020202020202020202020202020202020
+      200969706F73203A3D2069706F73202B20313B0D0A2020202020202020202009
+      09456E647B456E64205768696C6520633031203C3D20337D3B0D0A2020202020
+      202020202009096C6574726133203A3D2043656E74656E6128756E692C206465
+      632C2063656E293B0D0A2020202020202020202009096C6574726132203A3D20
+      446563656E6128756E692C20646563293B0D0A2020202020202020202009096C
+      6574726131203A3D20556E6964616428756E692C20646563293B0D0A20202020
+      202020202020090954464E756D65726F203A3D2054464E756D65726F202B2027
+      636F6E20272B4C65747261332B4C65747261322B4C65747261312B2763656E74
+      696D6F73273B0D0A20202020202020202009456E640D0A0909656C7365204265
+      67696E0D0A0909096966204C656E677468284E756D546D7029203C2032207468
+      656E0D0A090909094E756D546D70203A3D20537472696E674F66436861725028
+      2730272C3129202B204E756D546D703B0D0A09090954464E756D65726F203A3D
+      2054464E756D65726F202B2027636F6E20272B4E756D546D702B272F31303027
+      3B0D0A0909456E643B0D0A2020202020202020456E643B0D0A2020656E643B0D
+      0A0D0A20204966204D6179757363756C6173203D2031205468656E0D0A202020
+      2054464E756D65726F203A3D205570706572436173652854464E756D65726F29
+      0D0A2020456C7365204966204D6179757363756C6173203D2030205468656E0D
+      0A2020202054464E756D65726F203A3D204C6F776572436173652854464E756D
+      65726F293B0D0A2020526573756C74203A3D2054464E756D65726F3B0D0A456E
+      643B0D0A084361726574506F730102000200000001060A54726150726F677261
+      6D094368696C645479706502150E497346756E6374696F6E54797065090B5072
+      6F6772616D4E616D650606556E696461640B50726F6772616D54797065070A74
+      7446756E6374696F6E06536F757263650CF401000046756E6374696F6E20556E
+      696461642856617220756E692C206465633A496E7465676572293A537472696E
+      673B0D0A7661720D0A2020202063546578746F203A20537472696E673B0D0A42
+      6567696E0D0A2020202063546578746F203A3D2027273B0D0A20202020496620
+      646563203C3E2031205468656E0D0A20202020202020204361736520756E6920
+      6F660D0A202020202020202020202020313A2063546578746F203A3D2027756E
+      20273B0D0A202020202020202020202020323A2063546578746F203A3D202764
+      6F7320273B0D0A202020202020202020202020333A2063546578746F203A3D20
+      277472657320273B0D0A202020202020202020202020343A2063546578746F20
+      3A3D202763756174726F20273B0D0A202020202020202020202020353A206354
+      6578746F203A3D202763696E636F20273B0D0A2020202020202020456E643B0D
+      0A0D0A20204361736520756E69206F660D0A20202020363A2063546578746F20
+      3A3D20277365697320273B0D0A20202020373A2063546578746F203A3D202773
+      6965746520273B0D0A20202020383A2063546578746F203A3D20276F63686F20
+      273B0D0A20202020393A2063546578746F203A3D20276E7565766520273B0D0A
+      2020456E643B0D0A0D0A2020526573756C74203A3D2063546578746F3B0D0A45
+      6E643B0D0A0D0A0D0A084361726574506F7301022E0212000001060F54726145
+      76656E7448616E646C65720B50726F6772616D4E616D65061444657461696C42
+      65666F726547656E65726174650B50726F6772616D54797065070B747450726F
+      63656475726506536F7572636506E370726F6365647572652044657461696C42
+      65666F726547656E65726174653B0D0A626567696E0D0A206C6162656C372E43
+      617074696F6E203A3D2027202020202020202A2A2A2A2A272B4E756D4C657472
+      61732842616E636F735F5472616E73616363696F6E65735B2744656269746F27
+      5D202C312C31292B272A2A2A2A2A2A273B0D0A656E643B202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020202020202020200D0A0D436F6D706F6E656E744E616D65
+      060644657461696C094576656E744E616D65060E4265666F726547656E657261
+      7465074576656E744944021A084361726574506F7301024B0203000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView3: TdaADOQueryDataView
+      UserName = 'Query_Proveedores_Datos_de_Transferencias'
+      Height = 165
+      Left = 362
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 708
+      TypeColumnWidth = 52
+      Width = 410
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Bancos_Transacciones'
+      object Proveedores_Datos_de_Transferencias: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Proveedores_Datos_de_Transferencias'
+        MasterDataPipelineName = 'Bancos_Transacciones'
+        object ppField1: TppField
+          FieldAlias = 'Cod_Proveedor'
+          FieldName = 'CodProv'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAPROV_02'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Direccion_de_email'
+          FieldName = 'Direccion_de_email'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAPROV_02'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Numero_de_cuenta'
+          FieldName = 'Numero_de_cuenta'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAPROV_02'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Tipo_de_cuenta_a_transferir'
+          FieldName = 'Tipo_de_cuenta_a_transfer'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAPROV_02'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'CodBene'
+          CollationType = ctASCII
+          GuidCollationType = gcString
+          DetailFieldName = 'CodProv'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL3: TdaSQL
+        CollationType = ctASCII
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Proveedores_Datos_de_Transferencias'
+        IsCaseSensitive = True
+        LinkColor = clGreen
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT SAPROV_02.CodProv, '
+          '       SAPROV_02.Direccion_de_email, '
+          '       SAPROV_02.Numero_de_cuenta, '
+          
+            '       SAPROV_02.Tipo_de_cuenta_a_transferir Tipo_de_cuenta_a_tr' +
+            'ansfer'
+          'FROM SAPROV_02 SAPROV_02')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Cod_Proveedor'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Proveedor'
+          FieldLength = 15
+          FieldName = 'CodProv'
+          SQLFieldName = 'CodProv'
+          TableAlias = 'Proveedores:Datos_de_Transferencias'
+          TableName = 'SAPROV_02'
+          TableSQLAlias = 'SAPROV_02'
+        end
+        object daField2: TdaField
+          Alias = 'Direccion_de_email'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion_de_email'
+          FieldLength = 35
+          FieldName = 'Direccion_de_email'
+          SQLFieldName = 'Direccion_de_email'
+          TableAlias = 'Proveedores:Datos_de_Transferencias'
+          TableName = 'SAPROV_02'
+          TableSQLAlias = 'SAPROV_02'
+        end
+        object daField3: TdaField
+          Alias = 'Numero_de_cuenta'
+          DisplayWidth = 10
+          FieldAlias = 'Numero_de_cuenta'
+          FieldLength = 20
+          FieldName = 'Numero_de_cuenta'
+          SQLFieldName = 'Numero_de_cuenta'
+          TableAlias = 'Proveedores:Datos_de_Transferencias'
+          TableName = 'SAPROV_02'
+          TableSQLAlias = 'SAPROV_02'
+        end
+        object daField4: TdaField
+          Alias = 'Tipo_de_cuenta_a_transferir'
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_de_cuenta_a_transferir'
+          FieldLength = 35
+          FieldName = 'Tipo_de_cuenta_a_transferir'
+          SQLFieldName = 'Tipo_de_cuenta_a_transfer'
+          TableAlias = 'Proveedores:Datos_de_Transferencias'
+          TableName = 'SAPROV_02'
+          TableSQLAlias = 'SAPROV_02'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Proveedores:Datos_de_Transferencias'
+          JoinType = dajtNone
+          SQLAlias = 'SAPROV_02'
+          TableAlias = 'Proveedores:Datos_de_Transferencias'
+          TableName = 'SAPROV_02'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField5: TdaField
+            ChildType = 10
+            Alias = 'Codigo_Beneficiario'
+            DisplayWidth = 10
+            FieldAlias = 'Codigo_Beneficiario'
+            FieldLength = 30
+            FieldName = 'CodBene'
+            SQLFieldName = 'CodBene'
+            TableAlias = 'Bancos_Transacciones'
+            TableName = 'SBTRAN'
+            TableSQLAlias = 'SBTRAN'
+          end
+          object daField6: TdaField
+            ChildType = 11
+            Alias = 'Cod_Proveedor'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Proveedor'
+            FieldLength = 15
+            FieldName = 'CodProv'
+            SQLFieldName = 'CodProv'
+            TableAlias = 'Proveedores:Datos_de_Transferencias'
+            TableName = 'SAPROV_02'
+            TableSQLAlias = 'SAPROV_02'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Cuentas_pagar'
+      Height = 329
+      Left = 404
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 937
+      TypeColumnWidth = 52
+      Width = 326
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Bancos_Transacciones'
+      object Cuentas_pagar: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Cuentas_pagar'
+        MasterDataPipelineName = 'Bancos_Transacciones'
+        object ppField1: TppField
+          FieldAlias = 'Adelantos'
+          FieldName = 'CancelA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAACXP'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Afecta_compras'
+          FieldName = 'AfectaCom'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAACXP'
+        end
+        object ppField3: TppField
+          FieldAlias = 'AutSRI'
+          FieldName = 'AutSRI'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAACXP'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Base_imponible'
+          FieldName = 'BaseImpo'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAACXP'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Cheques'
+          FieldName = 'CancelC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SAACXP'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Cod_operacion'
+          FieldName = 'CodOper'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SAACXP'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cod_Proveedor'
+          FieldName = 'CodProv'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SAACXP'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Creditos'
+          FieldName = 'Creditos'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SAACXP'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Debitos'
+          FieldName = 'Debitos'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SAACXP'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SAACXP'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Descuento'
+          FieldName = 'CancelD'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SAACXP'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Detalle'
+          FieldName = 'Document'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SAACXP'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Detalle_cheque'
+          FieldName = 'DetalChq'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SAACXP'
+        end
+        object ppField14: TppField
+          FieldAlias = 'DocAfectado'
+          FieldName = 'NumeroN'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SAACXP'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Efectivo'
+          FieldName = 'CancelE'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SAACXP'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Emision'
+          FieldName = 'FechaE'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SAACXP'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Es_pago'
+          FieldName = 'EsUnPago'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SAACXP'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Es_RetencionIVA'
+          FieldName = 'EsReten'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SAACXP'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Estacion'
+          FieldName = 'CodEsta'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SAACXP'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Exento'
+          FieldName = 'TExento'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SAACXP'
+        end
+        object ppField21: TppField
+          FieldAlias = 'F_Factura'
+          FieldName = 'FechaI'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'SAACXP'
+        end
+        object ppField22: TppField
+          FieldAlias = 'F_Transaccion'
+          FieldName = 'FechaT'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'SAACXP'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Factor_Cambio'
+          FieldName = 'Factor'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'SAACXP'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Fecha_Retencion'
+          FieldName = 'FechaR'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'SAACXP'
+        end
+        object ppField25: TppField
+          FieldAlias = 'fromtran'
+          FieldName = 'fromtran'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'SAACXP'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Giros'
+          FieldName = 'CancelG'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'SAACXP'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Identificador'
+          FieldName = 'ID3'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'SAACXP'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Impuestos'
+          FieldName = 'MtoTax'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'SAACXP'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Impuestos_Org'
+          FieldName = 'OrgTax'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'SAACXP'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Instrumento_pago'
+          FieldName = 'CancelT'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'SAACXP'
+        end
+        object ppField31: TppField
+          FieldAlias = 'LibroIVA'
+          FieldName = 'EsLibroI'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'SAACXP'
+        end
+        object ppField32: TppField
+          FieldAlias = 'Monto'
+          FieldName = 'Monto'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'SAACXP'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Monto_Referencial'
+          FieldName = 'MontoMEx'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'SAACXP'
+        end
+        object ppField34: TppField
+          FieldAlias = 'MontoNeto'
+          FieldName = 'MontoNeto'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'SAACXP'
+        end
+        object ppField35: TppField
+          FieldAlias = 'Notas1'
+          FieldName = 'Notas1'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'SAACXP'
+        end
+        object ppField36: TppField
+          FieldAlias = 'Notas10'
+          FieldName = 'Notas10'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'SAACXP'
+        end
+        object ppField37: TppField
+          FieldAlias = 'Notas2'
+          FieldName = 'Notas2'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'SAACXP'
+        end
+        object ppField38: TppField
+          FieldAlias = 'Notas3'
+          FieldName = 'Notas3'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'SAACXP'
+        end
+        object ppField39: TppField
+          FieldAlias = 'Notas4'
+          FieldName = 'Notas4'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'SAACXP'
+        end
+        object ppField40: TppField
+          FieldAlias = 'Notas5'
+          FieldName = 'Notas5'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'SAACXP'
+        end
+        object ppField41: TppField
+          FieldAlias = 'Notas6'
+          FieldName = 'Notas6'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'SAACXP'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Notas7'
+          FieldName = 'Notas7'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'SAACXP'
+        end
+        object ppField43: TppField
+          FieldAlias = 'Notas8'
+          FieldName = 'Notas8'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'SAACXP'
+        end
+        object ppField44: TppField
+          FieldAlias = 'Notas9'
+          FieldName = 'Notas9'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'SAACXP'
+        end
+        object ppField45: TppField
+          FieldAlias = 'NroEstable'
+          FieldName = 'NroEstable'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'SAACXP'
+        end
+        object ppField46: TppField
+          FieldAlias = 'NroRegi'
+          FieldName = 'NroRegi'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'SAACXP'
+        end
+        object ppField47: TppField
+          FieldAlias = 'NroUnico'
+          FieldName = 'NroUnico'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 46
+          Searchable = False
+          Sortable = False
+          TableName = 'SAACXP'
+        end
+        object ppField48: TppField
+          FieldAlias = 'Numero'
+          FieldName = 'NumeroD'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 47
+          TableName = 'SAACXP'
+        end
+        object ppField49: TppField
+          FieldAlias = 'Numero_Control'
+          FieldName = 'NroCtrol'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 48
+          TableName = 'SAACXP'
+        end
+        object ppField50: TppField
+          FieldAlias = 'Orden_De_Pago'
+          FieldName = 'NroOPago'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 49
+          TableName = 'SAACXP'
+        end
+        object ppField51: TppField
+          FieldAlias = 'PtoEmision'
+          FieldName = 'PtoEmision'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 50
+          TableName = 'SAACXP'
+        end
+        object ppField52: TppField
+          FieldAlias = 'Ret_impuesto'
+          FieldName = 'CancelI'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 51
+          TableName = 'SAACXP'
+        end
+        object ppField53: TppField
+          FieldAlias = 'Retencion_IVA'
+          FieldName = 'RetenIVA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 52
+          TableName = 'SAACXP'
+        end
+        object ppField54: TppField
+          FieldAlias = 'Saldo_actual'
+          FieldName = 'SaldoAct'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 53
+          TableName = 'SAACXP'
+        end
+        object ppField55: TppField
+          FieldAlias = 'Saldo_cuenta'
+          FieldName = 'Saldo'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 54
+          TableName = 'SAACXP'
+        end
+        object ppField56: TppField
+          FieldAlias = 'Saldo_Fecha'
+          FieldName = 'SaldoOrg'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 55
+          TableName = 'SAACXP'
+        end
+        object ppField57: TppField
+          FieldAlias = 'Saldo_Referencial'
+          FieldName = 'SaldoMEx'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 56
+          TableName = 'SAACXP'
+        end
+        object ppField58: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 57
+          TableName = 'SAACXP'
+        end
+        object ppField59: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'TipoCxP'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 58
+          TableName = 'SAACXP'
+        end
+        object ppField60: TppField
+          FieldAlias = 'Tipo_Ope'
+          FieldName = 'TipoTraE'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 59
+          TableName = 'SAACXP'
+        end
+        object ppField61: TppField
+          FieldAlias = 'Tipo_Sus'
+          FieldName = 'TipoSus'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 60
+          TableName = 'SAACXP'
+        end
+        object ppField62: TppField
+          FieldAlias = 'Usuario'
+          FieldName = 'CodUsua'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 61
+          TableName = 'SAACXP'
+        end
+        object ppField63: TppField
+          FieldAlias = 'Vencimiento'
+          FieldName = 'FechaV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 62
+          TableName = 'SAACXP'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'NroPpal'
+          CollationType = ctASCII
+          GuidCollationType = gcString
+          DetailFieldName = 'NroUnico'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL1: TdaSQL
+        CollationType = ctASCII
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Cuentas_pagar'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT SAACXP.CancelA, SAACXP.AfectaCom, '
+          '       SAACXP.AutSRI, SAACXP.BaseImpo, '
+          '       SAACXP.CancelC, SAACXP.CodOper, '
+          '       SAACXP.CodProv, SAACXP.Creditos, '
+          '       SAACXP.Debitos, SAACXP.Descrip, '
+          '       SAACXP.CancelD, SAACXP.Document, '
+          '       SAACXP.DetalChq, SAACXP.NumeroN, '
+          '       SAACXP.CancelE, SAACXP.FechaE, '
+          '       SAACXP.EsUnPago, SAACXP.EsReten, '
+          '       SAACXP.CodEsta, SAACXP.TExento, '
+          '       SAACXP.FechaI, SAACXP.FechaT, '
+          '       SAACXP.Factor, SAACXP.FechaR, '
+          '       SAACXP.fromtran, SAACXP.CancelG, '
+          '       SAACXP.ID3, SAACXP.MtoTax, SAACXP.OrgTax, '
+          '       SAACXP.CancelT, SAACXP.EsLibroI, '
+          '       SAACXP.Monto, SAACXP.MontoMEx, '
+          '       SAACXP.MontoNeto, SAACXP.Notas1, '
+          '       SAACXP.Notas10, SAACXP.Notas2, '
+          '       SAACXP.Notas3, SAACXP.Notas4, '
+          '       SAACXP.Notas5, SAACXP.Notas6, '
+          '       SAACXP.Notas7, SAACXP.Notas8, '
+          '       SAACXP.Notas9, SAACXP.NroEstable, '
+          '       SAACXP.NroRegi, SAACXP.NroUnico, '
+          '       SAACXP.NumeroD, SAACXP.NroCtrol, '
+          '       SAACXP.NroOPago, SAACXP.PtoEmision, '
+          '       SAACXP.CancelI, SAACXP.RetenIVA, '
+          '       SAACXP.SaldoAct, SAACXP.Saldo, '
+          '       SAACXP.SaldoOrg, SAACXP.SaldoMEx, '
+          '       SAACXP.CodSucu, SAACXP.TipoCxP, '
+          '       SAACXP.TipoTraE, SAACXP.TipoSus, '
+          '       SAACXP.CodUsua, SAACXP.FechaV'
+          'FROM SAACXP SAACXP'
+          'WHERE ( SAACXP.TipoCxP IN ('#39'50'#39','#39'41'#39') )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          Value = '50,41'
+          object TdaField
+            Alias = 'Tipo'
+            DisplayWidth = 10
+            FieldAlias = 'Tipo'
+            FieldLength = 10
+            FieldName = 'TipoCxP'
+            SQLFieldName = 'TipoCxP'
+            TableAlias = 'Cuentas_pagar'
+            TableName = 'SAACXP'
+            TableSQLAlias = 'SAACXP'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Adelantos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Adelantos'
+          FieldLength = 3
+          FieldName = 'CancelA'
+          SQLFieldName = 'CancelA'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField2: TdaField
+          Alias = 'Afecta_compras'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Afecta_compras'
+          FieldLength = 0
+          FieldName = 'AfectaCom'
+          SQLFieldName = 'AfectaCom'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField3: TdaField
+          Alias = 'AutSRI'
+          DisplayWidth = 10
+          FieldAlias = 'AutSRI'
+          FieldLength = 40
+          FieldName = 'AutSRI'
+          SQLFieldName = 'AutSRI'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField4: TdaField
+          Alias = 'Base_imponible'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Base_imponible'
+          FieldLength = 3
+          FieldName = 'BaseImpo'
+          SQLFieldName = 'BaseImpo'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField5: TdaField
+          Alias = 'Cheques'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cheques'
+          FieldLength = 3
+          FieldName = 'CancelC'
+          SQLFieldName = 'CancelC'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField6: TdaField
+          Alias = 'Cod_operacion'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_operacion'
+          FieldLength = 10
+          FieldName = 'CodOper'
+          SQLFieldName = 'CodOper'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField7: TdaField
+          Alias = 'Cod_Proveedor'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Proveedor'
+          FieldLength = 15
+          FieldName = 'CodProv'
+          SQLFieldName = 'CodProv'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField8: TdaField
+          Alias = 'Creditos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Creditos'
+          FieldLength = 3
+          FieldName = 'Creditos'
+          SQLFieldName = 'Creditos'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField9: TdaField
+          Alias = 'Debitos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Debitos'
+          FieldLength = 3
+          FieldName = 'Debitos'
+          SQLFieldName = 'Debitos'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField10: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField11: TdaField
+          Alias = 'Descuento'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Descuento'
+          FieldLength = 3
+          FieldName = 'CancelD'
+          SQLFieldName = 'CancelD'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField12: TdaField
+          Alias = 'Detalle'
+          DisplayWidth = 10
+          FieldAlias = 'Detalle'
+          FieldLength = 40
+          FieldName = 'Document'
+          SQLFieldName = 'Document'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField13: TdaField
+          Alias = 'Detalle_cheque'
+          DisplayWidth = 10
+          FieldAlias = 'Detalle_cheque'
+          FieldLength = 40
+          FieldName = 'DetalChq'
+          SQLFieldName = 'DetalChq'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField14: TdaField
+          Alias = 'DocAfectado'
+          DisplayWidth = 10
+          FieldAlias = 'DocAfectado'
+          FieldLength = 20
+          FieldName = 'NumeroN'
+          SQLFieldName = 'NumeroN'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField15: TdaField
+          Alias = 'Efectivo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Efectivo'
+          FieldLength = 3
+          FieldName = 'CancelE'
+          SQLFieldName = 'CancelE'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField16: TdaField
+          Alias = 'Emision'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Emision'
+          FieldLength = 0
+          FieldName = 'FechaE'
+          SQLFieldName = 'FechaE'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField17: TdaField
+          Alias = 'Es_pago'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Es_pago'
+          FieldLength = 0
+          FieldName = 'EsUnPago'
+          SQLFieldName = 'EsUnPago'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField18: TdaField
+          Alias = 'Es_RetencionIVA'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Es_RetencionIVA'
+          FieldLength = 0
+          FieldName = 'EsReten'
+          SQLFieldName = 'EsReten'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField19: TdaField
+          Alias = 'Estacion'
+          DisplayWidth = 10
+          FieldAlias = 'Estacion'
+          FieldLength = 10
+          FieldName = 'CodEsta'
+          SQLFieldName = 'CodEsta'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField20: TdaField
+          Alias = 'Exento'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Exento'
+          FieldLength = 3
+          FieldName = 'TExento'
+          SQLFieldName = 'TExento'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField21: TdaField
+          Alias = 'F_Factura'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'F_Factura'
+          FieldLength = 0
+          FieldName = 'FechaI'
+          SQLFieldName = 'FechaI'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField22: TdaField
+          Alias = 'F_Transaccion'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'F_Transaccion'
+          FieldLength = 0
+          FieldName = 'FechaT'
+          SQLFieldName = 'FechaT'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField23: TdaField
+          Alias = 'Factor_Cambio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Factor_Cambio'
+          FieldLength = 3
+          FieldName = 'Factor'
+          SQLFieldName = 'Factor'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField24: TdaField
+          Alias = 'Fecha_Retencion'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha_Retencion'
+          FieldLength = 0
+          FieldName = 'FechaR'
+          SQLFieldName = 'FechaR'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField25: TdaField
+          Alias = 'fromtran'
+          DisplayWidth = 10
+          FieldAlias = 'fromtran'
+          FieldLength = 0
+          FieldName = 'fromtran'
+          SQLFieldName = 'fromtran'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField26: TdaField
+          Alias = 'Giros'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Giros'
+          FieldLength = 3
+          FieldName = 'CancelG'
+          SQLFieldName = 'CancelG'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField27: TdaField
+          Alias = 'Identificador'
+          DisplayWidth = 10
+          FieldAlias = 'Identificador'
+          FieldLength = 15
+          FieldName = 'ID3'
+          SQLFieldName = 'ID3'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField28: TdaField
+          Alias = 'Impuestos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Impuestos'
+          FieldLength = 3
+          FieldName = 'MtoTax'
+          SQLFieldName = 'MtoTax'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField29: TdaField
+          Alias = 'Impuestos_Org'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Impuestos_Org'
+          FieldLength = 3
+          FieldName = 'OrgTax'
+          SQLFieldName = 'OrgTax'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField30: TdaField
+          Alias = 'Instrumento_pago'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Instrumento_pago'
+          FieldLength = 3
+          FieldName = 'CancelT'
+          SQLFieldName = 'CancelT'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField31: TdaField
+          Alias = 'LibroIVA'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'LibroIVA'
+          FieldLength = 0
+          FieldName = 'EsLibroI'
+          SQLFieldName = 'EsLibroI'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField32: TdaField
+          Alias = 'Monto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Monto'
+          FieldLength = 3
+          FieldName = 'Monto'
+          SQLFieldName = 'Monto'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField33: TdaField
+          Alias = 'Monto_Referencial'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Monto_Referencial'
+          FieldLength = 3
+          FieldName = 'MontoMEx'
+          SQLFieldName = 'MontoMEx'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField34: TdaField
+          Alias = 'MontoNeto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MontoNeto'
+          FieldLength = 3
+          FieldName = 'MontoNeto'
+          SQLFieldName = 'MontoNeto'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField35: TdaField
+          Alias = 'Notas1'
+          DisplayWidth = 10
+          FieldAlias = 'Notas1'
+          FieldLength = 60
+          FieldName = 'Notas1'
+          SQLFieldName = 'Notas1'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField36: TdaField
+          Alias = 'Notas10'
+          DisplayWidth = 10
+          FieldAlias = 'Notas10'
+          FieldLength = 60
+          FieldName = 'Notas10'
+          SQLFieldName = 'Notas10'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField37: TdaField
+          Alias = 'Notas2'
+          DisplayWidth = 10
+          FieldAlias = 'Notas2'
+          FieldLength = 60
+          FieldName = 'Notas2'
+          SQLFieldName = 'Notas2'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField38: TdaField
+          Alias = 'Notas3'
+          DisplayWidth = 10
+          FieldAlias = 'Notas3'
+          FieldLength = 60
+          FieldName = 'Notas3'
+          SQLFieldName = 'Notas3'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField39: TdaField
+          Alias = 'Notas4'
+          DisplayWidth = 10
+          FieldAlias = 'Notas4'
+          FieldLength = 60
+          FieldName = 'Notas4'
+          SQLFieldName = 'Notas4'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField40: TdaField
+          Alias = 'Notas5'
+          DisplayWidth = 10
+          FieldAlias = 'Notas5'
+          FieldLength = 60
+          FieldName = 'Notas5'
+          SQLFieldName = 'Notas5'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField41: TdaField
+          Alias = 'Notas6'
+          DisplayWidth = 10
+          FieldAlias = 'Notas6'
+          FieldLength = 60
+          FieldName = 'Notas6'
+          SQLFieldName = 'Notas6'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField42: TdaField
+          Alias = 'Notas7'
+          DisplayWidth = 10
+          FieldAlias = 'Notas7'
+          FieldLength = 60
+          FieldName = 'Notas7'
+          SQLFieldName = 'Notas7'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField43: TdaField
+          Alias = 'Notas8'
+          DisplayWidth = 10
+          FieldAlias = 'Notas8'
+          FieldLength = 60
+          FieldName = 'Notas8'
+          SQLFieldName = 'Notas8'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField44: TdaField
+          Alias = 'Notas9'
+          DisplayWidth = 10
+          FieldAlias = 'Notas9'
+          FieldLength = 60
+          FieldName = 'Notas9'
+          SQLFieldName = 'Notas9'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField45: TdaField
+          Alias = 'NroEstable'
+          DisplayWidth = 10
+          FieldAlias = 'NroEstable'
+          FieldLength = 10
+          FieldName = 'NroEstable'
+          SQLFieldName = 'NroEstable'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField46: TdaField
+          Alias = 'NroRegi'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NroRegi'
+          FieldLength = 0
+          FieldName = 'NroRegi'
+          SQLFieldName = 'NroRegi'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField47: TdaField
+          Alias = 'NroUnico'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NroUnico'
+          FieldLength = 0
+          FieldName = 'NroUnico'
+          Searchable = False
+          Sortable = False
+          SQLFieldName = 'NroUnico'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField48: TdaField
+          Alias = 'Numero'
+          DisplayWidth = 10
+          FieldAlias = 'Numero'
+          FieldLength = 20
+          FieldName = 'NumeroD'
+          SQLFieldName = 'NumeroD'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField49: TdaField
+          Alias = 'Numero_Control'
+          DisplayWidth = 10
+          FieldAlias = 'Numero_Control'
+          FieldLength = 20
+          FieldName = 'NroCtrol'
+          SQLFieldName = 'NroCtrol'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField50: TdaField
+          Alias = 'Orden_De_Pago'
+          DisplayWidth = 10
+          FieldAlias = 'Orden_De_Pago'
+          FieldLength = 15
+          FieldName = 'NroOPago'
+          SQLFieldName = 'NroOPago'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField51: TdaField
+          Alias = 'PtoEmision'
+          DisplayWidth = 10
+          FieldAlias = 'PtoEmision'
+          FieldLength = 10
+          FieldName = 'PtoEmision'
+          SQLFieldName = 'PtoEmision'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField52: TdaField
+          Alias = 'Ret_impuesto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Ret_impuesto'
+          FieldLength = 3
+          FieldName = 'CancelI'
+          SQLFieldName = 'CancelI'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField53: TdaField
+          Alias = 'Retencion_IVA'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Retencion_IVA'
+          FieldLength = 3
+          FieldName = 'RetenIVA'
+          SQLFieldName = 'RetenIVA'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField54: TdaField
+          Alias = 'Saldo_actual'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_actual'
+          FieldLength = 4
+          FieldName = 'SaldoAct'
+          SQLFieldName = 'SaldoAct'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField55: TdaField
+          Alias = 'Saldo_cuenta'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_cuenta'
+          FieldLength = 3
+          FieldName = 'Saldo'
+          SQLFieldName = 'Saldo'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField56: TdaField
+          Alias = 'Saldo_Fecha'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_Fecha'
+          FieldLength = 3
+          FieldName = 'SaldoOrg'
+          SQLFieldName = 'SaldoOrg'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField57: TdaField
+          Alias = 'Saldo_Referencial'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_Referencial'
+          FieldLength = 3
+          FieldName = 'SaldoMEx'
+          SQLFieldName = 'SaldoMEx'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField58: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField59: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 2
+          FieldName = 'TipoCxP'
+          SQLFieldName = 'TipoCxP'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField60: TdaField
+          Alias = 'Tipo_Ope'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Ope'
+          FieldLength = 0
+          FieldName = 'TipoTraE'
+          SQLFieldName = 'TipoTraE'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField61: TdaField
+          Alias = 'Tipo_Sus'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Sus'
+          FieldLength = 0
+          FieldName = 'TipoSus'
+          SQLFieldName = 'TipoSus'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField62: TdaField
+          Alias = 'Usuario'
+          DisplayWidth = 10
+          FieldAlias = 'Usuario'
+          FieldLength = 10
+          FieldName = 'CodUsua'
+          SQLFieldName = 'CodUsua'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daField63: TdaField
+          Alias = 'Vencimiento'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Vencimiento'
+          FieldLength = 0
+          FieldName = 'FechaV'
+          SQLFieldName = 'FechaV'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+          TableSQLAlias = 'SAACXP'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Cuentas_pagar'
+          JoinType = dajtNone
+          SQLAlias = 'SAACXP'
+          TableAlias = 'Cuentas_pagar'
+          TableName = 'SAACXP'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField64: TdaField
+            ChildType = 10
+            Alias = 'NroPrincipal'
+            DataType = dtLongint
+            DisplayWidth = 10
+            FieldAlias = 'NroPrincipal'
+            FieldLength = 0
+            FieldName = 'NroPpal'
+            SQLFieldName = 'NroPpal'
+            TableAlias = 'Bancos_Transacciones'
+            TableName = 'SBTRAN'
+            TableSQLAlias = 'SBTRAN'
+          end
+          object daField65: TdaField
+            ChildType = 11
+            Alias = 'NroUnico'
+            DataType = dtLongint
+            DisplayWidth = 10
+            FieldAlias = 'NroUnico'
+            FieldLength = 0
+            FieldName = 'NroUnico'
+            Searchable = False
+            Sortable = False
+            SQLFieldName = 'NroUnico'
+            TableAlias = 'Cuentas_pagar'
+            TableName = 'SAACXP'
+            TableSQLAlias = 'SAACXP'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView4: TdaADOQueryDataView
+      UserName = 'Query_VW_C_SACONF'
+      Height = 708
+      Left = 1308
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 755
+      TypeColumnWidth = 52
+      Width = 358
+      AutoSearchTabOrder = 0
+      object VW_C_SACONF: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'VW_C_SACONF'
+        object ppField1: TppField
+          FieldAlias = 'ADAPTACION'
+          FieldName = 'ADAPTACION'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Adicional'
+          FieldName = 'Adicional'
+          FieldLength = 400
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField3: TppField
+          FieldAlias = 'AutoReten'
+          FieldName = 'AutoReten'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Ciudad'
+          FieldName = 'Ciudad'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField5: TppField
+          FieldAlias = 'CodSucu'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField6: TppField
+          FieldAlias = 'CodTaxs'
+          FieldName = 'CodTaxs'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField7: TppField
+          FieldAlias = 'CorrelEstac'
+          FieldName = 'CorrelEstac'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField8: TppField
+          FieldAlias = 'CorrelPrd'
+          FieldName = 'CorrelPrd'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField9: TppField
+          FieldAlias = 'CorrelUNC'
+          FieldName = 'CorrelUNC'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField10: TppField
+          FieldAlias = 'CostoMes'
+          FieldName = 'CostoMes'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Descrip'
+          FieldName = 'Descrip'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField12: TppField
+          FieldAlias = 'DESCRIPCION'
+          FieldName = 'DESCRIPCION'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Direc1'
+          FieldName = 'Direc1'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Direc2'
+          FieldName = 'Direc2'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Email'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField16: TppField
+          FieldAlias = 'ENCABEZADO'
+          FieldName = 'ENCABEZADO'
+          FieldLength = 100
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField17: TppField
+          FieldAlias = 'EsMoneda'
+          FieldName = 'EsMoneda'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Estado'
+          FieldName = 'Estado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Factor'
+          FieldName = 'Factor'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField20: TppField
+          FieldAlias = 'FactorM'
+          FieldName = 'FactorM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField21: TppField
+          FieldAlias = 'FechaUC'
+          FieldName = 'FechaUC'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField22: TppField
+          FieldAlias = 'ID3'
+          FieldName = 'ID3'
+          FieldLength = 12
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField23: TppField
+          FieldAlias = 'IdAppNot'
+          FieldName = 'IdAppNot'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField24: TppField
+          FieldAlias = 'IdVersion'
+          FieldName = 'IdVersion'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField25: TppField
+          FieldAlias = 'IdVerXtra'
+          FieldName = 'IdVerXtra'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Imagen'
+          FieldName = 'Imagen'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField27: TppField
+          FieldAlias = 'ImpFleteC'
+          FieldName = 'ImpFleteC'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField28: TppField
+          FieldAlias = 'ImpFleteV'
+          FieldName = 'ImpFleteV'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField29: TppField
+          FieldAlias = 'InvConsig'
+          FieldName = 'InvConsig'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField30: TppField
+          FieldAlias = 'KeySerial'
+          FieldName = 'KeySerial'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField31: TppField
+          FieldAlias = 'LEMA'
+          FieldName = 'LEMA'
+          FieldLength = 1000
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField32: TppField
+          FieldAlias = 'LICMUN'
+          FieldName = 'LICMUN'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField33: TppField
+          FieldAlias = 'LOGO'
+          FieldName = 'LOGO'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField34: TppField
+          FieldAlias = 'LOGO2'
+          FieldName = 'LOGO2'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField35: TppField
+          FieldAlias = 'MesCurso'
+          FieldName = 'MesCurso'
+          FieldLength = 6
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField36: TppField
+          FieldAlias = 'MesesPtos'
+          FieldName = 'MesesPtos'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField37: TppField
+          FieldAlias = 'MesOC'
+          FieldName = 'MesOC'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField38: TppField
+          FieldAlias = 'MesPrf'
+          FieldName = 'MesPrf'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField39: TppField
+          FieldAlias = 'MesTran'
+          FieldName = 'MesTran'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField40: TppField
+          FieldAlias = 'MtoExtraG'
+          FieldName = 'MtoExtraG'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField41: TppField
+          FieldAlias = 'Municipio'
+          FieldName = 'Municipio'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField42: TppField
+          FieldAlias = 'NIC'
+          FieldName = 'NIC'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField43: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField44: TppField
+          FieldAlias = 'NroEstable'
+          FieldName = 'NroEstable'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField45: TppField
+          FieldAlias = 'NroSerial'
+          FieldName = 'NroSerial'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField46: TppField
+          FieldAlias = 'ObliOper'
+          FieldName = 'ObliOper'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField47: TppField
+          FieldAlias = 'Pais'
+          FieldName = 'Pais'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 46
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField48: TppField
+          FieldAlias = 'PaswLim'
+          FieldName = 'PaswLim'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 47
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField49: TppField
+          FieldAlias = 'PedirNCtrl'
+          FieldName = 'PedirNCtrl'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 48
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField50: TppField
+          FieldAlias = 'PIE'
+          FieldName = 'PIE'
+          FieldLength = 100
+          DisplayWidth = 10
+          Position = 49
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField51: TppField
+          FieldAlias = 'PorctReten'
+          FieldName = 'PorctReten'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 50
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField52: TppField
+          FieldAlias = 'PrioridadIC'
+          FieldName = 'PrioridadIC'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 51
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField53: TppField
+          FieldAlias = 'Redond'
+          FieldName = 'Redond'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 52
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField54: TppField
+          FieldAlias = 'RedTotal'
+          FieldName = 'RedTotal'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 53
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField55: TppField
+          FieldAlias = 'RetenIsrl'
+          FieldName = 'RetenIsrl'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 54
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField56: TppField
+          FieldAlias = 'RetenIVA'
+          FieldName = 'RetenIVA'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 55
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField57: TppField
+          FieldAlias = 'RIF'
+          FieldName = 'RIF'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 56
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField58: TppField
+          FieldAlias = 'RUCPwd'
+          FieldName = 'RUCPwd'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 57
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField59: TppField
+          FieldAlias = 'RUCUser'
+          FieldName = 'RUCUser'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 58
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField60: TppField
+          FieldAlias = 'SCiudad'
+          FieldName = 'SCiudad'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 59
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField61: TppField
+          FieldAlias = 'SEstado'
+          FieldName = 'SEstado'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 60
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField62: TppField
+          FieldAlias = 'SimbFac'
+          FieldName = 'SimbFac'
+          FieldLength = 3
+          DisplayWidth = 10
+          Position = 61
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField63: TppField
+          FieldAlias = 'SMunicipio'
+          FieldName = 'SMunicipio'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 62
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField64: TppField
+          FieldAlias = 'SPais'
+          FieldName = 'SPais'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 63
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField65: TppField
+          FieldAlias = 'Telef'
+          FieldName = 'Telef'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 64
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField66: TppField
+          FieldAlias = 'TipFac'
+          FieldName = 'TipFac'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 65
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField67: TppField
+          FieldAlias = 'TipoFac'
+          FieldName = 'TipoFac'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 66
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField68: TppField
+          FieldAlias = 'UsaFactorM'
+          FieldName = 'UsaFactorM'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 67
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField69: TppField
+          FieldAlias = 'UsaNEL'
+          FieldName = 'UsaNEL'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 68
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField70: TppField
+          FieldAlias = 'ValorPtos'
+          FieldName = 'ValorPtos'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 69
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField71: TppField
+          FieldAlias = 'ValorPtosV'
+          FieldName = 'ValorPtosV'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 70
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField72: TppField
+          FieldAlias = 'VERSION'
+          FieldName = 'VERSION'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 71
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField73: TppField
+          FieldAlias = 'ZipCode'
+          FieldName = 'ZipCode'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 72
+          TableName = 'VW_C_SACONF'
+        end
+      end
+      object daSQL4: TdaSQL
+        CollationType = ctASCII
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'VW_C_SACONF'
+        IsCaseSensitive = True
+        LinkColor = clPurple
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT VW_C_SACONF.ADAPTACION, '
+          '       VW_C_SACONF.Adicional, '
+          '       VW_C_SACONF.AutoReten, VW_C_SACONF.Ciudad, '
+          '       VW_C_SACONF.CodSucu, VW_C_SACONF.CodTaxs, '
+          '       VW_C_SACONF.CorrelEstac, '
+          '       VW_C_SACONF.CorrelPrd, '
+          '       VW_C_SACONF.CorrelUNC, '
+          '       VW_C_SACONF.CostoMes, VW_C_SACONF.Descrip, '
+          '       VW_C_SACONF.DESCRIPCION, '
+          '       VW_C_SACONF.Direc1, VW_C_SACONF.Direc2, '
+          '       VW_C_SACONF.Email, VW_C_SACONF.ENCABEZADO, '
+          '       VW_C_SACONF.EsMoneda, VW_C_SACONF.Estado, '
+          '       VW_C_SACONF.Factor, VW_C_SACONF.FactorM, '
+          '       VW_C_SACONF.FechaUC, VW_C_SACONF.ID3, '
+          '       VW_C_SACONF.IdAppNot, '
+          '       VW_C_SACONF.IdVersion, '
+          '       VW_C_SACONF.IdVerXtra, VW_C_SACONF.Imagen, '
+          '       VW_C_SACONF.ImpFleteC, '
+          '       VW_C_SACONF.ImpFleteV, '
+          '       VW_C_SACONF.InvConsig, '
+          '       VW_C_SACONF.KeySerial, VW_C_SACONF.LEMA, '
+          '       VW_C_SACONF.LICMUN, VW_C_SACONF.LOGO, '
+          '       VW_C_SACONF.LOGO2, VW_C_SACONF.MesCurso, '
+          '       VW_C_SACONF.MesesPtos, VW_C_SACONF.MesOC, '
+          '       VW_C_SACONF.MesPrf, VW_C_SACONF.MesTran, '
+          '       VW_C_SACONF.MtoExtraG, '
+          '       VW_C_SACONF.Municipio, VW_C_SACONF.NIC, '
+          '       VW_C_SACONF.NIT, VW_C_SACONF.NroEstable, '
+          '       VW_C_SACONF.NroSerial, '
+          '       VW_C_SACONF.ObliOper, VW_C_SACONF.Pais, '
+          '       VW_C_SACONF.PaswLim, '
+          '       VW_C_SACONF.PedirNCtrl, VW_C_SACONF.PIE, '
+          '       VW_C_SACONF.PorctReten, '
+          '       VW_C_SACONF.PrioridadIC, '
+          '       VW_C_SACONF.Redond, VW_C_SACONF.RedTotal, '
+          '       VW_C_SACONF.RetenIsrl, '
+          '       VW_C_SACONF.RetenIVA, VW_C_SACONF.RIF, '
+          '       VW_C_SACONF.RUCPwd, VW_C_SACONF.RUCUser, '
+          '       VW_C_SACONF.SCiudad, VW_C_SACONF.SEstado, '
+          '       VW_C_SACONF.SimbFac, '
+          '       VW_C_SACONF.SMunicipio, VW_C_SACONF.SPais, '
+          '       VW_C_SACONF.Telef, VW_C_SACONF.TipFac, '
+          '       VW_C_SACONF.TipoFac, '
+          '       VW_C_SACONF.UsaFactorM, '
+          '       VW_C_SACONF.UsaNEL, VW_C_SACONF.ValorPtos, '
+          '       VW_C_SACONF.ValorPtosV, '
+          '       VW_C_SACONF.VERSION, VW_C_SACONF.ZipCode'
+          'FROM VW_C_SACONF VW_C_SACONF')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'ADAPTACION'
+          DisplayWidth = 10
+          FieldAlias = 'ADAPTACION'
+          FieldLength = 60
+          FieldName = 'ADAPTACION'
+          SQLFieldName = 'ADAPTACION'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField2: TdaField
+          Alias = 'Adicional'
+          DisplayWidth = 10
+          FieldAlias = 'Adicional'
+          FieldLength = 400
+          FieldName = 'Adicional'
+          SQLFieldName = 'Adicional'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField3: TdaField
+          Alias = 'AutoReten'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'AutoReten'
+          FieldLength = 0
+          FieldName = 'AutoReten'
+          SQLFieldName = 'AutoReten'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField4: TdaField
+          Alias = 'Ciudad'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Ciudad'
+          FieldLength = 0
+          FieldName = 'Ciudad'
+          SQLFieldName = 'Ciudad'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField5: TdaField
+          Alias = 'CodSucu'
+          DisplayWidth = 10
+          FieldAlias = 'CodSucu'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField6: TdaField
+          Alias = 'CodTaxs'
+          DisplayWidth = 10
+          FieldAlias = 'CodTaxs'
+          FieldLength = 5
+          FieldName = 'CodTaxs'
+          SQLFieldName = 'CodTaxs'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField7: TdaField
+          Alias = 'CorrelEstac'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'CorrelEstac'
+          FieldLength = 0
+          FieldName = 'CorrelEstac'
+          SQLFieldName = 'CorrelEstac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField8: TdaField
+          Alias = 'CorrelPrd'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'CorrelPrd'
+          FieldLength = 0
+          FieldName = 'CorrelPrd'
+          SQLFieldName = 'CorrelPrd'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField9: TdaField
+          Alias = 'CorrelUNC'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'CorrelUNC'
+          FieldLength = 0
+          FieldName = 'CorrelUNC'
+          SQLFieldName = 'CorrelUNC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField10: TdaField
+          Alias = 'CostoMes'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CostoMes'
+          FieldLength = 3
+          FieldName = 'CostoMes'
+          SQLFieldName = 'CostoMes'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField11: TdaField
+          Alias = 'Descrip'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip'
+          FieldLength = 80
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField12: TdaField
+          Alias = 'DESCRIPCION'
+          DisplayWidth = 10
+          FieldAlias = 'DESCRIPCION'
+          FieldLength = 60
+          FieldName = 'DESCRIPCION'
+          SQLFieldName = 'DESCRIPCION'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField13: TdaField
+          Alias = 'Direc1'
+          DisplayWidth = 10
+          FieldAlias = 'Direc1'
+          FieldLength = 80
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField14: TdaField
+          Alias = 'Direc2'
+          DisplayWidth = 10
+          FieldAlias = 'Direc2'
+          FieldLength = 80
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField15: TdaField
+          Alias = 'Email'
+          DisplayWidth = 10
+          FieldAlias = 'Email'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField16: TdaField
+          Alias = 'ENCABEZADO'
+          DisplayWidth = 10
+          FieldAlias = 'ENCABEZADO'
+          FieldLength = 100
+          FieldName = 'ENCABEZADO'
+          SQLFieldName = 'ENCABEZADO'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField17: TdaField
+          Alias = 'EsMoneda'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsMoneda'
+          FieldLength = 0
+          FieldName = 'EsMoneda'
+          SQLFieldName = 'EsMoneda'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField18: TdaField
+          Alias = 'Estado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Estado'
+          FieldLength = 0
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField19: TdaField
+          Alias = 'Factor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Factor'
+          FieldLength = 3
+          FieldName = 'Factor'
+          SQLFieldName = 'Factor'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField20: TdaField
+          Alias = 'FactorM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'FactorM'
+          FieldLength = 3
+          FieldName = 'FactorM'
+          SQLFieldName = 'FactorM'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField21: TdaField
+          Alias = 'FechaUC'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaUC'
+          FieldLength = 0
+          FieldName = 'FechaUC'
+          SQLFieldName = 'FechaUC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField22: TdaField
+          Alias = 'ID3'
+          DisplayWidth = 10
+          FieldAlias = 'ID3'
+          FieldLength = 12
+          FieldName = 'ID3'
+          SQLFieldName = 'ID3'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField23: TdaField
+          Alias = 'IdAppNot'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'IdAppNot'
+          FieldLength = 0
+          FieldName = 'IdAppNot'
+          SQLFieldName = 'IdAppNot'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField24: TdaField
+          Alias = 'IdVersion'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'IdVersion'
+          FieldLength = 0
+          FieldName = 'IdVersion'
+          SQLFieldName = 'IdVersion'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField25: TdaField
+          Alias = 'IdVerXtra'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'IdVerXtra'
+          FieldLength = 0
+          FieldName = 'IdVerXtra'
+          SQLFieldName = 'IdVerXtra'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField26: TdaField
+          Alias = 'Imagen'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'Imagen'
+          FieldLength = 0
+          FieldName = 'Imagen'
+          Linkable = False
+          SQLFieldName = 'Imagen'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField27: TdaField
+          Alias = 'ImpFleteC'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ImpFleteC'
+          FieldLength = 0
+          FieldName = 'ImpFleteC'
+          SQLFieldName = 'ImpFleteC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField28: TdaField
+          Alias = 'ImpFleteV'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ImpFleteV'
+          FieldLength = 0
+          FieldName = 'ImpFleteV'
+          SQLFieldName = 'ImpFleteV'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField29: TdaField
+          Alias = 'InvConsig'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'InvConsig'
+          FieldLength = 0
+          FieldName = 'InvConsig'
+          SQLFieldName = 'InvConsig'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField30: TdaField
+          Alias = 'KeySerial'
+          DisplayWidth = 10
+          FieldAlias = 'KeySerial'
+          FieldLength = 10
+          FieldName = 'KeySerial'
+          SQLFieldName = 'KeySerial'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField31: TdaField
+          Alias = 'LEMA'
+          DisplayWidth = 10
+          FieldAlias = 'LEMA'
+          FieldLength = 1000
+          FieldName = 'LEMA'
+          SQLFieldName = 'LEMA'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField32: TdaField
+          Alias = 'LICMUN'
+          DisplayWidth = 10
+          FieldAlias = 'LICMUN'
+          FieldLength = 60
+          FieldName = 'LICMUN'
+          SQLFieldName = 'LICMUN'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField33: TdaField
+          Alias = 'LOGO'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'LOGO'
+          FieldLength = 0
+          FieldName = 'LOGO'
+          Linkable = False
+          SQLFieldName = 'LOGO'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField34: TdaField
+          Alias = 'LOGO2'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'LOGO2'
+          FieldLength = 0
+          FieldName = 'LOGO2'
+          Linkable = False
+          SQLFieldName = 'LOGO2'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField35: TdaField
+          Alias = 'MesCurso'
+          DisplayWidth = 10
+          FieldAlias = 'MesCurso'
+          FieldLength = 6
+          FieldName = 'MesCurso'
+          SQLFieldName = 'MesCurso'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField36: TdaField
+          Alias = 'MesesPtos'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesesPtos'
+          FieldLength = 0
+          FieldName = 'MesesPtos'
+          SQLFieldName = 'MesesPtos'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField37: TdaField
+          Alias = 'MesOC'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesOC'
+          FieldLength = 0
+          FieldName = 'MesOC'
+          SQLFieldName = 'MesOC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField38: TdaField
+          Alias = 'MesPrf'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesPrf'
+          FieldLength = 0
+          FieldName = 'MesPrf'
+          SQLFieldName = 'MesPrf'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField39: TdaField
+          Alias = 'MesTran'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesTran'
+          FieldLength = 0
+          FieldName = 'MesTran'
+          SQLFieldName = 'MesTran'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField40: TdaField
+          Alias = 'MtoExtraG'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoExtraG'
+          FieldLength = 3
+          FieldName = 'MtoExtraG'
+          SQLFieldName = 'MtoExtraG'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField41: TdaField
+          Alias = 'Municipio'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Municipio'
+          FieldLength = 0
+          FieldName = 'Municipio'
+          SQLFieldName = 'Municipio'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField42: TdaField
+          Alias = 'NIC'
+          DisplayWidth = 10
+          FieldAlias = 'NIC'
+          FieldLength = 60
+          FieldName = 'NIC'
+          SQLFieldName = 'NIC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField43: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField44: TdaField
+          Alias = 'NroEstable'
+          DisplayWidth = 10
+          FieldAlias = 'NroEstable'
+          FieldLength = 10
+          FieldName = 'NroEstable'
+          SQLFieldName = 'NroEstable'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField45: TdaField
+          Alias = 'NroSerial'
+          DisplayWidth = 10
+          FieldAlias = 'NroSerial'
+          FieldLength = 25
+          FieldName = 'NroSerial'
+          SQLFieldName = 'NroSerial'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField46: TdaField
+          Alias = 'ObliOper'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ObliOper'
+          FieldLength = 0
+          FieldName = 'ObliOper'
+          SQLFieldName = 'ObliOper'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField47: TdaField
+          Alias = 'Pais'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Pais'
+          FieldLength = 0
+          FieldName = 'Pais'
+          SQLFieldName = 'Pais'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField48: TdaField
+          Alias = 'PaswLim'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'PaswLim'
+          FieldLength = 0
+          FieldName = 'PaswLim'
+          SQLFieldName = 'PaswLim'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField49: TdaField
+          Alias = 'PedirNCtrl'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'PedirNCtrl'
+          FieldLength = 0
+          FieldName = 'PedirNCtrl'
+          SQLFieldName = 'PedirNCtrl'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField50: TdaField
+          Alias = 'PIE'
+          DisplayWidth = 10
+          FieldAlias = 'PIE'
+          FieldLength = 100
+          FieldName = 'PIE'
+          SQLFieldName = 'PIE'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField51: TdaField
+          Alias = 'PorctReten'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'PorctReten'
+          FieldLength = 3
+          FieldName = 'PorctReten'
+          SQLFieldName = 'PorctReten'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField52: TdaField
+          Alias = 'PrioridadIC'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'PrioridadIC'
+          FieldLength = 0
+          FieldName = 'PrioridadIC'
+          SQLFieldName = 'PrioridadIC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField53: TdaField
+          Alias = 'Redond'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Redond'
+          FieldLength = 0
+          FieldName = 'Redond'
+          SQLFieldName = 'Redond'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField54: TdaField
+          Alias = 'RedTotal'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'RedTotal'
+          FieldLength = 0
+          FieldName = 'RedTotal'
+          SQLFieldName = 'RedTotal'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField55: TdaField
+          Alias = 'RetenIsrl'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'RetenIsrl'
+          FieldLength = 0
+          FieldName = 'RetenIsrl'
+          SQLFieldName = 'RetenIsrl'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField56: TdaField
+          Alias = 'RetenIVA'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'RetenIVA'
+          FieldLength = 0
+          FieldName = 'RetenIVA'
+          SQLFieldName = 'RetenIVA'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField57: TdaField
+          Alias = 'RIF'
+          DisplayWidth = 10
+          FieldAlias = 'RIF'
+          FieldLength = 30
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField58: TdaField
+          Alias = 'RUCPwd'
+          DisplayWidth = 10
+          FieldAlias = 'RUCPwd'
+          FieldLength = 20
+          FieldName = 'RUCPwd'
+          SQLFieldName = 'RUCPwd'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField59: TdaField
+          Alias = 'RUCUser'
+          DisplayWidth = 10
+          FieldAlias = 'RUCUser'
+          FieldLength = 20
+          FieldName = 'RUCUser'
+          SQLFieldName = 'RUCUser'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField60: TdaField
+          Alias = 'SCiudad'
+          DisplayWidth = 10
+          FieldAlias = 'SCiudad'
+          FieldLength = 30
+          FieldName = 'SCiudad'
+          SQLFieldName = 'SCiudad'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField61: TdaField
+          Alias = 'SEstado'
+          DisplayWidth = 10
+          FieldAlias = 'SEstado'
+          FieldLength = 30
+          FieldName = 'SEstado'
+          SQLFieldName = 'SEstado'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField62: TdaField
+          Alias = 'SimbFac'
+          DisplayWidth = 10
+          FieldAlias = 'SimbFac'
+          FieldLength = 3
+          FieldName = 'SimbFac'
+          SQLFieldName = 'SimbFac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField63: TdaField
+          Alias = 'SMunicipio'
+          DisplayWidth = 10
+          FieldAlias = 'SMunicipio'
+          FieldLength = 30
+          FieldName = 'SMunicipio'
+          SQLFieldName = 'SMunicipio'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField64: TdaField
+          Alias = 'SPais'
+          DisplayWidth = 10
+          FieldAlias = 'SPais'
+          FieldLength = 30
+          FieldName = 'SPais'
+          SQLFieldName = 'SPais'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField65: TdaField
+          Alias = 'Telef'
+          DisplayWidth = 10
+          FieldAlias = 'Telef'
+          FieldLength = 40
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField66: TdaField
+          Alias = 'TipFac'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'TipFac'
+          FieldLength = 0
+          FieldName = 'TipFac'
+          SQLFieldName = 'TipFac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField67: TdaField
+          Alias = 'TipoFac'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'TipoFac'
+          FieldLength = 0
+          FieldName = 'TipoFac'
+          SQLFieldName = 'TipoFac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField68: TdaField
+          Alias = 'UsaFactorM'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'UsaFactorM'
+          FieldLength = 0
+          FieldName = 'UsaFactorM'
+          SQLFieldName = 'UsaFactorM'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField69: TdaField
+          Alias = 'UsaNEL'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'UsaNEL'
+          FieldLength = 0
+          FieldName = 'UsaNEL'
+          SQLFieldName = 'UsaNEL'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField70: TdaField
+          Alias = 'ValorPtos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'ValorPtos'
+          FieldLength = 3
+          FieldName = 'ValorPtos'
+          SQLFieldName = 'ValorPtos'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField71: TdaField
+          Alias = 'ValorPtosV'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'ValorPtosV'
+          FieldLength = 3
+          FieldName = 'ValorPtosV'
+          SQLFieldName = 'ValorPtosV'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField72: TdaField
+          Alias = 'VERSION'
+          DisplayWidth = 10
+          FieldAlias = 'VERSION'
+          FieldLength = 60
+          FieldName = 'VERSION'
+          SQLFieldName = 'VERSION'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField73: TdaField
+          Alias = 'ZipCode'
+          DisplayWidth = 10
+          FieldAlias = 'ZipCode'
+          FieldLength = 20
+          FieldName = 'ZipCode'
+          SQLFieldName = 'ZipCode'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'VW_C_SACONF'
+          JoinType = dajtNone
+          SQLAlias = 'VW_C_SACONF'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+        end
+      end
+    end
+    object daADOQueryDataView5: TdaADOQueryDataView
+      UserName = 'Query_Bancos_Detalle_Transacciones'
+      Height = 505
+      Left = 790
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 765
+      TypeColumnWidth = 52
+      Width = 425
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Bancos_Transacciones'
+      object Bancos_Detalle_Transacciones: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Bancos_Detalle_Transacciones'
+        MasterDataPipelineName = 'Bancos_Transacciones'
+        object ppField1: TppField
+          FieldAlias = 'Cod_Banco'
+          FieldName = 'CodBanc'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SBDTRN'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Cod_Cuenta'
+          FieldName = 'CodCta'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SBDTRN'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cod_operacion'
+          FieldName = 'CodOper'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SBDTRN'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo_Centro_Costo'
+          FieldName = 'CodCenCto'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SBDTRN'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Codigo_Tercero'
+          FieldName = 'CodTercero'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SBDTRN'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Consolidado'
+          FieldName = 'Consolidado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SBDTRN'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Credito'
+          FieldName = 'MtoCr'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SBDTRN'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Debito'
+          FieldName = 'MtoDb'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SBDTRN'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descripcion'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SBDTRN'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Descripcion_Tercero'
+          FieldName = 'Tercero'
+          FieldLength = 50
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SBDTRN'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Estacion'
+          FieldName = 'CodEsta'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SBDTRN'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Estado'
+          FieldName = 'Estado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SBDTRN'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Fecha'
+          FieldName = 'Fecha'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SBDTRN'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Fecha_Consolidacion'
+          FieldName = 'FConsolidado'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SBDTRN'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Monto'
+          FieldName = 'Monto'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SBDTRN'
+        end
+        object ppField16: TppField
+          FieldAlias = 'NoLinea'
+          FieldName = 'NLinea'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SBDTRN'
+        end
+        object ppField17: TppField
+          FieldAlias = 'NoOpe'
+          FieldName = 'NOpe'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SBDTRN'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Origen'
+          FieldName = 'Origen'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SBDTRN'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Si_Centro'
+          FieldName = 'SiCentro'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SBDTRN'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Si_Tercero'
+          FieldName = 'SiTercero'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SBDTRN'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'SBDTRN'
+        end
+        object ppField22: TppField
+          FieldAlias = 'TipoOpe'
+          FieldName = 'CDCD'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'SBDTRN'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Transferencia'
+          FieldName = 'EsTransf'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'SBDTRN'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Usuario'
+          FieldName = 'CodUsua'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'SBDTRN'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'NOpe'
+          CollationType = ctASCII
+          GuidCollationType = gcString
+          DetailFieldName = 'NOpe'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL5: TdaSQL
+        CollationType = ctASCII
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Bancos_Detalle_Transacciones'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT SBDTRN.CodBanc, SBDTRN.CodCta, '
+          '       SBDTRN.CodOper, SBDTRN.CodCenCto, '
+          '       SBDTRN.CodTercero, SBDTRN.Consolidado, '
+          '       SBDTRN.MtoCr, SBDTRN.MtoDb, '
+          '       SBDTRN.Descripcion, SBDTRN.Tercero, '
+          '       SBDTRN.CodEsta, SBDTRN.Estado, '
+          '       SBDTRN.Fecha, SBDTRN.FConsolidado, '
+          '       SBDTRN.Monto, SBDTRN.NLinea, SBDTRN.NOpe, '
+          '       SBDTRN.Origen, SBDTRN.SiCentro, '
+          '       SBDTRN.SiTercero, SBDTRN.CodSucu, '
+          '       SBDTRN.CDCD, SBDTRN.EsTransf, '
+          '       SBDTRN.CodUsua'
+          'FROM SBDTRN SBDTRN'
+          'ORDER BY SBDTRN.MtoCr')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Cod_Banco'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Banco'
+          FieldLength = 30
+          FieldName = 'CodBanc'
+          SQLFieldName = 'CodBanc'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField2: TdaField
+          Alias = 'Cod_Cuenta'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Cuenta'
+          FieldLength = 30
+          FieldName = 'CodCta'
+          SQLFieldName = 'CodCta'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField3: TdaField
+          Alias = 'Cod_operacion'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_operacion'
+          FieldLength = 10
+          FieldName = 'CodOper'
+          SQLFieldName = 'CodOper'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo_Centro_Costo'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Centro_Costo'
+          FieldLength = 30
+          FieldName = 'CodCenCto'
+          SQLFieldName = 'CodCenCto'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField5: TdaField
+          Alias = 'Codigo_Tercero'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Tercero'
+          FieldLength = 30
+          FieldName = 'CodTercero'
+          SQLFieldName = 'CodTercero'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField6: TdaField
+          Alias = 'Consolidado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Consolidado'
+          FieldLength = 0
+          FieldName = 'Consolidado'
+          SQLFieldName = 'Consolidado'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField7: TdaField
+          Alias = 'Credito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Credito'
+          FieldLength = 3
+          FieldName = 'MtoCr'
+          SQLFieldName = 'MtoCr'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField8: TdaField
+          Alias = 'Debito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Debito'
+          FieldLength = 3
+          FieldName = 'MtoDb'
+          SQLFieldName = 'MtoDb'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField9: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descripcion'
+          SQLFieldName = 'Descripcion'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField10: TdaField
+          Alias = 'Descripcion_Tercero'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion_Tercero'
+          FieldLength = 50
+          FieldName = 'Tercero'
+          SQLFieldName = 'Tercero'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField11: TdaField
+          Alias = 'Estacion'
+          DisplayWidth = 10
+          FieldAlias = 'Estacion'
+          FieldLength = 30
+          FieldName = 'CodEsta'
+          SQLFieldName = 'CodEsta'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField12: TdaField
+          Alias = 'Estado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Estado'
+          FieldLength = 0
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField13: TdaField
+          Alias = 'Fecha'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha'
+          FieldLength = 0
+          FieldName = 'Fecha'
+          SQLFieldName = 'Fecha'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField14: TdaField
+          Alias = 'Fecha_Consolidacion'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha_Consolidacion'
+          FieldLength = 0
+          FieldName = 'FConsolidado'
+          SQLFieldName = 'FConsolidado'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField15: TdaField
+          Alias = 'Monto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Monto'
+          FieldLength = 3
+          FieldName = 'Monto'
+          SQLFieldName = 'Monto'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField16: TdaField
+          Alias = 'NoLinea'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NoLinea'
+          FieldLength = 0
+          FieldName = 'NLinea'
+          SQLFieldName = 'NLinea'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField17: TdaField
+          Alias = 'NoOpe'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NoOpe'
+          FieldLength = 0
+          FieldName = 'NOpe'
+          SQLFieldName = 'NOpe'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField18: TdaField
+          Alias = 'Origen'
+          DisplayWidth = 10
+          FieldAlias = 'Origen'
+          FieldLength = 35
+          FieldName = 'Origen'
+          SQLFieldName = 'Origen'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField19: TdaField
+          Alias = 'Si_Centro'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Si_Centro'
+          FieldLength = 0
+          FieldName = 'SiCentro'
+          SQLFieldName = 'SiCentro'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField20: TdaField
+          Alias = 'Si_Tercero'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Si_Tercero'
+          FieldLength = 0
+          FieldName = 'SiTercero'
+          SQLFieldName = 'SiTercero'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField21: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField22: TdaField
+          Alias = 'TipoOpe'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'TipoOpe'
+          FieldLength = 0
+          FieldName = 'CDCD'
+          SQLFieldName = 'CDCD'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField23: TdaField
+          Alias = 'Transferencia'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Transferencia'
+          FieldLength = 0
+          FieldName = 'EsTransf'
+          SQLFieldName = 'EsTransf'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField24: TdaField
+          Alias = 'Usuario'
+          DisplayWidth = 10
+          FieldAlias = 'Usuario'
+          FieldLength = 30
+          FieldName = 'CodUsua'
+          SQLFieldName = 'CodUsua'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daField25: TdaField
+          ChildType = 2
+          Alias = 'Credito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Credito'
+          FieldLength = 10
+          FieldName = 'MtoCr'
+          SQLFieldName = 'MtoCr'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+          TableSQLAlias = 'SBDTRN'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Bancos_Detalle_Transacciones'
+          JoinType = dajtNone
+          SQLAlias = 'SBDTRN'
+          TableAlias = 'Bancos_Detalle_Transacciones'
+          TableName = 'SBDTRN'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField26: TdaField
+            ChildType = 10
+            Alias = 'NoOpe'
+            DataType = dtLongint
+            DisplayWidth = 10
+            FieldAlias = 'NoOpe'
+            FieldLength = 0
+            FieldName = 'NOpe'
+            SQLFieldName = 'NOpe'
+            TableAlias = 'Bancos_Transacciones'
+            TableName = 'SBTRAN'
+            TableSQLAlias = 'SBTRAN'
+          end
+          object daField27: TdaField
+            ChildType = 11
+            Alias = 'NoOpe'
+            DataType = dtLongint
+            DisplayWidth = 10
+            FieldAlias = 'NoOpe'
+            FieldLength = 0
+            FieldName = 'NOpe'
+            SQLFieldName = 'NOpe'
+            TableAlias = 'Bancos_Detalle_Transacciones'
+            TableName = 'SBDTRN'
+            TableSQLAlias = 'SBDTRN'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Bancos_Transacciones'
+      Height = 651
+      Left = 22
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 654
+      TypeColumnWidth = 52
+      Width = 294
+      AutoSearchTabOrder = 0
+      object Bancos_Transacciones: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Bancos_Transacciones'
+        object ppField1: TppField
+          FieldAlias = 'AOD'
+          FieldName = 'AOD'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SBTRAN'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Cod_Banco'
+          FieldName = 'CodBanc'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SBTRAN'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cod_operacion'
+          FieldName = 'CodOper'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SBTRAN'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo_Beneficiario'
+          FieldName = 'CodBene'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SBTRAN'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Comentario1'
+          FieldName = 'Comentario1'
+          FieldLength = 50
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SBTRAN'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Comentario2'
+          FieldName = 'Comentario2'
+          FieldLength = 50
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SBTRAN'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Comentario3'
+          FieldName = 'Comentario3'
+          FieldLength = 50
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SBTRAN'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Consolidado'
+          FieldName = 'Consolidado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SBTRAN'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Credito'
+          FieldName = 'MtoCr'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SBTRAN'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Cuenta_debito_bancario'
+          FieldName = 'CtaIDB'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SBTRAN'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Debito'
+          FieldName = 'MtoDb'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SBTRAN'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descripcion'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SBTRAN'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Descripcion_cuenta_debito_bancario'
+          FieldName = 'DCtaIDB'
+          FieldLength = 50
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SBTRAN'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Documento'
+          FieldName = 'Documento'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SBTRAN'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Endosable'
+          FieldName = 'Endosable'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SBTRAN'
+        end
+        object ppField16: TppField
+          FieldAlias = 'EsIDB'
+          FieldName = 'TipoOpe'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SBTRAN'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Estacion'
+          FieldName = 'CodEsta'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SBTRAN'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Estado'
+          FieldName = 'Estado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SBTRAN'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Fecha'
+          FieldName = 'Fecha'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SBTRAN'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Fecha_Conciliacion'
+          FieldName = 'FecConc'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SBTRAN'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Fecha_Consolidacion'
+          FieldName = 'FConsolidado'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'SBTRAN'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Memo'
+          FieldName = 'Memo'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 21
+          Searchable = False
+          Sortable = False
+          TableName = 'SBTRAN'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Monto'
+          FieldName = 'Monto'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'SBTRAN'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Monto_debito_bancario'
+          FieldName = 'MtoIDB'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'SBTRAN'
+        end
+        object ppField25: TppField
+          FieldAlias = 'NoOpe'
+          FieldName = 'NOpe'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'SBTRAN'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Nro_Comprobante'
+          FieldName = 'NroComp'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'SBTRAN'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Nro_Conciacion'
+          FieldName = 'NoConc'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'SBTRAN'
+        end
+        object ppField28: TppField
+          FieldAlias = 'NroPrincipal'
+          FieldName = 'NroPpal'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'SBTRAN'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Origen_Trn'
+          FieldName = 'OBCP'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'SBTRAN'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'SBTRAN'
+        end
+        object ppField31: TppField
+          FieldAlias = 'TipoCuenta'
+          FieldName = 'TDC'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'SBTRAN'
+        end
+        object ppField32: TppField
+          FieldAlias = 'TipoOpe'
+          FieldName = 'CDCD'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'SBTRAN'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Usuario'
+          FieldName = 'CodUsua'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'SBTRAN'
+        end
+      end
+      object daSQL2: TdaSQL
+        CollationType = ctASCII
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Bancos_Transacciones'
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SBTRAN.AOD, SBTRAN.CodBanc, '
+          '       SBTRAN.CodOper, SBTRAN.CodBene, '
+          '       SBTRAN.Comentario1, SBTRAN.Comentario2, '
+          '       SBTRAN.Comentario3, SBTRAN.Consolidado, '
+          '       SBTRAN.MtoCr, SBTRAN.CtaIDB, SBTRAN.MtoDb, '
+          '       SBTRAN.Descripcion, SBTRAN.DCtaIDB, '
+          '       SBTRAN.Documento, SBTRAN.Endosable, '
+          '       SBTRAN.TipoOpe, SBTRAN.CodEsta, '
+          '       SBTRAN.Estado, SBTRAN.Fecha, '
+          '       SBTRAN.FecConc, SBTRAN.FConsolidado, '
+          '       SBTRAN.Memo, SBTRAN.Monto, SBTRAN.MtoIDB, '
+          '       SBTRAN.NOpe, SBTRAN.NroComp, '
+          '       SBTRAN.NoConc, SBTRAN.NroPpal, '
+          '       SBTRAN.OBCP, SBTRAN.CodSucu, SBTRAN.TDC, '
+          '       SBTRAN.CDCD, SBTRAN.CodUsua'
+          'FROM SBTRAN SBTRAN'
+          'WHERE ( SBTRAN.CodBanc = '#39'10100007'#39' )'
+          '       AND ( SBTRAN.MtoCr < 1 )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = '10100007'
+          object TdaField
+            Alias = 'Cod_Banco'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Banco'
+            FieldLength = 10
+            FieldName = 'CodBanc'
+            SQLFieldName = 'CodBanc'
+            TableAlias = 'Bancos_Transacciones'
+            TableName = 'SBTRAN'
+            TableSQLAlias = 'SBTRAN'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoLessThan
+          Value = '1'
+          object TdaField
+            Alias = 'Credito'
+            DataType = dtDouble
+            DisplayWidth = 10
+            FieldAlias = 'Credito'
+            FieldLength = 10
+            FieldName = 'MtoCr'
+            SQLFieldName = 'MtoCr'
+            TableAlias = 'Bancos_Transacciones'
+            TableName = 'SBTRAN'
+            TableSQLAlias = 'SBTRAN'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'AOD'
+          DisplayWidth = 10
+          FieldAlias = 'AOD'
+          FieldLength = 1
+          FieldName = 'AOD'
+          SQLFieldName = 'AOD'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField2: TdaField
+          Alias = 'Cod_Banco'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Banco'
+          FieldLength = 30
+          FieldName = 'CodBanc'
+          SQLFieldName = 'CodBanc'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField3: TdaField
+          Alias = 'Cod_operacion'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_operacion'
+          FieldLength = 10
+          FieldName = 'CodOper'
+          SQLFieldName = 'CodOper'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo_Beneficiario'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Beneficiario'
+          FieldLength = 30
+          FieldName = 'CodBene'
+          SQLFieldName = 'CodBene'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField5: TdaField
+          Alias = 'Comentario1'
+          DisplayWidth = 10
+          FieldAlias = 'Comentario1'
+          FieldLength = 50
+          FieldName = 'Comentario1'
+          SQLFieldName = 'Comentario1'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField6: TdaField
+          Alias = 'Comentario2'
+          DisplayWidth = 10
+          FieldAlias = 'Comentario2'
+          FieldLength = 50
+          FieldName = 'Comentario2'
+          SQLFieldName = 'Comentario2'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField7: TdaField
+          Alias = 'Comentario3'
+          DisplayWidth = 10
+          FieldAlias = 'Comentario3'
+          FieldLength = 50
+          FieldName = 'Comentario3'
+          SQLFieldName = 'Comentario3'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField8: TdaField
+          Alias = 'Consolidado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Consolidado'
+          FieldLength = 0
+          FieldName = 'Consolidado'
+          SQLFieldName = 'Consolidado'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField9: TdaField
+          Alias = 'Credito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Credito'
+          FieldLength = 3
+          FieldName = 'MtoCr'
+          SQLFieldName = 'MtoCr'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField10: TdaField
+          Alias = 'Cuenta_debito_bancario'
+          DisplayWidth = 10
+          FieldAlias = 'Cuenta_debito_bancario'
+          FieldLength = 30
+          FieldName = 'CtaIDB'
+          SQLFieldName = 'CtaIDB'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField11: TdaField
+          Alias = 'Debito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Debito'
+          FieldLength = 3
+          FieldName = 'MtoDb'
+          SQLFieldName = 'MtoDb'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField12: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descripcion'
+          SQLFieldName = 'Descripcion'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField13: TdaField
+          Alias = 'Descripcion_cuenta_debito_bancario'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion_cuenta_debito_bancario'
+          FieldLength = 50
+          FieldName = 'DCtaIDB'
+          SQLFieldName = 'DCtaIDB'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField14: TdaField
+          Alias = 'Documento'
+          DisplayWidth = 10
+          FieldAlias = 'Documento'
+          FieldLength = 25
+          FieldName = 'Documento'
+          SQLFieldName = 'Documento'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField15: TdaField
+          Alias = 'Endosable'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Endosable'
+          FieldLength = 0
+          FieldName = 'Endosable'
+          SQLFieldName = 'Endosable'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField16: TdaField
+          Alias = 'EsIDB'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'EsIDB'
+          FieldLength = 0
+          FieldName = 'TipoOpe'
+          SQLFieldName = 'TipoOpe'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField17: TdaField
+          Alias = 'Estacion'
+          DisplayWidth = 10
+          FieldAlias = 'Estacion'
+          FieldLength = 30
+          FieldName = 'CodEsta'
+          SQLFieldName = 'CodEsta'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField18: TdaField
+          Alias = 'Estado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Estado'
+          FieldLength = 0
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField19: TdaField
+          Alias = 'Fecha'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha'
+          FieldLength = 0
+          FieldName = 'Fecha'
+          SQLFieldName = 'Fecha'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField20: TdaField
+          Alias = 'Fecha_Conciliacion'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha_Conciliacion'
+          FieldLength = 0
+          FieldName = 'FecConc'
+          SQLFieldName = 'FecConc'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField21: TdaField
+          Alias = 'Fecha_Consolidacion'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha_Consolidacion'
+          FieldLength = 0
+          FieldName = 'FConsolidado'
+          SQLFieldName = 'FConsolidado'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField22: TdaField
+          Alias = 'Memo'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Memo'
+          FieldLength = 0
+          FieldName = 'Memo'
+          Linkable = False
+          Searchable = False
+          Sortable = False
+          SQLFieldName = 'Memo'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField23: TdaField
+          Alias = 'Monto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Monto'
+          FieldLength = 3
+          FieldName = 'Monto'
+          SQLFieldName = 'Monto'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField24: TdaField
+          Alias = 'Monto_debito_bancario'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Monto_debito_bancario'
+          FieldLength = 3
+          FieldName = 'MtoIDB'
+          SQLFieldName = 'MtoIDB'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField25: TdaField
+          Alias = 'NoOpe'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NoOpe'
+          FieldLength = 0
+          FieldName = 'NOpe'
+          SQLFieldName = 'NOpe'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField26: TdaField
+          Alias = 'Nro_Comprobante'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Nro_Comprobante'
+          FieldLength = 0
+          FieldName = 'NroComp'
+          SQLFieldName = 'NroComp'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField27: TdaField
+          Alias = 'Nro_Conciacion'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Nro_Conciacion'
+          FieldLength = 0
+          FieldName = 'NoConc'
+          SQLFieldName = 'NoConc'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField28: TdaField
+          Alias = 'NroPrincipal'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NroPrincipal'
+          FieldLength = 0
+          FieldName = 'NroPpal'
+          SQLFieldName = 'NroPpal'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField29: TdaField
+          Alias = 'Origen_Trn'
+          DisplayWidth = 10
+          FieldAlias = 'Origen_Trn'
+          FieldLength = 1
+          FieldName = 'OBCP'
+          SQLFieldName = 'OBCP'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField30: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField31: TdaField
+          Alias = 'TipoCuenta'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'TipoCuenta'
+          FieldLength = 0
+          FieldName = 'TDC'
+          SQLFieldName = 'TDC'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField32: TdaField
+          Alias = 'TipoOpe'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'TipoOpe'
+          FieldLength = 0
+          FieldName = 'CDCD'
+          SQLFieldName = 'CDCD'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daField33: TdaField
+          Alias = 'Usuario'
+          DisplayWidth = 10
+          FieldAlias = 'Usuario'
+          FieldLength = 30
+          FieldName = 'CodUsua'
+          SQLFieldName = 'CodUsua'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+          TableSQLAlias = 'SBTRAN'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Bancos_Transacciones'
+          JoinType = dajtNone
+          SQLAlias = 'SBTRAN'
+          TableAlias = 'Bancos_Transacciones'
+          TableName = 'SBTRAN'
+        end
+      end
+    end
+  end
+  object ppDesignLayers2: TppDesignLayers
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

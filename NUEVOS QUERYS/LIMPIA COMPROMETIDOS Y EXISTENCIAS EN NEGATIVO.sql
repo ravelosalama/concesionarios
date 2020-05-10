@@ -1,0 +1,21 @@
+-- SELECT * FROM SAEXIS 
+
+
+UPDATE SAEXIS SET CANTCOM=0, CantPed=0, UnidPed=0 
+
+UPDATE SAEXIS SET EXISTEN=0 WHERE EXISTEN<0
+
+UPDATE SAPROD SET COMPRO=0, PEDIDO=0
+
+
+ 
+--SELECT * FROM SAEXIS 
+
+--SELECT * FROM SAPROD
+
+/*
+SELECT     X.CodOper, X.Descrip, Y.CodOper AS Expr1, Y.Descrip AS Expr2
+FROM         BAKSAOPER AS X LEFT OUTER JOIN
+                      SAOPER AS Y ON X.CodOper = Y.CodOper
+                      */
+

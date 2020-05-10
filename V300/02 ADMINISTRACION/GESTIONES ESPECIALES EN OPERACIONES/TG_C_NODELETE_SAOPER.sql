@@ -1,0 +1,27 @@
+
+-- DETECTA INTENTO DE ELIMINAR REGISTRO EN SAOPER Y LO CANCELA
+ 
+if exists (select * from dbo.sysobjects where id = object_id(N'[TG_C_NODELETE_SAOPER]'))
+drop TRIGGER [TG_C_NODELETE_SAOPER]  
+GO
+ 
+CREATE TRIGGER dbo.TG_C_NODELETE_SAOPER ON SAOPER FOR DELETE
+AS
+
+BEGIN
+ DECLARE @DESCRIPERROR VARCHAR(200)
+ DECLARE @AHORA VARCHAR(30)
+
+ SET @AHORA = convert(varchar(8), getdate(), 112) + 
+                     ' ' + 
+                     convert(varchar(12), getdate(), 114)
+ SET @DESCRIPERROR='DELETE DETECTADO EN OPERACIONES A LAS:'+@AHORA  
+ RAISERROR (@DESCRIPERROR,16,1)
+ ROLLBACK TRANSACTION
+ RETURN
+END
+
+
+
+
+

@@ -1,0 +1,13 @@
+
+  SELECT CODPROD,REFERE FROM SAPROD WHERE CodInst='12' AND (Refere <> CodProd)
+
+
+--UPDATE SAPROD SET Refere=CodProd WHERE CodInst='12' AND (Refere IS NULL OR Refere='')
+
+
+
+-- CORRIGE PRODUCTOS COLOCADOS EN LOTIFICACION POR ERROR /RORAIMA
+
+UPDATE    SAPROD
+SET              CodInst = '32'
+WHERE     (CodInst = '37')

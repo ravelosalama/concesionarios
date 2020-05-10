@@ -1,0 +1,6216 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.VW_SAFACT
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 210000
+  PrinterSetup.mmPaperWidth = 297000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = 'VENTAS DESPLEGADO'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'D:\Usuarios\Ravelo\Documents\Dropbox\SAINT\CONCESIONARIOS\V311\V' +
+    'ENTAS DESPLAGADOS.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = []
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<EncontrarTexto>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 176
+  Top = 88
+  Version = '16.03'
+  mmColumnWidth = 0
+  DataPipelineName = 'VW_SAFACT'
+  object ppHeaderBand1: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 23548
+    mmPrintPosition = 0
+    object ppDBText12: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText12'
+      AutoSize = True
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView2.VW_C_SACONF
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'VW_C_SACONF'
+      mmHeight = 6085
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 18785
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText13: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText13'
+      AutoSize = True
+      DataField = 'RIF'
+      DataPipeline = daADOQueryDataView2.VW_C_SACONF
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'VW_C_SACONF'
+      mmHeight = 4233
+      mmLeft = 0
+      mmTop = 6350
+      mmWidth = 5292
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel12: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label12'
+      Caption = 'RELACION DE VENTAS POR VENDEDOR'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 14
+      Font.Style = [fsBold, fsUnderline]
+      FormField = False
+      Transparent = True
+      mmHeight = 6086
+      mmLeft = 98954
+      mmTop = 4233
+      mmWidth = 100278
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable1: TppSystemVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'SystemVariable1'
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3440
+      mmLeft = 239713
+      mmTop = 0
+      mmWidth = 38629
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'SystemVariable2'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3440
+      mmLeft = 269338
+      mmTop = 4233
+      mmWidth = 8995
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppMemo1: TppMemo
+      DesignLayer = ppDesignLayer1
+      UserName = 'Memo1'
+      Caption = 'Memo1'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Lines.Strings = (
+        
+          'Mostrar todos los datos donde FechaE est'#225' entre 01/09/2016, 01/1' +
+          '0/2016')
+      RemoveEmptyLines = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 8467
+      mmLeft = 48419
+      mmTop = 10850
+      mmWidth = 184415
+      BandType = 0
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      mmLeading = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText1'
+      DataField = 'NumeroD'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 4498
+      mmLeft = 7685
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText2: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText2'
+      DataField = 'FechaE'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 4498
+      mmLeft = 37825
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText3'
+      DataField = 'TipoFac'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 4498
+      mmLeft = 15867
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText4'
+      AutoSize = True
+      DataField = 'CodClie'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 4233
+      mmLeft = 59267
+      mmTop = 0
+      mmWidth = 11377
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText5: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText5'
+      DataField = 'CodOper'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 4498
+      mmLeft = 84902
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText6: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText6'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TOTALPRD_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 94986
+      mmTop = 0
+      mmWidth = 21960
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText7: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText7'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TOTALSRV_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 147373
+      mmTop = 0
+      mmWidth = 21696
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText8: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText8'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TGRAVABLE_VW_SA'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 209550
+      mmTop = 0
+      mmWidth = 23284
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText9: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText9'
+      AutoSize = True
+      DataField = 'VW_SAFACT_MTOTAX_VW_SAFAC'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 237596
+      mmTop = 0
+      mmWidth = 19050
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText10: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText10'
+      AutoSize = True
+      DataField = 'VW_SAFACT_MTOTOTAL_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 259557
+      mmTop = 0
+      mmWidth = 22489
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText11: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText11'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TEXENTO_VW_SAFA'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 194205
+      mmTop = 0
+      mmWidth = 20108
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText15: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText15'
+      AutoSize = True
+      DataField = 'VW_SAFACT_COSTOPRD_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 113506
+      mmTop = 0
+      mmWidth = 22755
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText16: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText16'
+      AutoSize = True
+      DataField = 'MTOTOT'
+      DataPipeline = daADOQueryDataView5.VW_C_SAITEMFACTOT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_C_SAITEMFACTOT'
+      mmHeight = 3439
+      mmLeft = 178470
+      mmTop = 265
+      mmWidth = 11112
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBCalc10: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc10'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ResetGroup = ppGroup1
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 4498
+      mmLeft = 0
+      mmTop = 264
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 13758
+    mmPrintPosition = 0
+    object ppDBCalc11: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc11'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TOTALPRD_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 80698
+      mmTop = 8731
+      mmWidth = 35983
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc12: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc12'
+      AutoSize = True
+      DataField = 'VW_SAFACT_COSTOPRD_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3439
+      mmLeft = 100013
+      mmTop = 5292
+      mmWidth = 36248
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc13: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc13'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TOTALSRV_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 133086
+      mmTop = 8731
+      mmWidth = 35719
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc14: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc14'
+      AutoSize = True
+      DataField = 'MTOTOT'
+      DataPipeline = daADOQueryDataView5.VW_C_SAITEMFACTOT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_C_SAITEMFACTOT'
+      mmHeight = 3439
+      mmLeft = 165894
+      mmTop = 5292
+      mmWidth = 23548
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc15: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc15'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TEXENTO_VW_SAFA'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 179917
+      mmTop = 8731
+      mmWidth = 33073
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc16: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc16'
+      AutoSize = True
+      DataField = 'VW_SAFACT_TGRAVABLE_VW_SA'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3439
+      mmLeft = 195263
+      mmTop = 5292
+      mmWidth = 37571
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc17: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc17'
+      AutoSize = True
+      DataField = 'VW_SAFACT_MTOTAX_VW_SAFAC'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3440
+      mmLeft = 223838
+      mmTop = 8731
+      mmWidth = 32808
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc18: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc18'
+      AutoSize = True
+      DataField = 'VW_SAFACT_MTOTOTAL_VW_SAF'
+      DataPipeline = daADOQueryDataView1.VW_SAFACT
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_SAFACT'
+      mmHeight = 3439
+      mmLeft = 245534
+      mmTop = 5292
+      mmWidth = 36512
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppLine3: TppLine
+      DesignLayer = ppDesignLayer1
+      UserName = 'Line3'
+      Weight = 0.750000000000000000
+      mmHeight = 1588
+      mmLeft = 2117
+      mmTop = 2381
+      mmWidth = 281517
+      BandType = 7
+      LayerName = Foreground
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'CodVend'
+    DataPipeline = daADOQueryDataView1.VW_SAFACT
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'VW_SAFACT'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 18785
+      mmPrintPosition = 0
+      object ppShape1: TppShape
+        DesignLayer = ppDesignLayer1
+        UserName = 'Shape1'
+        Brush.Color = clSilver
+        Shape = stRoundRect
+        mmHeight = 7144
+        mmLeft = 265
+        mmTop = 794
+        mmWidth = 281782
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel1: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label1'
+        Caption = 'TOTAL'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 272521
+        mmTop = 9266
+        mmWidth = 9525
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel2: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label2'
+        Caption = 'IVA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 251355
+        mmTop = 11912
+        mmWidth = 5292
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel3: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label3'
+        Caption = 'GRAVABLE'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 217488
+        mmTop = 9266
+        mmWidth = 15346
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel4: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label4'
+        Caption = 'SERVICIOS'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 153219
+        mmTop = 11906
+        mmWidth = 15875
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel5: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label5'
+        Caption = 'REPUESTOS'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 98385
+        mmTop = 11906
+        mmWidth = 16933
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel6: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label6'
+        Caption = 'Cod.Oper.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 84754
+        mmTop = 8812
+        mmWidth = 14288
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel7: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label7'
+        Caption = 'CODCLIE'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 63236
+        mmTop = 11912
+        mmWidth = 12435
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel8: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label8'
+        Caption = 'EMISION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 42333
+        mmTop = 11912
+        mmWidth = 12700
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel9: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label9'
+        Caption = 'TIPO/DOC'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 20373
+        mmTop = 11912
+        mmWidth = 14817
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel10: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label10'
+        Caption = 'DOC.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 7673
+        mmTop = 11912
+        mmWidth = 6879
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel11: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label11'
+        Caption = 'Exento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 202671
+        mmTop = 11912
+        mmWidth = 10319
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel13: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label13'
+        Caption = 'VENDEDOR:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 7673
+        mmTop = 2910
+        mmWidth = 16140
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel14: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label14'
+        Caption = 'Costo/Rep.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 118039
+        mmTop = 9266
+        mmWidth = 16669
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel15: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label15'
+        Caption = 'Mto.TOT'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 177146
+        mmTop = 9260
+        mmWidth = 12436
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBText14: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText14'
+        AutoSize = True
+        DataField = 'CodVend'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 4233
+        mmLeft = 26988
+        mmTop = 2117
+        mmWidth = 13494
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBText17: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText17'
+        AutoSize = True
+        DataField = 'Descrip_2'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 47096
+        mmTop = 2381
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLine1: TppLine
+        DesignLayer = ppDesignLayer1
+        UserName = 'Line1'
+        Weight = 0.750000000000000000
+        mmHeight = 2381
+        mmLeft = 2117
+        mmTop = 17727
+        mmWidth = 283634
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 11113
+      mmPrintPosition = 0
+      object ppDBCalc1: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc1'
+        AutoSize = True
+        DataField = 'VW_SAFACT_MTOTOTAL_VW_SAF'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 250561
+        mmTop = 2910
+        mmWidth = 31485
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc2: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc2'
+        AutoSize = True
+        DataField = 'VW_SAFACT_MTOTAX_VW_SAFAC'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 228600
+        mmTop = 6350
+        mmWidth = 28046
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc3: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc3'
+        AutoSize = True
+        DataField = 'VW_SAFACT_TGRAVABLE_VW_SA'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 200555
+        mmTop = 2910
+        mmWidth = 32279
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc4: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc4'
+        AutoSize = True
+        DataField = 'VW_SAFACT_TOTALSRV_VW_SAF'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 138377
+        mmTop = 7408
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc5: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc5'
+        AutoSize = True
+        DataField = 'VW_SAFACT_TOTALPRD_VW_SAF'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 85990
+        mmTop = 7408
+        mmWidth = 30956
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc6: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc6'
+        AutoSize = True
+        DataField = 'VW_SAFACT_TEXENTO_VW_SAFA'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 184680
+        mmTop = 7408
+        mmWidth = 29104
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc7: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc7'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        Transparent = True
+        VerticalAlignment = avBottom
+        DBCalcType = dcCount
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 4498
+        mmLeft = 52652
+        mmTop = 1852
+        mmWidth = 17198
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc8: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc8'
+        AutoSize = True
+        DataField = 'VW_SAFACT_COSTOPRD_VW_SAF'
+        DataPipeline = daADOQueryDataView1.VW_SAFACT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_SAFACT'
+        mmHeight = 3440
+        mmLeft = 104511
+        mmTop = 2910
+        mmWidth = 31750
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc9: TppDBCalc
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBCalc9'
+        AutoSize = True
+        DataField = 'MTOTOT'
+        DataPipeline = daADOQueryDataView5.VW_C_SAITEMFACTOT
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'VW_C_SAITEMFACTOT'
+        mmHeight = 3440
+        mmLeft = 169598
+        mmTop = 2910
+        mmWidth = 20109
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel16: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label16'
+        Caption = 'Transacciones:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormField = False
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 28840
+        mmTop = 2910
+        mmWidth = 22225
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLine2: TppLine
+        DesignLayer = ppDesignLayer1
+        UserName = 'Line2'
+        Weight = 0.750000000000000000
+        mmHeight = 2117
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 283634
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+      4865616465724265666F72655072696E740B50726F6772616D54797065070B74
+      7450726F63656475726506536F75726365067870726F63656475726520486561
+      6465724265666F72655072696E743B0D0A626567694E0D0A4D454D4F312E4C49
+      4E45532E434C4541523B0D0A5265706F72742E4765744175746F536561726368
+      4465736372697074696F6E4C696E6573284D454D4F312E4C696E6573293B0D0A
+      656E643B2020200D0A0D0A0D436F6D706F6E656E744E616D6506064865616465
+      72094576656E744E616D65060B4265666F72655072696E74074576656E744944
+      0218084361726574506F730102010206000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_VW_SAFACT'
+      Height = 708
+      Left = 81
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 9
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object VW_SAFACT: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'VW_SAFACT'
+        object ppField1: TppField
+          FieldAlias = 'AutSRI'
+          FieldName = 'AutSRI'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'VW_SAFACT'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Cambio'
+          FieldName = 'Cambio'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'VW_SAFACT'
+        end
+        object ppField3: TppField
+          FieldAlias = 'CancelA'
+          FieldName = 'CancelA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'VW_SAFACT'
+        end
+        object ppField4: TppField
+          FieldAlias = 'CancelC'
+          FieldName = 'CancelC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'VW_SAFACT'
+        end
+        object ppField5: TppField
+          FieldAlias = 'CancelE'
+          FieldName = 'CancelE'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'VW_SAFACT'
+        end
+        object ppField6: TppField
+          FieldAlias = 'CancelG'
+          FieldName = 'CancelG'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'VW_SAFACT'
+        end
+        object ppField7: TppField
+          FieldAlias = 'CancelI'
+          FieldName = 'CancelI'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'VW_SAFACT'
+        end
+        object ppField8: TppField
+          FieldAlias = 'CancelP'
+          FieldName = 'CancelP'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'VW_SAFACT'
+        end
+        object ppField9: TppField
+          FieldAlias = 'CancelT'
+          FieldName = 'CancelT'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'VW_SAFACT'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Ciudad'
+          FieldName = 'Ciudad'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'VW_SAFACT'
+        end
+        object ppField11: TppField
+          FieldAlias = 'CodClie'
+          FieldName = 'CodClie'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'VW_SAFACT'
+        end
+        object ppField12: TppField
+          FieldAlias = 'CodConv'
+          FieldName = 'CodConv'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'VW_SAFACT'
+        end
+        object ppField13: TppField
+          FieldAlias = 'CodEsta'
+          FieldName = 'CodEsta'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'VW_SAFACT'
+        end
+        object ppField14: TppField
+          FieldAlias = 'CodOper'
+          FieldName = 'CodOper'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'VW_SAFACT'
+        end
+        object ppField15: TppField
+          FieldAlias = 'CodSucu'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'VW_SAFACT'
+        end
+        object ppField16: TppField
+          FieldAlias = 'CodUbic'
+          FieldName = 'CodUbic'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'VW_SAFACT'
+        end
+        object ppField17: TppField
+          FieldAlias = 'CodUsua'
+          FieldName = 'CodUsua'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'VW_SAFACT'
+        end
+        object ppField18: TppField
+          FieldAlias = 'CodVend'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'VW_SAFACT'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Contado'
+          FieldName = 'Contado'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'VW_SAFACT'
+        end
+        object ppField20: TppField
+          FieldAlias = 'CostoPrd'
+          FieldName = 'CostoPrd'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'VW_SAFACT'
+        end
+        object ppField21: TppField
+          FieldAlias = 'CostoSrv'
+          FieldName = 'CostoSrv'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'VW_SAFACT'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Credito'
+          FieldName = 'Credito'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'VW_SAFACT'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Descrip'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'VW_SAFACT'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Descto1'
+          FieldName = 'Descto1'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'VW_SAFACT'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Descto2'
+          FieldName = 'Descto2'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'VW_SAFACT'
+        end
+        object ppField26: TppField
+          FieldAlias = 'DesctoP'
+          FieldName = 'DesctoP'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'VW_SAFACT'
+        end
+        object ppField27: TppField
+          FieldAlias = 'DetalChq'
+          FieldName = 'DetalChq'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'VW_SAFACT'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Direc1'
+          FieldName = 'Direc1'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'VW_SAFACT'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Direc2'
+          FieldName = 'Direc2'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'VW_SAFACT'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Direc3'
+          FieldName = 'Direc3'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'VW_SAFACT'
+        end
+        object ppField31: TppField
+          FieldAlias = 'EsConsig'
+          FieldName = 'EsConsig'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'VW_SAFACT'
+        end
+        object ppField32: TppField
+          FieldAlias = 'EsCorrel'
+          FieldName = 'EsCorrel'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'VW_SAFACT'
+        end
+        object ppField33: TppField
+          FieldAlias = 'EsExPickup'
+          FieldName = 'EsExPickup'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'VW_SAFACT'
+        end
+        object ppField34: TppField
+          FieldAlias = 'Estado'
+          FieldName = 'Estado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'VW_SAFACT'
+        end
+        object ppField35: TppField
+          FieldAlias = 'Factor'
+          FieldName = 'Factor'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'VW_SAFACT'
+        end
+        object ppField36: TppField
+          FieldAlias = 'FechaD1'
+          FieldName = 'FechaD1'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'VW_SAFACT'
+        end
+        object ppField37: TppField
+          FieldAlias = 'FechaE'
+          FieldName = 'FechaE'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'VW_SAFACT'
+        end
+        object ppField38: TppField
+          FieldAlias = 'FechaI'
+          FieldName = 'FechaI'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'VW_SAFACT'
+        end
+        object ppField39: TppField
+          FieldAlias = 'FechaR'
+          FieldName = 'FechaR'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'VW_SAFACT'
+        end
+        object ppField40: TppField
+          FieldAlias = 'FechaT'
+          FieldName = 'FechaT'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'VW_SAFACT'
+        end
+        object ppField41: TppField
+          FieldAlias = 'FechaV'
+          FieldName = 'FechaV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'VW_SAFACT'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Fletes'
+          FieldName = 'Fletes'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'VW_SAFACT'
+        end
+        object ppField43: TppField
+          FieldAlias = 'ID3'
+          FieldName = 'ID3'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'VW_SAFACT'
+        end
+        object ppField44: TppField
+          FieldAlias = 'Moneda'
+          FieldName = 'Moneda'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'VW_SAFACT'
+        end
+        object ppField45: TppField
+          FieldAlias = 'Monto'
+          FieldName = 'Monto'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'VW_SAFACT'
+        end
+        object ppField46: TppField
+          FieldAlias = 'MontoMEx'
+          FieldName = 'MontoMEx'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'VW_SAFACT'
+        end
+        object ppField47: TppField
+          FieldAlias = 'MtoComiCob'
+          FieldName = 'MtoComiCob'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 46
+          TableName = 'VW_SAFACT'
+        end
+        object ppField48: TppField
+          FieldAlias = 'MtoComiCobD'
+          FieldName = 'MtoComiCobD'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 47
+          TableName = 'VW_SAFACT'
+        end
+        object ppField49: TppField
+          FieldAlias = 'MtoComiVta'
+          FieldName = 'MtoComiVta'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 48
+          TableName = 'VW_SAFACT'
+        end
+        object ppField50: TppField
+          FieldAlias = 'MtoComiVtaD'
+          FieldName = 'MtoComiVtaD'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 49
+          TableName = 'VW_SAFACT'
+        end
+        object ppField51: TppField
+          FieldAlias = 'MtoExtra'
+          FieldName = 'MtoExtra'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 50
+          TableName = 'VW_SAFACT'
+        end
+        object ppField52: TppField
+          FieldAlias = 'MtoFinanc'
+          FieldName = 'MtoFinanc'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 51
+          TableName = 'VW_SAFACT'
+        end
+        object ppField53: TppField
+          FieldAlias = 'MtoInt1'
+          FieldName = 'MtoInt1'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 52
+          TableName = 'VW_SAFACT'
+        end
+        object ppField54: TppField
+          FieldAlias = 'MtoInt2'
+          FieldName = 'MtoInt2'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 53
+          TableName = 'VW_SAFACT'
+        end
+        object ppField55: TppField
+          FieldAlias = 'MtoNCredito'
+          FieldName = 'MtoNCredito'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 54
+          TableName = 'VW_SAFACT'
+        end
+        object ppField56: TppField
+          FieldAlias = 'MtoNDebito'
+          FieldName = 'MtoNDebito'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 55
+          TableName = 'VW_SAFACT'
+        end
+        object ppField57: TppField
+          FieldAlias = 'MtoPagos'
+          FieldName = 'MtoPagos'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 56
+          TableName = 'VW_SAFACT'
+        end
+        object ppField58: TppField
+          FieldAlias = 'MtoTax'
+          FieldName = 'MtoTax'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 57
+          TableName = 'VW_SAFACT'
+        end
+        object ppField59: TppField
+          FieldAlias = 'MtoTotal'
+          FieldName = 'MtoTotal'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 58
+          TableName = 'VW_SAFACT'
+        end
+        object ppField60: TppField
+          FieldAlias = 'Municipio'
+          FieldName = 'Municipio'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 59
+          TableName = 'VW_SAFACT'
+        end
+        object ppField61: TppField
+          FieldAlias = 'NGiros'
+          FieldName = 'NGiros'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 60
+          TableName = 'VW_SAFACT'
+        end
+        object ppField62: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 61
+          TableName = 'VW_SAFACT'
+        end
+        object ppField63: TppField
+          FieldAlias = 'NMeses'
+          FieldName = 'NMeses'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 62
+          TableName = 'VW_SAFACT'
+        end
+        object ppField64: TppField
+          FieldAlias = 'Notas1'
+          FieldName = 'Notas1'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 63
+          TableName = 'VW_SAFACT'
+        end
+        object ppField65: TppField
+          FieldAlias = 'Notas10'
+          FieldName = 'Notas10'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 64
+          TableName = 'VW_SAFACT'
+        end
+        object ppField66: TppField
+          FieldAlias = 'Notas2'
+          FieldName = 'Notas2'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 65
+          TableName = 'VW_SAFACT'
+        end
+        object ppField67: TppField
+          FieldAlias = 'Notas3'
+          FieldName = 'Notas3'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 66
+          TableName = 'VW_SAFACT'
+        end
+        object ppField68: TppField
+          FieldAlias = 'Notas4'
+          FieldName = 'Notas4'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 67
+          TableName = 'VW_SAFACT'
+        end
+        object ppField69: TppField
+          FieldAlias = 'Notas5'
+          FieldName = 'Notas5'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 68
+          TableName = 'VW_SAFACT'
+        end
+        object ppField70: TppField
+          FieldAlias = 'Notas6'
+          FieldName = 'Notas6'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 69
+          TableName = 'VW_SAFACT'
+        end
+        object ppField71: TppField
+          FieldAlias = 'Notas7'
+          FieldName = 'Notas7'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 70
+          TableName = 'VW_SAFACT'
+        end
+        object ppField72: TppField
+          FieldAlias = 'Notas8'
+          FieldName = 'Notas8'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 71
+          TableName = 'VW_SAFACT'
+        end
+        object ppField73: TppField
+          FieldAlias = 'Notas9'
+          FieldName = 'Notas9'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 72
+          TableName = 'VW_SAFACT'
+        end
+        object ppField74: TppField
+          FieldAlias = 'NroCtrol'
+          FieldName = 'NroCtrol'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 73
+          TableName = 'VW_SAFACT'
+        end
+        object ppField75: TppField
+          FieldAlias = 'NroEstable'
+          FieldName = 'NroEstable'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 74
+          TableName = 'VW_SAFACT'
+        end
+        object ppField76: TppField
+          FieldAlias = 'NROUNICO'
+          FieldName = 'NROUNICO'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 75
+          TableName = 'VW_SAFACT'
+        end
+        object ppField77: TppField
+          FieldAlias = 'NumeroC'
+          FieldName = 'NumeroC'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 76
+          TableName = 'VW_SAFACT'
+        end
+        object ppField78: TppField
+          FieldAlias = 'NumeroD'
+          FieldName = 'NumeroD'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 77
+          TableName = 'VW_SAFACT'
+        end
+        object ppField79: TppField
+          FieldAlias = 'NumeroD1'
+          FieldName = 'NumeroD1'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 78
+          TableName = 'VW_SAFACT'
+        end
+        object ppField80: TppField
+          FieldAlias = 'NumeroE'
+          FieldName = 'NumeroE'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 79
+          TableName = 'VW_SAFACT'
+        end
+        object ppField81: TppField
+          FieldAlias = 'NumeroF'
+          FieldName = 'NumeroF'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 80
+          TableName = 'VW_SAFACT'
+        end
+        object ppField82: TppField
+          FieldAlias = 'NumeroK'
+          FieldName = 'NumeroK'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 81
+          TableName = 'VW_SAFACT'
+        end
+        object ppField83: TppField
+          FieldAlias = 'NumeroNCF'
+          FieldName = 'NumeroNCF'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 82
+          TableName = 'VW_SAFACT'
+        end
+        object ppField84: TppField
+          FieldAlias = 'NumeroP'
+          FieldName = 'NumeroP'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 83
+          TableName = 'VW_SAFACT'
+        end
+        object ppField85: TppField
+          FieldAlias = 'NumeroR'
+          FieldName = 'NumeroR'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 84
+          TableName = 'VW_SAFACT'
+        end
+        object ppField86: TppField
+          FieldAlias = 'NumeroT'
+          FieldName = 'NumeroT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 85
+          TableName = 'VW_SAFACT'
+        end
+        object ppField87: TppField
+          FieldAlias = 'NumeroZ'
+          FieldName = 'NumeroZ'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 86
+          TableName = 'VW_SAFACT'
+        end
+        object ppField88: TppField
+          FieldAlias = 'ONumero'
+          FieldName = 'ONumero'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 87
+          TableName = 'VW_SAFACT'
+        end
+        object ppField89: TppField
+          FieldAlias = 'OrdenC'
+          FieldName = 'OrdenC'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 88
+          TableName = 'VW_SAFACT'
+        end
+        object ppField90: TppField
+          FieldAlias = 'OTipo'
+          FieldName = 'OTipo'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 89
+          TableName = 'VW_SAFACT'
+        end
+        object ppField91: TppField
+          FieldAlias = 'Pais'
+          FieldName = 'Pais'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 90
+          TableName = 'VW_SAFACT'
+        end
+        object ppField92: TppField
+          FieldAlias = 'PctAnual'
+          FieldName = 'PctAnual'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 91
+          TableName = 'VW_SAFACT'
+        end
+        object ppField93: TppField
+          FieldAlias = 'PctManejo'
+          FieldName = 'PctManejo'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 92
+          TableName = 'VW_SAFACT'
+        end
+        object ppField94: TppField
+          FieldAlias = 'PtoEmision'
+          FieldName = 'PtoEmision'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 93
+          TableName = 'VW_SAFACT'
+        end
+        object ppField95: TppField
+          FieldAlias = 'RetenIVA'
+          FieldName = 'RetenIVA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 94
+          TableName = 'VW_SAFACT'
+        end
+        object ppField96: TppField
+          FieldAlias = 'SaldoAct'
+          FieldName = 'SaldoAct'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 95
+          TableName = 'VW_SAFACT'
+        end
+        object ppField97: TppField
+          FieldAlias = 'Signo'
+          FieldName = 'Signo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 96
+          TableName = 'VW_SAFACT'
+        end
+        object ppField98: TppField
+          FieldAlias = 'Status'
+          FieldName = 'Status'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 97
+          TableName = 'VW_SAFACT'
+        end
+        object ppField99: TppField
+          FieldAlias = 'Telef'
+          FieldName = 'Telef'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 98
+          TableName = 'VW_SAFACT'
+        end
+        object ppField100: TppField
+          FieldAlias = 'TExento'
+          FieldName = 'TExento'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 99
+          TableName = 'VW_SAFACT'
+        end
+        object ppField101: TppField
+          FieldAlias = 'TGravable'
+          FieldName = 'TGravable'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 100
+          TableName = 'VW_SAFACT'
+        end
+        object ppField102: TppField
+          FieldAlias = 'TGravable0'
+          FieldName = 'TGravable0'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 101
+          TableName = 'VW_SAFACT'
+        end
+        object ppField103: TppField
+          FieldAlias = 'TipoFac'
+          FieldName = 'TipoFac'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 102
+          TableName = 'VW_SAFACT'
+        end
+        object ppField104: TppField
+          FieldAlias = 'TipoTra'
+          FieldName = 'TipoTra'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 103
+          TableName = 'VW_SAFACT'
+        end
+        object ppField105: TppField
+          FieldAlias = 'TipoTraE'
+          FieldName = 'TipoTraE'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 104
+          TableName = 'VW_SAFACT'
+        end
+        object ppField106: TppField
+          FieldAlias = 'TotalPrd'
+          FieldName = 'TotalPrd'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 105
+          TableName = 'VW_SAFACT'
+        end
+        object ppField107: TppField
+          FieldAlias = 'TotalSrv'
+          FieldName = 'TotalSrv'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 106
+          TableName = 'VW_SAFACT'
+        end
+        object ppField108: TppField
+          FieldAlias = 'ValorPtos'
+          FieldName = 'ValorPtos'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 107
+          TableName = 'VW_SAFACT'
+        end
+        object ppField109: TppField
+          FieldAlias = 'ZipCode'
+          FieldName = 'ZipCode'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 108
+          TableName = 'VW_SAFACT'
+        end
+        object ppField110: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip_2'
+          FieldLength = 60
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 109
+          TableName = 'SAVEND'
+        end
+        object ppField111: TppField
+          FieldAlias = 'TOTALPRD_REAL'
+          FieldName = 'VW_SAFACT_TOTALPRD_VW_SAF'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 110
+          TableName = 'VW_SAFACT'
+        end
+        object ppField112: TppField
+          FieldAlias = 'TOTALSRV_REAL'
+          FieldName = 'VW_SAFACT_TOTALSRV_VW_SAF'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 111
+          TableName = 'VW_SAFACT'
+        end
+        object ppField113: TppField
+          FieldAlias = 'COSTOPRD_REAL'
+          FieldName = 'VW_SAFACT_COSTOPRD_VW_SAF'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 112
+          TableName = 'VW_SAFACT'
+        end
+        object ppField114: TppField
+          FieldAlias = 'COSTOSRV_REAL'
+          FieldName = 'VW_SAFACT_COSTOSRV_VW_SAF'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 113
+          TableName = 'VW_SAFACT'
+        end
+        object ppField115: TppField
+          FieldAlias = 'TEXENTO_REAL'
+          FieldName = 'VW_SAFACT_TEXENTO_VW_SAFA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 114
+          TableName = 'VW_SAFACT'
+        end
+        object ppField116: TppField
+          FieldAlias = 'TGRAVABLE_REAL'
+          FieldName = 'VW_SAFACT_TGRAVABLE_VW_SA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 115
+          TableName = 'VW_SAFACT'
+        end
+        object ppField117: TppField
+          FieldAlias = 'MTOTAX_REAL'
+          FieldName = 'VW_SAFACT_MTOTAX_VW_SAFAC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 116
+          TableName = 'VW_SAFACT'
+        end
+        object ppField118: TppField
+          FieldAlias = 'MTOTOTAL_REAL'
+          FieldName = 'VW_SAFACT_MTOTOTAL_VW_SAF'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 117
+          TableName = 'VW_SAFACT'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'VW_SAFACT'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT VW_SAFACT.AutSRI, VW_SAFACT.Cambio, '
+          '       VW_SAFACT.CancelA, VW_SAFACT.CancelC, '
+          '       VW_SAFACT.CancelE, VW_SAFACT.CancelG, '
+          '       VW_SAFACT.CancelI, VW_SAFACT.CancelP, '
+          '       VW_SAFACT.CancelT, VW_SAFACT.Ciudad, '
+          '       VW_SAFACT.CodClie, VW_SAFACT.CodConv, '
+          '       VW_SAFACT.CodEsta, VW_SAFACT.CodOper, '
+          '       VW_SAFACT.CodSucu, VW_SAFACT.CodUbic, '
+          '       VW_SAFACT.CodUsua, VW_SAFACT.CodVend, '
+          '       VW_SAFACT.Contado, VW_SAFACT.CostoPrd, '
+          '       VW_SAFACT.CostoSrv, VW_SAFACT.Credito, '
+          '       VW_SAFACT.Descrip, VW_SAFACT.Descto1, '
+          '       VW_SAFACT.Descto2, VW_SAFACT.DesctoP, '
+          '       VW_SAFACT.DetalChq, VW_SAFACT.Direc1, '
+          '       VW_SAFACT.Direc2, VW_SAFACT.Direc3, '
+          '       VW_SAFACT.EsConsig, VW_SAFACT.EsCorrel, '
+          '       VW_SAFACT.EsExPickup, VW_SAFACT.Estado, '
+          '       VW_SAFACT.Factor, VW_SAFACT.FechaD1, '
+          '       VW_SAFACT.FechaE, VW_SAFACT.FechaI, '
+          '       VW_SAFACT.FechaR, VW_SAFACT.FechaT, '
+          '       VW_SAFACT.FechaV, VW_SAFACT.Fletes, '
+          '       VW_SAFACT.ID3, VW_SAFACT.Moneda, '
+          '       VW_SAFACT.Monto, VW_SAFACT.MontoMEx, '
+          '       VW_SAFACT.MtoComiCob, '
+          '       VW_SAFACT.MtoComiCobD, '
+          '       VW_SAFACT.MtoComiVta, '
+          '       VW_SAFACT.MtoComiVtaD, VW_SAFACT.MtoExtra, '
+          '       VW_SAFACT.MtoFinanc, VW_SAFACT.MtoInt1, '
+          '       VW_SAFACT.MtoInt2, VW_SAFACT.MtoNCredito, '
+          '       VW_SAFACT.MtoNDebito, VW_SAFACT.MtoPagos, '
+          '       VW_SAFACT.MtoTax, VW_SAFACT.MtoTotal, '
+          '       VW_SAFACT.Municipio, VW_SAFACT.NGiros, '
+          '       VW_SAFACT.NIT, VW_SAFACT.NMeses, '
+          '       VW_SAFACT.Notas1, VW_SAFACT.Notas10, '
+          '       VW_SAFACT.Notas2, VW_SAFACT.Notas3, '
+          '       VW_SAFACT.Notas4, VW_SAFACT.Notas5, '
+          '       VW_SAFACT.Notas6, VW_SAFACT.Notas7, '
+          '       VW_SAFACT.Notas8, VW_SAFACT.Notas9, '
+          '       VW_SAFACT.NroCtrol, VW_SAFACT.NroEstable, '
+          '       VW_SAFACT.NROUNICO, VW_SAFACT.NumeroC, '
+          '       VW_SAFACT.NumeroD, VW_SAFACT.NumeroD1, '
+          '       VW_SAFACT.NumeroE, VW_SAFACT.NumeroF, '
+          '       VW_SAFACT.NumeroK, VW_SAFACT.NumeroNCF, '
+          '       VW_SAFACT.NumeroP, VW_SAFACT.NumeroR, '
+          '       VW_SAFACT.NumeroT, VW_SAFACT.NumeroZ, '
+          '       VW_SAFACT.ONumero, VW_SAFACT.OrdenC, '
+          '       VW_SAFACT.OTipo, VW_SAFACT.Pais, '
+          '       VW_SAFACT.PctAnual, VW_SAFACT.PctManejo, '
+          '       VW_SAFACT.PtoEmision, VW_SAFACT.RetenIVA, '
+          '       VW_SAFACT.SaldoAct, VW_SAFACT.Signo, '
+          '       VW_SAFACT.Status, VW_SAFACT.Telef, '
+          '       VW_SAFACT.TExento, VW_SAFACT.TGravable, '
+          '       VW_SAFACT.TGravable0, VW_SAFACT.TipoFac, '
+          '       VW_SAFACT.TipoTra, VW_SAFACT.TipoTraE, '
+          '       VW_SAFACT.TotalPrd, VW_SAFACT.TotalSrv, '
+          '       VW_SAFACT.ValorPtos, VW_SAFACT.ZipCode, '
+          '       SAVEND.Descrip Descrip_2, '
+          
+            '       VW_SAFACT.TOTALPRD*VW_SAFACT.SIGNO VW_SAFACT_TOTALPRD_VW_' +
+            'SAF, '
+          
+            '       VW_SAFACT.TOTALSRV*VW_SAFACT.SIGNO VW_SAFACT_TOTALSRV_VW_' +
+            'SAF, '
+          
+            '       VW_SAFACT.COSTOPRD*VW_SAFACT.SIGNO VW_SAFACT_COSTOPRD_VW_' +
+            'SAF, '
+          
+            '       VW_SAFACT.COSTOSRV*VW_SAFACT.SIGNO VW_SAFACT_COSTOSRV_VW_' +
+            'SAF, '
+          
+            '       VW_SAFACT.TEXENTO*VW_SAFACT.SIGNO VW_SAFACT_TEXENTO_VW_SA' +
+            'FA, '
+          
+            '       VW_SAFACT.TGRAVABLE*VW_SAFACT.SIGNO VW_SAFACT_TGRAVABLE_V' +
+            'W_SA, '
+          
+            '       VW_SAFACT.MTOTAX*VW_SAFACT.SIGNO VW_SAFACT_MTOTAX_VW_SAFA' +
+            'C, '
+          
+            '       VW_SAFACT.MTOTOTAL*VW_SAFACT.SIGNO VW_SAFACT_MTOTOTAL_VW_' +
+            'SAF'
+          'FROM VW_SAFACT VW_SAFACT'
+          '      LEFT OUTER JOIN SAVEND SAVEND ON '
+          '     (SAVEND.CodVend = VW_SAFACT.CodVend)'
+          'WHERE '
+          
+            '      ( VW_SAFACT.FechaE BETWEEN CONVERT(DATETIME,'#39'2017-05-01'#39',1' +
+            '20) AND CONVERT(DATETIME,'#39'2017-06-01'#39',120) )'
+          '       AND ( VW_SAFACT.TipoFac IN ('#39'A'#39','#39'B'#39') )'
+          'ORDER BY VW_SAFACT.CodVend, VW_SAFACT.FechaE')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'TOTALPRD_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_TOTALPRD_VW_SAF'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.TOTALPRD*VW_SAFACT.SIGNO'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'TOTALSRV_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_TOTALSRV_VW_SAF'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.TOTALSRV*VW_SAFACT.SIGNO'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'COSTOPRD_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_COSTOPRD_VW_SAF'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.COSTOPRD*VW_SAFACT.SIGNO'
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 8
+          Alias = 'COSTOSRV_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_COSTOSRV_VW_SAF'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.COSTOSRV*VW_SAFACT.SIGNO'
+        end
+        object daCalculation5: TdaCalculation
+          ChildType = 8
+          Alias = 'TEXENTO_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_TEXENTO_VW_SAFA'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.TEXENTO*VW_SAFACT.SIGNO'
+        end
+        object daCalculation6: TdaCalculation
+          ChildType = 8
+          Alias = 'TGRAVABLE_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_TGRAVABLE_VW_SA'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.TGRAVABLE*VW_SAFACT.SIGNO'
+        end
+        object daCalculation7: TdaCalculation
+          ChildType = 8
+          Alias = 'MTOTAX_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_MTOTAX_VW_SAFAC'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.MTOTAX*VW_SAFACT.SIGNO'
+        end
+        object daCalculation8: TdaCalculation
+          ChildType = 8
+          Alias = 'MTOTOTAL_REAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'VW_SAFACT_MTOTOTAL_VW_SAF'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+          CalcType = dacaExpression
+          Expression = 'VW_SAFACT.MTOTOTAL*VW_SAFACT.SIGNO'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          Value = '01/05/2017,01/06/2017'
+          object TdaField
+            Alias = 'FechaE'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'FechaE'
+            FieldLength = 10
+            FieldName = 'FechaE'
+            SQLFieldName = 'FechaE'
+            TableAlias = 'VW_SAFACT'
+            TableName = 'VW_SAFACT'
+            TableSQLAlias = 'VW_SAFACT'
+          end
+          object TdaNumericValue
+            Value = 42856.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 42887.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          ParamName = 'Poperaciones'
+          object TdaField
+            Alias = 'CodOper'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'CodOper'
+            FieldLength = 10
+            FieldName = 'CodOper'
+            SQLFieldName = 'CodOper'
+            TableAlias = 'VW_SAFACT'
+            TableName = 'VW_SAFACT'
+            TableSQLAlias = 'VW_SAFACT'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          Value = 'A,B'
+          object TdaField
+            Alias = 'TipoFac'
+            DisplayWidth = 10
+            FieldAlias = 'TipoFac'
+            FieldLength = 10
+            FieldName = 'TipoFac'
+            SQLFieldName = 'TipoFac'
+            TableAlias = 'VW_SAFACT'
+            TableName = 'VW_SAFACT'
+            TableSQLAlias = 'VW_SAFACT'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          ParamName = 'Pvendedores'
+          object TdaField
+            Alias = 'CodVend'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'CodVend'
+            FieldLength = 10
+            FieldName = 'CodVend'
+            SQLFieldName = 'CodVend'
+            TableAlias = 'VW_SAFACT'
+            TableName = 'VW_SAFACT'
+            TableSQLAlias = 'VW_SAFACT'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'AutSRI'
+          DisplayWidth = 10
+          FieldAlias = 'AutSRI'
+          FieldLength = 40
+          FieldName = 'AutSRI'
+          SQLFieldName = 'AutSRI'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField2: TdaField
+          Alias = 'Cambio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cambio'
+          FieldLength = 3
+          FieldName = 'Cambio'
+          SQLFieldName = 'Cambio'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField3: TdaField
+          Alias = 'CancelA'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CancelA'
+          FieldLength = 3
+          FieldName = 'CancelA'
+          SQLFieldName = 'CancelA'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField4: TdaField
+          Alias = 'CancelC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CancelC'
+          FieldLength = 3
+          FieldName = 'CancelC'
+          SQLFieldName = 'CancelC'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField5: TdaField
+          Alias = 'CancelE'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CancelE'
+          FieldLength = 3
+          FieldName = 'CancelE'
+          SQLFieldName = 'CancelE'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField6: TdaField
+          Alias = 'CancelG'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CancelG'
+          FieldLength = 3
+          FieldName = 'CancelG'
+          SQLFieldName = 'CancelG'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField7: TdaField
+          Alias = 'CancelI'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CancelI'
+          FieldLength = 3
+          FieldName = 'CancelI'
+          SQLFieldName = 'CancelI'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField8: TdaField
+          Alias = 'CancelP'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CancelP'
+          FieldLength = 3
+          FieldName = 'CancelP'
+          SQLFieldName = 'CancelP'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField9: TdaField
+          Alias = 'CancelT'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CancelT'
+          FieldLength = 3
+          FieldName = 'CancelT'
+          SQLFieldName = 'CancelT'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField10: TdaField
+          Alias = 'Ciudad'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Ciudad'
+          FieldLength = 0
+          FieldName = 'Ciudad'
+          SQLFieldName = 'Ciudad'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField11: TdaField
+          Alias = 'CodClie'
+          DisplayWidth = 10
+          FieldAlias = 'CodClie'
+          FieldLength = 15
+          FieldName = 'CodClie'
+          SQLFieldName = 'CodClie'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField12: TdaField
+          Alias = 'CodConv'
+          DisplayWidth = 10
+          FieldAlias = 'CodConv'
+          FieldLength = 10
+          FieldName = 'CodConv'
+          SQLFieldName = 'CodConv'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField13: TdaField
+          Alias = 'CodEsta'
+          DisplayWidth = 10
+          FieldAlias = 'CodEsta'
+          FieldLength = 10
+          FieldName = 'CodEsta'
+          SQLFieldName = 'CodEsta'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField14: TdaField
+          Alias = 'CodOper'
+          DisplayWidth = 10
+          FieldAlias = 'CodOper'
+          FieldLength = 10
+          FieldName = 'CodOper'
+          SQLFieldName = 'CodOper'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField15: TdaField
+          Alias = 'CodSucu'
+          DisplayWidth = 10
+          FieldAlias = 'CodSucu'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField16: TdaField
+          Alias = 'CodUbic'
+          DisplayWidth = 10
+          FieldAlias = 'CodUbic'
+          FieldLength = 10
+          FieldName = 'CodUbic'
+          SQLFieldName = 'CodUbic'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField17: TdaField
+          Alias = 'CodUsua'
+          DisplayWidth = 10
+          FieldAlias = 'CodUsua'
+          FieldLength = 10
+          FieldName = 'CodUsua'
+          SQLFieldName = 'CodUsua'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField18: TdaField
+          Alias = 'CodVend'
+          DisplayWidth = 10
+          FieldAlias = 'CodVend'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField19: TdaField
+          Alias = 'Contado'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Contado'
+          FieldLength = 3
+          FieldName = 'Contado'
+          SQLFieldName = 'Contado'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField20: TdaField
+          Alias = 'CostoPrd'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CostoPrd'
+          FieldLength = 3
+          FieldName = 'CostoPrd'
+          SQLFieldName = 'CostoPrd'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField21: TdaField
+          Alias = 'CostoSrv'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CostoSrv'
+          FieldLength = 3
+          FieldName = 'CostoSrv'
+          SQLFieldName = 'CostoSrv'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField22: TdaField
+          Alias = 'Credito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Credito'
+          FieldLength = 3
+          FieldName = 'Credito'
+          SQLFieldName = 'Credito'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField23: TdaField
+          Alias = 'Descrip'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField24: TdaField
+          Alias = 'Descto1'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Descto1'
+          FieldLength = 3
+          FieldName = 'Descto1'
+          SQLFieldName = 'Descto1'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField25: TdaField
+          Alias = 'Descto2'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Descto2'
+          FieldLength = 3
+          FieldName = 'Descto2'
+          SQLFieldName = 'Descto2'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField26: TdaField
+          Alias = 'DesctoP'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'DesctoP'
+          FieldLength = 3
+          FieldName = 'DesctoP'
+          SQLFieldName = 'DesctoP'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField27: TdaField
+          Alias = 'DetalChq'
+          DisplayWidth = 10
+          FieldAlias = 'DetalChq'
+          FieldLength = 40
+          FieldName = 'DetalChq'
+          SQLFieldName = 'DetalChq'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField28: TdaField
+          Alias = 'Direc1'
+          DisplayWidth = 10
+          FieldAlias = 'Direc1'
+          FieldLength = 60
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField29: TdaField
+          Alias = 'Direc2'
+          DisplayWidth = 10
+          FieldAlias = 'Direc2'
+          FieldLength = 60
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField30: TdaField
+          Alias = 'Direc3'
+          DisplayWidth = 10
+          FieldAlias = 'Direc3'
+          FieldLength = 60
+          FieldName = 'Direc3'
+          SQLFieldName = 'Direc3'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField31: TdaField
+          Alias = 'EsConsig'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsConsig'
+          FieldLength = 0
+          FieldName = 'EsConsig'
+          SQLFieldName = 'EsConsig'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField32: TdaField
+          Alias = 'EsCorrel'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsCorrel'
+          FieldLength = 0
+          FieldName = 'EsCorrel'
+          SQLFieldName = 'EsCorrel'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField33: TdaField
+          Alias = 'EsExPickup'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsExPickup'
+          FieldLength = 0
+          FieldName = 'EsExPickup'
+          SQLFieldName = 'EsExPickup'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField34: TdaField
+          Alias = 'Estado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Estado'
+          FieldLength = 0
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField35: TdaField
+          Alias = 'Factor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Factor'
+          FieldLength = 3
+          FieldName = 'Factor'
+          SQLFieldName = 'Factor'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField36: TdaField
+          Alias = 'FechaD1'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaD1'
+          FieldLength = 0
+          FieldName = 'FechaD1'
+          SQLFieldName = 'FechaD1'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField37: TdaField
+          Alias = 'FechaE'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaE'
+          FieldLength = 0
+          FieldName = 'FechaE'
+          SQLFieldName = 'FechaE'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField38: TdaField
+          Alias = 'FechaI'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaI'
+          FieldLength = 0
+          FieldName = 'FechaI'
+          SQLFieldName = 'FechaI'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField39: TdaField
+          Alias = 'FechaR'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaR'
+          FieldLength = 0
+          FieldName = 'FechaR'
+          SQLFieldName = 'FechaR'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField40: TdaField
+          Alias = 'FechaT'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaT'
+          FieldLength = 0
+          FieldName = 'FechaT'
+          SQLFieldName = 'FechaT'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField41: TdaField
+          Alias = 'FechaV'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaV'
+          FieldLength = 0
+          FieldName = 'FechaV'
+          SQLFieldName = 'FechaV'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField42: TdaField
+          Alias = 'Fletes'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Fletes'
+          FieldLength = 3
+          FieldName = 'Fletes'
+          SQLFieldName = 'Fletes'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField43: TdaField
+          Alias = 'ID3'
+          DisplayWidth = 10
+          FieldAlias = 'ID3'
+          FieldLength = 25
+          FieldName = 'ID3'
+          SQLFieldName = 'ID3'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField44: TdaField
+          Alias = 'Moneda'
+          DisplayWidth = 10
+          FieldAlias = 'Moneda'
+          FieldLength = 5
+          FieldName = 'Moneda'
+          SQLFieldName = 'Moneda'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField45: TdaField
+          Alias = 'Monto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Monto'
+          FieldLength = 3
+          FieldName = 'Monto'
+          SQLFieldName = 'Monto'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField46: TdaField
+          Alias = 'MontoMEx'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MontoMEx'
+          FieldLength = 3
+          FieldName = 'MontoMEx'
+          SQLFieldName = 'MontoMEx'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField47: TdaField
+          Alias = 'MtoComiCob'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoComiCob'
+          FieldLength = 3
+          FieldName = 'MtoComiCob'
+          SQLFieldName = 'MtoComiCob'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField48: TdaField
+          Alias = 'MtoComiCobD'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoComiCobD'
+          FieldLength = 3
+          FieldName = 'MtoComiCobD'
+          SQLFieldName = 'MtoComiCobD'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField49: TdaField
+          Alias = 'MtoComiVta'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoComiVta'
+          FieldLength = 3
+          FieldName = 'MtoComiVta'
+          SQLFieldName = 'MtoComiVta'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField50: TdaField
+          Alias = 'MtoComiVtaD'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoComiVtaD'
+          FieldLength = 3
+          FieldName = 'MtoComiVtaD'
+          SQLFieldName = 'MtoComiVtaD'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField51: TdaField
+          Alias = 'MtoExtra'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoExtra'
+          FieldLength = 3
+          FieldName = 'MtoExtra'
+          SQLFieldName = 'MtoExtra'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField52: TdaField
+          Alias = 'MtoFinanc'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoFinanc'
+          FieldLength = 3
+          FieldName = 'MtoFinanc'
+          SQLFieldName = 'MtoFinanc'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField53: TdaField
+          Alias = 'MtoInt1'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoInt1'
+          FieldLength = 3
+          FieldName = 'MtoInt1'
+          SQLFieldName = 'MtoInt1'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField54: TdaField
+          Alias = 'MtoInt2'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoInt2'
+          FieldLength = 3
+          FieldName = 'MtoInt2'
+          SQLFieldName = 'MtoInt2'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField55: TdaField
+          Alias = 'MtoNCredito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoNCredito'
+          FieldLength = 3
+          FieldName = 'MtoNCredito'
+          SQLFieldName = 'MtoNCredito'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField56: TdaField
+          Alias = 'MtoNDebito'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoNDebito'
+          FieldLength = 3
+          FieldName = 'MtoNDebito'
+          SQLFieldName = 'MtoNDebito'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField57: TdaField
+          Alias = 'MtoPagos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoPagos'
+          FieldLength = 3
+          FieldName = 'MtoPagos'
+          SQLFieldName = 'MtoPagos'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField58: TdaField
+          Alias = 'MtoTax'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoTax'
+          FieldLength = 3
+          FieldName = 'MtoTax'
+          SQLFieldName = 'MtoTax'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField59: TdaField
+          Alias = 'MtoTotal'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoTotal'
+          FieldLength = 3
+          FieldName = 'MtoTotal'
+          SQLFieldName = 'MtoTotal'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField60: TdaField
+          Alias = 'Municipio'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Municipio'
+          FieldLength = 0
+          FieldName = 'Municipio'
+          SQLFieldName = 'Municipio'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField61: TdaField
+          Alias = 'NGiros'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NGiros'
+          FieldLength = 0
+          FieldName = 'NGiros'
+          SQLFieldName = 'NGiros'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField62: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField63: TdaField
+          Alias = 'NMeses'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NMeses'
+          FieldLength = 0
+          FieldName = 'NMeses'
+          SQLFieldName = 'NMeses'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField64: TdaField
+          Alias = 'Notas1'
+          DisplayWidth = 10
+          FieldAlias = 'Notas1'
+          FieldLength = 60
+          FieldName = 'Notas1'
+          SQLFieldName = 'Notas1'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField65: TdaField
+          Alias = 'Notas10'
+          DisplayWidth = 10
+          FieldAlias = 'Notas10'
+          FieldLength = 60
+          FieldName = 'Notas10'
+          SQLFieldName = 'Notas10'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField66: TdaField
+          Alias = 'Notas2'
+          DisplayWidth = 10
+          FieldAlias = 'Notas2'
+          FieldLength = 60
+          FieldName = 'Notas2'
+          SQLFieldName = 'Notas2'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField67: TdaField
+          Alias = 'Notas3'
+          DisplayWidth = 10
+          FieldAlias = 'Notas3'
+          FieldLength = 60
+          FieldName = 'Notas3'
+          SQLFieldName = 'Notas3'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField68: TdaField
+          Alias = 'Notas4'
+          DisplayWidth = 10
+          FieldAlias = 'Notas4'
+          FieldLength = 60
+          FieldName = 'Notas4'
+          SQLFieldName = 'Notas4'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField69: TdaField
+          Alias = 'Notas5'
+          DisplayWidth = 10
+          FieldAlias = 'Notas5'
+          FieldLength = 60
+          FieldName = 'Notas5'
+          SQLFieldName = 'Notas5'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField70: TdaField
+          Alias = 'Notas6'
+          DisplayWidth = 10
+          FieldAlias = 'Notas6'
+          FieldLength = 60
+          FieldName = 'Notas6'
+          SQLFieldName = 'Notas6'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField71: TdaField
+          Alias = 'Notas7'
+          DisplayWidth = 10
+          FieldAlias = 'Notas7'
+          FieldLength = 60
+          FieldName = 'Notas7'
+          SQLFieldName = 'Notas7'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField72: TdaField
+          Alias = 'Notas8'
+          DisplayWidth = 10
+          FieldAlias = 'Notas8'
+          FieldLength = 60
+          FieldName = 'Notas8'
+          SQLFieldName = 'Notas8'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField73: TdaField
+          Alias = 'Notas9'
+          DisplayWidth = 10
+          FieldAlias = 'Notas9'
+          FieldLength = 60
+          FieldName = 'Notas9'
+          SQLFieldName = 'Notas9'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField74: TdaField
+          Alias = 'NroCtrol'
+          DisplayWidth = 10
+          FieldAlias = 'NroCtrol'
+          FieldLength = 20
+          FieldName = 'NroCtrol'
+          SQLFieldName = 'NroCtrol'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField75: TdaField
+          Alias = 'NroEstable'
+          DisplayWidth = 10
+          FieldAlias = 'NroEstable'
+          FieldLength = 10
+          FieldName = 'NroEstable'
+          SQLFieldName = 'NroEstable'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField76: TdaField
+          Alias = 'NROUNICO'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NROUNICO'
+          FieldLength = 0
+          FieldName = 'NROUNICO'
+          SQLFieldName = 'NROUNICO'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField77: TdaField
+          Alias = 'NumeroC'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroC'
+          FieldLength = 10
+          FieldName = 'NumeroC'
+          SQLFieldName = 'NumeroC'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField78: TdaField
+          Alias = 'NumeroD'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroD'
+          FieldLength = 20
+          FieldName = 'NumeroD'
+          SQLFieldName = 'NumeroD'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField79: TdaField
+          Alias = 'NumeroD1'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroD1'
+          FieldLength = 15
+          FieldName = 'NumeroD1'
+          SQLFieldName = 'NumeroD1'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField80: TdaField
+          Alias = 'NumeroE'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroE'
+          FieldLength = 20
+          FieldName = 'NumeroE'
+          SQLFieldName = 'NumeroE'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField81: TdaField
+          Alias = 'NumeroF'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroF'
+          FieldLength = 20
+          FieldName = 'NumeroF'
+          SQLFieldName = 'NumeroF'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField82: TdaField
+          Alias = 'NumeroK'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroK'
+          FieldLength = 15
+          FieldName = 'NumeroK'
+          SQLFieldName = 'NumeroK'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField83: TdaField
+          Alias = 'NumeroNCF'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroNCF'
+          FieldLength = 20
+          FieldName = 'NumeroNCF'
+          SQLFieldName = 'NumeroNCF'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField84: TdaField
+          Alias = 'NumeroP'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroP'
+          FieldLength = 15
+          FieldName = 'NumeroP'
+          SQLFieldName = 'NumeroP'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField85: TdaField
+          Alias = 'NumeroR'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroR'
+          FieldLength = 20
+          FieldName = 'NumeroR'
+          SQLFieldName = 'NumeroR'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField86: TdaField
+          Alias = 'NumeroT'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroT'
+          FieldLength = 15
+          FieldName = 'NumeroT'
+          SQLFieldName = 'NumeroT'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField87: TdaField
+          Alias = 'NumeroZ'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroZ'
+          FieldLength = 10
+          FieldName = 'NumeroZ'
+          SQLFieldName = 'NumeroZ'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField88: TdaField
+          Alias = 'ONumero'
+          DisplayWidth = 10
+          FieldAlias = 'ONumero'
+          FieldLength = 10
+          FieldName = 'ONumero'
+          SQLFieldName = 'ONumero'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField89: TdaField
+          Alias = 'OrdenC'
+          DisplayWidth = 10
+          FieldAlias = 'OrdenC'
+          FieldLength = 30
+          FieldName = 'OrdenC'
+          SQLFieldName = 'OrdenC'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField90: TdaField
+          Alias = 'OTipo'
+          DisplayWidth = 10
+          FieldAlias = 'OTipo'
+          FieldLength = 1
+          FieldName = 'OTipo'
+          SQLFieldName = 'OTipo'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField91: TdaField
+          Alias = 'Pais'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Pais'
+          FieldLength = 0
+          FieldName = 'Pais'
+          SQLFieldName = 'Pais'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField92: TdaField
+          Alias = 'PctAnual'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'PctAnual'
+          FieldLength = 3
+          FieldName = 'PctAnual'
+          SQLFieldName = 'PctAnual'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField93: TdaField
+          Alias = 'PctManejo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'PctManejo'
+          FieldLength = 3
+          FieldName = 'PctManejo'
+          SQLFieldName = 'PctManejo'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField94: TdaField
+          Alias = 'PtoEmision'
+          DisplayWidth = 10
+          FieldAlias = 'PtoEmision'
+          FieldLength = 10
+          FieldName = 'PtoEmision'
+          SQLFieldName = 'PtoEmision'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField95: TdaField
+          Alias = 'RetenIVA'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'RetenIVA'
+          FieldLength = 3
+          FieldName = 'RetenIVA'
+          SQLFieldName = 'RetenIVA'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField96: TdaField
+          Alias = 'SaldoAct'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'SaldoAct'
+          FieldLength = 3
+          FieldName = 'SaldoAct'
+          SQLFieldName = 'SaldoAct'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField97: TdaField
+          Alias = 'Signo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Signo'
+          FieldLength = 0
+          FieldName = 'Signo'
+          SQLFieldName = 'Signo'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField98: TdaField
+          Alias = 'Status'
+          DisplayWidth = 10
+          FieldAlias = 'Status'
+          FieldLength = 2
+          FieldName = 'Status'
+          SQLFieldName = 'Status'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField99: TdaField
+          Alias = 'Telef'
+          DisplayWidth = 10
+          FieldAlias = 'Telef'
+          FieldLength = 30
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField100: TdaField
+          Alias = 'TExento'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TExento'
+          FieldLength = 3
+          FieldName = 'TExento'
+          SQLFieldName = 'TExento'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField101: TdaField
+          Alias = 'TGravable'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TGravable'
+          FieldLength = 3
+          FieldName = 'TGravable'
+          SQLFieldName = 'TGravable'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField102: TdaField
+          Alias = 'TGravable0'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TGravable0'
+          FieldLength = 3
+          FieldName = 'TGravable0'
+          SQLFieldName = 'TGravable0'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField103: TdaField
+          Alias = 'TipoFac'
+          DisplayWidth = 10
+          FieldAlias = 'TipoFac'
+          FieldLength = 1
+          FieldName = 'TipoFac'
+          SQLFieldName = 'TipoFac'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField104: TdaField
+          Alias = 'TipoTra'
+          DisplayWidth = 10
+          FieldAlias = 'TipoTra'
+          FieldLength = 1
+          FieldName = 'TipoTra'
+          SQLFieldName = 'TipoTra'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField105: TdaField
+          Alias = 'TipoTraE'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'TipoTraE'
+          FieldLength = 0
+          FieldName = 'TipoTraE'
+          SQLFieldName = 'TipoTraE'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField106: TdaField
+          Alias = 'TotalPrd'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalPrd'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'TotalPrd'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField107: TdaField
+          Alias = 'TotalSrv'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalSrv'
+          FieldLength = 3
+          FieldName = 'TotalSrv'
+          SQLFieldName = 'TotalSrv'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField108: TdaField
+          Alias = 'ValorPtos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'ValorPtos'
+          FieldLength = 3
+          FieldName = 'ValorPtos'
+          SQLFieldName = 'ValorPtos'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField109: TdaField
+          Alias = 'ZipCode'
+          DisplayWidth = 10
+          FieldAlias = 'ZipCode'
+          FieldLength = 20
+          FieldName = 'ZipCode'
+          SQLFieldName = 'ZipCode'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField110: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          IsDetail = True
+          SQLFieldName = 'Descrip_2'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField111: TdaField
+          ChildType = 2
+          Alias = 'CodVend'
+          DisplayWidth = 10
+          FieldAlias = 'CodVend'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daField112: TdaField
+          ChildType = 2
+          Alias = 'FechaE'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaE'
+          FieldLength = 10
+          FieldName = 'FechaE'
+          SQLFieldName = 'FechaE'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+          TableSQLAlias = 'VW_SAFACT'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'VW_SAFACT'
+          JoinType = dajtNone
+          SQLAlias = 'VW_SAFACT'
+          TableAlias = 'VW_SAFACT'
+          TableName = 'VW_SAFACT'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Vendedores'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SAVEND'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField114: TdaField
+              ChildType = 3
+              Alias = 'Cod_Vendedor'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Vendedor'
+              FieldLength = 10
+              FieldName = 'CodVend'
+              SQLFieldName = 'CodVend'
+              TableAlias = 'Vendedores'
+              TableName = 'SAVEND'
+              TableSQLAlias = 'SAVEND'
+            end
+            object daField113: TdaField
+              ChildType = 4
+              Alias = 'CodVend'
+              DisplayWidth = 10
+              FieldAlias = 'CodVend'
+              FieldLength = 10
+              FieldName = 'CodVend'
+              SQLFieldName = 'CodVend'
+              TableAlias = 'VW_SAFACT'
+              TableName = 'VW_SAFACT'
+              TableSQLAlias = 'VW_SAFACT'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_VW_C_SACONF'
+      Height = 708
+      Left = 662
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 19
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object VW_C_SACONF: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'VW_C_SACONF'
+        object ppField1: TppField
+          FieldAlias = 'Adicional'
+          FieldName = 'Adicional'
+          FieldLength = 400
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField2: TppField
+          FieldAlias = 'AutoReten'
+          FieldName = 'AutoReten'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Ciudad'
+          FieldName = 'Ciudad'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField4: TppField
+          FieldAlias = 'CodSucu'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField5: TppField
+          FieldAlias = 'CodTaxs'
+          FieldName = 'CodTaxs'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField6: TppField
+          FieldAlias = 'CorrelEstac'
+          FieldName = 'CorrelEstac'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField7: TppField
+          FieldAlias = 'CorrelPrd'
+          FieldName = 'CorrelPrd'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField8: TppField
+          FieldAlias = 'CorrelUNC'
+          FieldName = 'CorrelUNC'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField9: TppField
+          FieldAlias = 'CostoMes'
+          FieldName = 'CostoMes'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Descrip'
+          FieldName = 'Descrip'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Direc1'
+          FieldName = 'Direc1'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Direc2'
+          FieldName = 'Direc2'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Email'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField14: TppField
+          FieldAlias = 'EsMoneda'
+          FieldName = 'EsMoneda'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Estado'
+          FieldName = 'Estado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Factor'
+          FieldName = 'Factor'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField17: TppField
+          FieldAlias = 'FactorM'
+          FieldName = 'FactorM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField18: TppField
+          FieldAlias = 'FechaUC'
+          FieldName = 'FechaUC'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField19: TppField
+          FieldAlias = 'IdAppNot'
+          FieldName = 'IdAppNot'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField20: TppField
+          FieldAlias = 'IdVersion'
+          FieldName = 'IdVersion'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField21: TppField
+          FieldAlias = 'IdVerXtra'
+          FieldName = 'IdVerXtra'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Imagen'
+          FieldName = 'Imagen'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField23: TppField
+          FieldAlias = 'ImpFleteC'
+          FieldName = 'ImpFleteC'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField24: TppField
+          FieldAlias = 'ImpFleteV'
+          FieldName = 'ImpFleteV'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField25: TppField
+          FieldAlias = 'InvConsig'
+          FieldName = 'InvConsig'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField26: TppField
+          FieldAlias = 'KeySerial'
+          FieldName = 'KeySerial'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField27: TppField
+          FieldAlias = 'MesCurso'
+          FieldName = 'MesCurso'
+          FieldLength = 6
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField28: TppField
+          FieldAlias = 'MesesPtos'
+          FieldName = 'MesesPtos'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField29: TppField
+          FieldAlias = 'MesOC'
+          FieldName = 'MesOC'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField30: TppField
+          FieldAlias = 'MesPrf'
+          FieldName = 'MesPrf'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField31: TppField
+          FieldAlias = 'MesTran'
+          FieldName = 'MesTran'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField32: TppField
+          FieldAlias = 'MtoExtraG'
+          FieldName = 'MtoExtraG'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Municipio'
+          FieldName = 'Municipio'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField34: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField35: TppField
+          FieldAlias = 'NroEstable'
+          FieldName = 'NroEstable'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField36: TppField
+          FieldAlias = 'NroSerial'
+          FieldName = 'NroSerial'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField37: TppField
+          FieldAlias = 'ObliOper'
+          FieldName = 'ObliOper'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField38: TppField
+          FieldAlias = 'Pais'
+          FieldName = 'Pais'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField39: TppField
+          FieldAlias = 'PaswLim'
+          FieldName = 'PaswLim'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField40: TppField
+          FieldAlias = 'PedirNCtrl'
+          FieldName = 'PedirNCtrl'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField41: TppField
+          FieldAlias = 'PorctReten'
+          FieldName = 'PorctReten'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField42: TppField
+          FieldAlias = 'PrioridadIC'
+          FieldName = 'PrioridadIC'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField43: TppField
+          FieldAlias = 'Redond'
+          FieldName = 'Redond'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField44: TppField
+          FieldAlias = 'RedTotal'
+          FieldName = 'RedTotal'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField45: TppField
+          FieldAlias = 'RetenIsrl'
+          FieldName = 'RetenIsrl'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField46: TppField
+          FieldAlias = 'RetenIVA'
+          FieldName = 'RetenIVA'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField47: TppField
+          FieldAlias = 'RIF'
+          FieldName = 'RIF'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 46
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField48: TppField
+          FieldAlias = 'RUCPwd'
+          FieldName = 'RUCPwd'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 47
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField49: TppField
+          FieldAlias = 'RUCUser'
+          FieldName = 'RUCUser'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 48
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField50: TppField
+          FieldAlias = 'SCiudad'
+          FieldName = 'SCiudad'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 49
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField51: TppField
+          FieldAlias = 'SEstado'
+          FieldName = 'SEstado'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 50
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField52: TppField
+          FieldAlias = 'SimbFac'
+          FieldName = 'SimbFac'
+          FieldLength = 3
+          DisplayWidth = 10
+          Position = 51
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField53: TppField
+          FieldAlias = 'SMunicipio'
+          FieldName = 'SMunicipio'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 52
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField54: TppField
+          FieldAlias = 'SPais'
+          FieldName = 'SPais'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 53
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField55: TppField
+          FieldAlias = 'Telef'
+          FieldName = 'Telef'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 54
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField56: TppField
+          FieldAlias = 'TipFac'
+          FieldName = 'TipFac'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 55
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField57: TppField
+          FieldAlias = 'TipoFac'
+          FieldName = 'TipoFac'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 56
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField58: TppField
+          FieldAlias = 'UsaFactorM'
+          FieldName = 'UsaFactorM'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 57
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField59: TppField
+          FieldAlias = 'UsaNEL'
+          FieldName = 'UsaNEL'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 58
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField60: TppField
+          FieldAlias = 'ValorPtos'
+          FieldName = 'ValorPtos'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 59
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField61: TppField
+          FieldAlias = 'ValorPtosV'
+          FieldName = 'ValorPtosV'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 60
+          TableName = 'VW_C_SACONF'
+        end
+        object ppField62: TppField
+          FieldAlias = 'ZipCode'
+          FieldName = 'ZipCode'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 61
+          TableName = 'VW_C_SACONF'
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'VW_C_SACONF'
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT VW_C_SACONF.Adicional, '
+          '       VW_C_SACONF.AutoReten, VW_C_SACONF.Ciudad, '
+          '       VW_C_SACONF.CodSucu, VW_C_SACONF.CodTaxs, '
+          '       VW_C_SACONF.CorrelEstac, '
+          '       VW_C_SACONF.CorrelPrd, '
+          '       VW_C_SACONF.CorrelUNC, '
+          '       VW_C_SACONF.CostoMes, VW_C_SACONF.Descrip, '
+          '       VW_C_SACONF.Direc1, VW_C_SACONF.Direc2, '
+          '       VW_C_SACONF.Email, VW_C_SACONF.EsMoneda, '
+          '       VW_C_SACONF.Estado, VW_C_SACONF.Factor, '
+          '       VW_C_SACONF.FactorM, VW_C_SACONF.FechaUC, '
+          '       VW_C_SACONF.IdAppNot, '
+          '       VW_C_SACONF.IdVersion, '
+          '       VW_C_SACONF.IdVerXtra, VW_C_SACONF.Imagen, '
+          '       VW_C_SACONF.ImpFleteC, '
+          '       VW_C_SACONF.ImpFleteV, '
+          '       VW_C_SACONF.InvConsig, '
+          '       VW_C_SACONF.KeySerial, '
+          '       VW_C_SACONF.MesCurso, '
+          '       VW_C_SACONF.MesesPtos, VW_C_SACONF.MesOC, '
+          '       VW_C_SACONF.MesPrf, VW_C_SACONF.MesTran, '
+          '       VW_C_SACONF.MtoExtraG, '
+          '       VW_C_SACONF.Municipio, VW_C_SACONF.NIT, '
+          '       VW_C_SACONF.NroEstable, '
+          '       VW_C_SACONF.NroSerial, '
+          '       VW_C_SACONF.ObliOper, VW_C_SACONF.Pais, '
+          '       VW_C_SACONF.PaswLim, '
+          '       VW_C_SACONF.PedirNCtrl, '
+          '       VW_C_SACONF.PorctReten, '
+          '       VW_C_SACONF.PrioridadIC, '
+          '       VW_C_SACONF.Redond, VW_C_SACONF.RedTotal, '
+          '       VW_C_SACONF.RetenIsrl, '
+          '       VW_C_SACONF.RetenIVA, VW_C_SACONF.RIF, '
+          '       VW_C_SACONF.RUCPwd, VW_C_SACONF.RUCUser, '
+          '       VW_C_SACONF.SCiudad, VW_C_SACONF.SEstado, '
+          '       VW_C_SACONF.SimbFac, '
+          '       VW_C_SACONF.SMunicipio, VW_C_SACONF.SPais, '
+          '       VW_C_SACONF.Telef, VW_C_SACONF.TipFac, '
+          '       VW_C_SACONF.TipoFac, '
+          '       VW_C_SACONF.UsaFactorM, '
+          '       VW_C_SACONF.UsaNEL, VW_C_SACONF.ValorPtos, '
+          '       VW_C_SACONF.ValorPtosV, VW_C_SACONF.ZipCode'
+          'FROM VW_C_SACONF VW_C_SACONF')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Adicional'
+          DisplayWidth = 10
+          FieldAlias = 'Adicional'
+          FieldLength = 400
+          FieldName = 'Adicional'
+          SQLFieldName = 'Adicional'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField2: TdaField
+          Alias = 'AutoReten'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'AutoReten'
+          FieldLength = 0
+          FieldName = 'AutoReten'
+          SQLFieldName = 'AutoReten'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField3: TdaField
+          Alias = 'Ciudad'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Ciudad'
+          FieldLength = 0
+          FieldName = 'Ciudad'
+          SQLFieldName = 'Ciudad'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField4: TdaField
+          Alias = 'CodSucu'
+          DisplayWidth = 10
+          FieldAlias = 'CodSucu'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField5: TdaField
+          Alias = 'CodTaxs'
+          DisplayWidth = 10
+          FieldAlias = 'CodTaxs'
+          FieldLength = 5
+          FieldName = 'CodTaxs'
+          SQLFieldName = 'CodTaxs'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField6: TdaField
+          Alias = 'CorrelEstac'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'CorrelEstac'
+          FieldLength = 0
+          FieldName = 'CorrelEstac'
+          SQLFieldName = 'CorrelEstac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField7: TdaField
+          Alias = 'CorrelPrd'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'CorrelPrd'
+          FieldLength = 0
+          FieldName = 'CorrelPrd'
+          SQLFieldName = 'CorrelPrd'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField8: TdaField
+          Alias = 'CorrelUNC'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'CorrelUNC'
+          FieldLength = 0
+          FieldName = 'CorrelUNC'
+          SQLFieldName = 'CorrelUNC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField9: TdaField
+          Alias = 'CostoMes'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CostoMes'
+          FieldLength = 3
+          FieldName = 'CostoMes'
+          SQLFieldName = 'CostoMes'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField10: TdaField
+          Alias = 'Descrip'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip'
+          FieldLength = 80
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField11: TdaField
+          Alias = 'Direc1'
+          DisplayWidth = 10
+          FieldAlias = 'Direc1'
+          FieldLength = 80
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField12: TdaField
+          Alias = 'Direc2'
+          DisplayWidth = 10
+          FieldAlias = 'Direc2'
+          FieldLength = 80
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField13: TdaField
+          Alias = 'Email'
+          DisplayWidth = 10
+          FieldAlias = 'Email'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField14: TdaField
+          Alias = 'EsMoneda'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsMoneda'
+          FieldLength = 0
+          FieldName = 'EsMoneda'
+          SQLFieldName = 'EsMoneda'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField15: TdaField
+          Alias = 'Estado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Estado'
+          FieldLength = 0
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField16: TdaField
+          Alias = 'Factor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Factor'
+          FieldLength = 3
+          FieldName = 'Factor'
+          SQLFieldName = 'Factor'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField17: TdaField
+          Alias = 'FactorM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'FactorM'
+          FieldLength = 3
+          FieldName = 'FactorM'
+          SQLFieldName = 'FactorM'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField18: TdaField
+          Alias = 'FechaUC'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaUC'
+          FieldLength = 0
+          FieldName = 'FechaUC'
+          SQLFieldName = 'FechaUC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField19: TdaField
+          Alias = 'IdAppNot'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'IdAppNot'
+          FieldLength = 0
+          FieldName = 'IdAppNot'
+          SQLFieldName = 'IdAppNot'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField20: TdaField
+          Alias = 'IdVersion'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'IdVersion'
+          FieldLength = 0
+          FieldName = 'IdVersion'
+          SQLFieldName = 'IdVersion'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField21: TdaField
+          Alias = 'IdVerXtra'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'IdVerXtra'
+          FieldLength = 0
+          FieldName = 'IdVerXtra'
+          SQLFieldName = 'IdVerXtra'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField22: TdaField
+          Alias = 'Imagen'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'Imagen'
+          FieldLength = 0
+          FieldName = 'Imagen'
+          Linkable = False
+          SQLFieldName = 'Imagen'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField23: TdaField
+          Alias = 'ImpFleteC'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ImpFleteC'
+          FieldLength = 0
+          FieldName = 'ImpFleteC'
+          SQLFieldName = 'ImpFleteC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField24: TdaField
+          Alias = 'ImpFleteV'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ImpFleteV'
+          FieldLength = 0
+          FieldName = 'ImpFleteV'
+          SQLFieldName = 'ImpFleteV'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField25: TdaField
+          Alias = 'InvConsig'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'InvConsig'
+          FieldLength = 0
+          FieldName = 'InvConsig'
+          SQLFieldName = 'InvConsig'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField26: TdaField
+          Alias = 'KeySerial'
+          DisplayWidth = 10
+          FieldAlias = 'KeySerial'
+          FieldLength = 10
+          FieldName = 'KeySerial'
+          SQLFieldName = 'KeySerial'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField27: TdaField
+          Alias = 'MesCurso'
+          DisplayWidth = 10
+          FieldAlias = 'MesCurso'
+          FieldLength = 6
+          FieldName = 'MesCurso'
+          SQLFieldName = 'MesCurso'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField28: TdaField
+          Alias = 'MesesPtos'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesesPtos'
+          FieldLength = 0
+          FieldName = 'MesesPtos'
+          SQLFieldName = 'MesesPtos'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField29: TdaField
+          Alias = 'MesOC'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesOC'
+          FieldLength = 0
+          FieldName = 'MesOC'
+          SQLFieldName = 'MesOC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField30: TdaField
+          Alias = 'MesPrf'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesPrf'
+          FieldLength = 0
+          FieldName = 'MesPrf'
+          SQLFieldName = 'MesPrf'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField31: TdaField
+          Alias = 'MesTran'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'MesTran'
+          FieldLength = 0
+          FieldName = 'MesTran'
+          SQLFieldName = 'MesTran'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField32: TdaField
+          Alias = 'MtoExtraG'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoExtraG'
+          FieldLength = 3
+          FieldName = 'MtoExtraG'
+          SQLFieldName = 'MtoExtraG'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField33: TdaField
+          Alias = 'Municipio'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Municipio'
+          FieldLength = 0
+          FieldName = 'Municipio'
+          SQLFieldName = 'Municipio'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField34: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField35: TdaField
+          Alias = 'NroEstable'
+          DisplayWidth = 10
+          FieldAlias = 'NroEstable'
+          FieldLength = 10
+          FieldName = 'NroEstable'
+          SQLFieldName = 'NroEstable'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField36: TdaField
+          Alias = 'NroSerial'
+          DisplayWidth = 10
+          FieldAlias = 'NroSerial'
+          FieldLength = 25
+          FieldName = 'NroSerial'
+          SQLFieldName = 'NroSerial'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField37: TdaField
+          Alias = 'ObliOper'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ObliOper'
+          FieldLength = 0
+          FieldName = 'ObliOper'
+          SQLFieldName = 'ObliOper'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField38: TdaField
+          Alias = 'Pais'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Pais'
+          FieldLength = 0
+          FieldName = 'Pais'
+          SQLFieldName = 'Pais'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField39: TdaField
+          Alias = 'PaswLim'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'PaswLim'
+          FieldLength = 0
+          FieldName = 'PaswLim'
+          SQLFieldName = 'PaswLim'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField40: TdaField
+          Alias = 'PedirNCtrl'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'PedirNCtrl'
+          FieldLength = 0
+          FieldName = 'PedirNCtrl'
+          SQLFieldName = 'PedirNCtrl'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField41: TdaField
+          Alias = 'PorctReten'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'PorctReten'
+          FieldLength = 3
+          FieldName = 'PorctReten'
+          SQLFieldName = 'PorctReten'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField42: TdaField
+          Alias = 'PrioridadIC'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'PrioridadIC'
+          FieldLength = 0
+          FieldName = 'PrioridadIC'
+          SQLFieldName = 'PrioridadIC'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField43: TdaField
+          Alias = 'Redond'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Redond'
+          FieldLength = 0
+          FieldName = 'Redond'
+          SQLFieldName = 'Redond'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField44: TdaField
+          Alias = 'RedTotal'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'RedTotal'
+          FieldLength = 0
+          FieldName = 'RedTotal'
+          SQLFieldName = 'RedTotal'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField45: TdaField
+          Alias = 'RetenIsrl'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'RetenIsrl'
+          FieldLength = 0
+          FieldName = 'RetenIsrl'
+          SQLFieldName = 'RetenIsrl'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField46: TdaField
+          Alias = 'RetenIVA'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'RetenIVA'
+          FieldLength = 0
+          FieldName = 'RetenIVA'
+          SQLFieldName = 'RetenIVA'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField47: TdaField
+          Alias = 'RIF'
+          DisplayWidth = 10
+          FieldAlias = 'RIF'
+          FieldLength = 30
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField48: TdaField
+          Alias = 'RUCPwd'
+          DisplayWidth = 10
+          FieldAlias = 'RUCPwd'
+          FieldLength = 20
+          FieldName = 'RUCPwd'
+          SQLFieldName = 'RUCPwd'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField49: TdaField
+          Alias = 'RUCUser'
+          DisplayWidth = 10
+          FieldAlias = 'RUCUser'
+          FieldLength = 20
+          FieldName = 'RUCUser'
+          SQLFieldName = 'RUCUser'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField50: TdaField
+          Alias = 'SCiudad'
+          DisplayWidth = 10
+          FieldAlias = 'SCiudad'
+          FieldLength = 30
+          FieldName = 'SCiudad'
+          SQLFieldName = 'SCiudad'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField51: TdaField
+          Alias = 'SEstado'
+          DisplayWidth = 10
+          FieldAlias = 'SEstado'
+          FieldLength = 30
+          FieldName = 'SEstado'
+          SQLFieldName = 'SEstado'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField52: TdaField
+          Alias = 'SimbFac'
+          DisplayWidth = 10
+          FieldAlias = 'SimbFac'
+          FieldLength = 3
+          FieldName = 'SimbFac'
+          SQLFieldName = 'SimbFac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField53: TdaField
+          Alias = 'SMunicipio'
+          DisplayWidth = 10
+          FieldAlias = 'SMunicipio'
+          FieldLength = 30
+          FieldName = 'SMunicipio'
+          SQLFieldName = 'SMunicipio'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField54: TdaField
+          Alias = 'SPais'
+          DisplayWidth = 10
+          FieldAlias = 'SPais'
+          FieldLength = 30
+          FieldName = 'SPais'
+          SQLFieldName = 'SPais'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField55: TdaField
+          Alias = 'Telef'
+          DisplayWidth = 10
+          FieldAlias = 'Telef'
+          FieldLength = 40
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField56: TdaField
+          Alias = 'TipFac'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'TipFac'
+          FieldLength = 0
+          FieldName = 'TipFac'
+          SQLFieldName = 'TipFac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField57: TdaField
+          Alias = 'TipoFac'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'TipoFac'
+          FieldLength = 0
+          FieldName = 'TipoFac'
+          SQLFieldName = 'TipoFac'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField58: TdaField
+          Alias = 'UsaFactorM'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'UsaFactorM'
+          FieldLength = 0
+          FieldName = 'UsaFactorM'
+          SQLFieldName = 'UsaFactorM'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField59: TdaField
+          Alias = 'UsaNEL'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'UsaNEL'
+          FieldLength = 0
+          FieldName = 'UsaNEL'
+          SQLFieldName = 'UsaNEL'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField60: TdaField
+          Alias = 'ValorPtos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'ValorPtos'
+          FieldLength = 3
+          FieldName = 'ValorPtos'
+          SQLFieldName = 'ValorPtos'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField61: TdaField
+          Alias = 'ValorPtosV'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'ValorPtosV'
+          FieldLength = 3
+          FieldName = 'ValorPtosV'
+          SQLFieldName = 'ValorPtosV'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daField62: TdaField
+          Alias = 'ZipCode'
+          DisplayWidth = 10
+          FieldAlias = 'ZipCode'
+          FieldLength = 20
+          FieldName = 'ZipCode'
+          SQLFieldName = 'ZipCode'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+          TableSQLAlias = 'VW_C_SACONF'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'VW_C_SACONF'
+          JoinType = dajtNone
+          SQLAlias = 'VW_C_SACONF'
+          TableAlias = 'VW_C_SACONF'
+          TableName = 'VW_C_SACONF'
+        end
+      end
+    end
+    object daADOQueryDataView3: TdaADOQueryDataView
+      UserName = 'Query_Operaciones'
+      Height = 199
+      Left = 955
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 5
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Operaciones: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Operaciones'
+        object ppField1: TppField
+          FieldAlias = 'Activo'
+          FieldName = 'Activo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAOPER'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Clase'
+          FieldName = 'Clase'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAOPER'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cod_Operacion'
+          FieldName = 'CodOper'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAOPER'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAOPER'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Rango'
+          FieldName = 'Rango'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SAOPER'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'TipoOpe'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SAOPER'
+        end
+      end
+      object daSQL3: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Operaciones'
+        LinkColor = clGreen
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SAOPER.Activo, SAOPER.Clase, '
+          '       SAOPER.CodOper, SAOPER.Descrip, '
+          '       SAOPER.Rango, SAOPER.TipoOpe'
+          'FROM SAOPER SAOPER'
+          'WHERE '
+          
+            '      ( SAOPER.CodOper IN ('#39'01-101'#39','#39'01-201'#39','#39'01-301'#39','#39'01-401'#39','#39 +
+            '01-501'#39','#39'01-601'#39','#39'01-901'#39') )'
+          '       AND ( SAOPER.Activo = 1 )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          Value = '01-101,01-201,01-301,01-401,01-501,01-601,01-901'
+          object TdaField
+            Alias = 'Cod_Operacion'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Operacion'
+            FieldLength = 10
+            FieldName = 'CodOper'
+            SQLFieldName = 'CodOper'
+            TableAlias = 'Operaciones'
+            TableName = 'SAOPER'
+            TableSQLAlias = 'SAOPER'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = '1'
+          object TdaField
+            Alias = 'Activo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Activo'
+            FieldLength = 10
+            FieldName = 'Activo'
+            SQLFieldName = 'Activo'
+            TableAlias = 'Operaciones'
+            TableName = 'SAOPER'
+            TableSQLAlias = 'SAOPER'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Activo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Activo'
+          FieldLength = 0
+          FieldName = 'Activo'
+          SQLFieldName = 'Activo'
+          TableAlias = 'Operaciones'
+          TableName = 'SAOPER'
+          TableSQLAlias = 'SAOPER'
+        end
+        object daField2: TdaField
+          Alias = 'Clase'
+          DisplayWidth = 10
+          FieldAlias = 'Clase'
+          FieldLength = 10
+          FieldName = 'Clase'
+          SQLFieldName = 'Clase'
+          TableAlias = 'Operaciones'
+          TableName = 'SAOPER'
+          TableSQLAlias = 'SAOPER'
+        end
+        object daField3: TdaField
+          Alias = 'Cod_Operacion'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Operacion'
+          FieldLength = 10
+          FieldName = 'CodOper'
+          SQLFieldName = 'CodOper'
+          TableAlias = 'Operaciones'
+          TableName = 'SAOPER'
+          TableSQLAlias = 'SAOPER'
+        end
+        object daField4: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 40
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Operaciones'
+          TableName = 'SAOPER'
+          TableSQLAlias = 'SAOPER'
+        end
+        object daField5: TdaField
+          Alias = 'Rango'
+          DisplayWidth = 10
+          FieldAlias = 'Rango'
+          FieldLength = 80
+          FieldName = 'Rango'
+          SQLFieldName = 'Rango'
+          TableAlias = 'Operaciones'
+          TableName = 'SAOPER'
+          TableSQLAlias = 'SAOPER'
+        end
+        object daField6: TdaField
+          Alias = 'Tipo'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'TipoOpe'
+          SQLFieldName = 'TipoOpe'
+          TableAlias = 'Operaciones'
+          TableName = 'SAOPER'
+          TableSQLAlias = 'SAOPER'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Operaciones'
+          JoinType = dajtNone
+          SQLAlias = 'SAOPER'
+          TableAlias = 'Operaciones'
+          TableName = 'SAOPER'
+        end
+      end
+    end
+    object daADOQueryDataView4: TdaADOQueryDataView
+      UserName = 'Query_Vendedores'
+      Height = 437
+      Left = 1139
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 11
+      TypeColumnWidth = 52
+      Width = 327
+      AutoSearchTabOrder = 0
+      object Vendedores: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Vendedores'
+        object ppField1: TppField
+          FieldAlias = 'Activo'
+          FieldName = 'Activo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAVEND'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Clase'
+          FieldName = 'Clase'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAVEND'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cod_Ciudad'
+          FieldName = 'Ciudad'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAVEND'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Cod_Estado'
+          FieldName = 'Estado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAVEND'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Cod_Municipio'
+          FieldName = 'Municipio'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SAVEND'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Cod_Pais'
+          FieldName = 'Pais'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SAVEND'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cod_Vendedor'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SAVEND'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Codigo_Postal'
+          FieldName = 'ZipCode'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SAVEND'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SAVEND'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SAVEND'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SAVEND'
+        end
+        object ppField12: TppField
+          FieldAlias = 'email'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SAVEND'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Identificador'
+          FieldName = 'ID3'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SAVEND'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Movil'
+          FieldName = 'Movil'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SAVEND'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SAVEND'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SAVEND'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Tipo_ID'
+          FieldName = 'TipoID'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SAVEND'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Tipo_Persona'
+          FieldName = 'TipoID3'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SAVEND'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Ult_cobro'
+          FieldName = 'FechaUC'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SAVEND'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Ult_venta'
+          FieldName = 'FechaUV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SAVEND'
+        end
+      end
+      object daSQL4: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Vendedores'
+        LinkColor = clPurple
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SAVEND.Activo, SAVEND.Clase, '
+          '       SAVEND.Ciudad, SAVEND.Estado, '
+          '       SAVEND.Municipio, SAVEND.Pais, '
+          '       SAVEND.CodVend, SAVEND.ZipCode, '
+          '       SAVEND.Descrip, SAVEND.Direc1, '
+          '       SAVEND.Direc2, SAVEND.Email, SAVEND.ID3, '
+          '       SAVEND.Movil, SAVEND.CodSucu, '
+          '       SAVEND.Telef, SAVEND.TipoID, '
+          '       SAVEND.TipoID3, SAVEND.FechaUC, '
+          '       SAVEND.FechaUV'
+          'FROM SAVEND SAVEND'
+          'WHERE ( SAVEND.Activo = 1 )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = '1'
+          object TdaField
+            Alias = 'Activo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Activo'
+            FieldLength = 10
+            FieldName = 'Activo'
+            SQLFieldName = 'Activo'
+            TableAlias = 'Vendedores'
+            TableName = 'SAVEND'
+            TableSQLAlias = 'SAVEND'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Activo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Activo'
+          FieldLength = 0
+          FieldName = 'Activo'
+          SQLFieldName = 'Activo'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField2: TdaField
+          Alias = 'Clase'
+          DisplayWidth = 10
+          FieldAlias = 'Clase'
+          FieldLength = 10
+          FieldName = 'Clase'
+          SQLFieldName = 'Clase'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField3: TdaField
+          Alias = 'Cod_Ciudad'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Ciudad'
+          FieldLength = 0
+          FieldName = 'Ciudad'
+          SQLFieldName = 'Ciudad'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField4: TdaField
+          Alias = 'Cod_Estado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Estado'
+          FieldLength = 0
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField5: TdaField
+          Alias = 'Cod_Municipio'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Municipio'
+          FieldLength = 0
+          FieldName = 'Municipio'
+          SQLFieldName = 'Municipio'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField6: TdaField
+          Alias = 'Cod_Pais'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Pais'
+          FieldLength = 0
+          FieldName = 'Pais'
+          SQLFieldName = 'Pais'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField7: TdaField
+          Alias = 'Cod_Vendedor'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Vendedor'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField8: TdaField
+          Alias = 'Codigo_Postal'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Postal'
+          FieldLength = 20
+          FieldName = 'ZipCode'
+          SQLFieldName = 'ZipCode'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField9: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField10: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 60
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField11: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 60
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField12: TdaField
+          Alias = 'email'
+          DisplayWidth = 10
+          FieldAlias = 'email'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField13: TdaField
+          Alias = 'Identificador'
+          DisplayWidth = 10
+          FieldAlias = 'Identificador'
+          FieldLength = 25
+          FieldName = 'ID3'
+          SQLFieldName = 'ID3'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField14: TdaField
+          Alias = 'Movil'
+          DisplayWidth = 10
+          FieldAlias = 'Movil'
+          FieldLength = 15
+          FieldName = 'Movil'
+          SQLFieldName = 'Movil'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField15: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField16: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 30
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField17: TdaField
+          Alias = 'Tipo_ID'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_ID'
+          FieldLength = 0
+          FieldName = 'TipoID'
+          SQLFieldName = 'TipoID'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField18: TdaField
+          Alias = 'Tipo_Persona'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Persona'
+          FieldLength = 0
+          FieldName = 'TipoID3'
+          SQLFieldName = 'TipoID3'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField19: TdaField
+          Alias = 'Ult_cobro'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Ult_cobro'
+          FieldLength = 0
+          FieldName = 'FechaUC'
+          SQLFieldName = 'FechaUC'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField20: TdaField
+          Alias = 'Ult_venta'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Ult_venta'
+          FieldLength = 0
+          FieldName = 'FechaUV'
+          SQLFieldName = 'FechaUV'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Vendedores'
+          JoinType = dajtNone
+          SQLAlias = 'SAVEND'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+        end
+      end
+    end
+    object daADOQueryDataView5: TdaADOQueryDataView
+      UserName = 'Query_VW_C_SAITEMFACTOT'
+      Height = 240
+      Left = 355
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 277
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_VW_SAFACT'
+      object VW_C_SAITEMFACTOT: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'VW_C_SAITEMFACTOT'
+        MasterDataPipelineName = 'VW_SAFACT'
+        object ppField1: TppField
+          FieldAlias = 'MTOTOT'
+          FieldName = 'MTOTOT'
+          FieldLength = 6
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'VW_C_SAITEMFACTOT'
+        end
+        object ppField2: TppField
+          FieldAlias = 'NumeroD'
+          FieldName = 'NumeroD'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'VW_C_SAITEMFACTOT'
+        end
+        object ppField3: TppField
+          FieldAlias = 'TipoFac'
+          FieldName = 'TipoFac'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'VW_C_SAITEMFACTOT'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'CodVend'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'CodVend'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'FechaE'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'FechaE'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'NumeroD'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'NumeroD'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'TipoFac'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'TipoFac'
+          DetailSortOrder = soAscending
+        end
+      end
+      object daSQL5: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'VW_C_SAITEMFACTOT'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT VW_C_SAITEMFACTOT.MTOTOT, '
+          '       VW_C_SAITEMFACTOT.NumeroD, '
+          '       VW_C_SAITEMFACTOT.TipoFac'
+          'FROM VW_C_SAITEMFACTOT VW_C_SAITEMFACTOT')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'MTOTOT'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MTOTOT'
+          FieldLength = 6
+          FieldName = 'MTOTOT'
+          SQLFieldName = 'MTOTOT'
+          TableAlias = 'VW_C_SAITEMFACTOT'
+          TableName = 'VW_C_SAITEMFACTOT'
+          TableSQLAlias = 'VW_C_SAITEMFACTOT'
+        end
+        object daField2: TdaField
+          Alias = 'NumeroD'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroD'
+          FieldLength = 20
+          FieldName = 'NumeroD'
+          SQLFieldName = 'NumeroD'
+          TableAlias = 'VW_C_SAITEMFACTOT'
+          TableName = 'VW_C_SAITEMFACTOT'
+          TableSQLAlias = 'VW_C_SAITEMFACTOT'
+        end
+        object daField3: TdaField
+          Alias = 'TipoFac'
+          DisplayWidth = 10
+          FieldAlias = 'TipoFac'
+          FieldLength = 1
+          FieldName = 'TipoFac'
+          SQLFieldName = 'TipoFac'
+          TableAlias = 'VW_C_SAITEMFACTOT'
+          TableName = 'VW_C_SAITEMFACTOT'
+          TableSQLAlias = 'VW_C_SAITEMFACTOT'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'VW_C_SAITEMFACTOT'
+          JoinType = dajtNone
+          SQLAlias = 'VW_C_SAITEMFACTOT'
+          TableAlias = 'VW_C_SAITEMFACTOT'
+          TableName = 'VW_C_SAITEMFACTOT'
+        end
+        object daSQLLink1: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'NumeroD'
+            DisplayWidth = 10
+            FieldAlias = 'NumeroD'
+            FieldLength = 20
+            FieldName = 'NumeroD'
+            SQLFieldName = 'NumeroD'
+            TableAlias = 'VW_SAFACT'
+            TableName = 'VW_SAFACT'
+            TableSQLAlias = 'VW_SAFACT'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'NumeroD'
+            DisplayWidth = 10
+            FieldAlias = 'NumeroD'
+            FieldLength = 20
+            FieldName = 'NumeroD'
+            SQLFieldName = 'NumeroD'
+            TableAlias = 'VW_C_SAITEMFACTOT'
+            TableName = 'VW_C_SAITEMFACTOT'
+            TableSQLAlias = 'VW_C_SAITEMFACTOT'
+          end
+        end
+        object daSQLLink2: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'TipoFac'
+            DisplayWidth = 10
+            FieldAlias = 'TipoFac'
+            FieldLength = 1
+            FieldName = 'TipoFac'
+            SQLFieldName = 'TipoFac'
+            TableAlias = 'VW_SAFACT'
+            TableName = 'VW_SAFACT'
+            TableSQLAlias = 'VW_SAFACT'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'TipoFac'
+            DisplayWidth = 10
+            FieldAlias = 'TipoFac'
+            FieldLength = 1
+            FieldName = 'TipoFac'
+            SQLFieldName = 'TipoFac'
+            TableAlias = 'VW_C_SAITEMFACTOT'
+            TableName = 'VW_C_SAITEMFACTOT'
+            TableSQLAlias = 'VW_C_SAITEMFACTOT'
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object ppParameter1: TppParameter
+      AutoSearchSettings.Enabled = True
+      AutoSearchSettings.FieldAlias = 'CodOper'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = False
+      DataType = dtString
+      LookupSettings.NameField = 'Descrip'
+      LookupSettings.DisplayType = dtValueAndName
+      LookupSettings.SortOrder = soValue
+      LookupSettings.ValueField = 'CodOper'
+      LookupSettings.DataPipelineName = 'Operaciones'
+      Value = ''
+      UserName = 'Poperaciones'
+    end
+    object ppParameter2: TppParameter
+      AutoSearchSettings.Enabled = True
+      AutoSearchSettings.FieldAlias = 'CodVend'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = False
+      AutoSearchSettings.SearchOperator = soInList
+      DataType = dtString
+      LookupSettings.NameField = 'Descrip'
+      LookupSettings.DisplayType = dtValueAndName
+      LookupSettings.SortOrder = soValue
+      LookupSettings.ValueField = 'CodVend'
+      LookupSettings.DataPipelineName = 'Vendedores'
+      Value = ''
+      UserName = 'Pvendedores'
+    end
+  end
+end

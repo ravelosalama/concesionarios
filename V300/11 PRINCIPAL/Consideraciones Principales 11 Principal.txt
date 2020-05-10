@@ -1,0 +1,15 @@
+Todos estos objetos deberan renombrarse tanto nombre de archivo como nombre de objetos en sql con
+mejores nombres nemotecnicos que describan y diferencien los objetos de la solucion concesionario a simple vista.
+
+Todos estos objetos son parte de la solucion Saint Concesionario adaptación versiones 9XXX iniciando con 9024 de AGO2016.
+
+201.208.234.239
+
+
+075772
+075782
+075783
+075785
+
+
+
